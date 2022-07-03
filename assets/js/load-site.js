@@ -13,7 +13,8 @@ $(document).ready(function() {
 		smartBackspace: true, 
 		showCursor: true, 
 		cursorChar: '_', 
-		attr: null
+    attr: null,
+    cursorColor: inherit
 	};
 	
 	// Will remove overlay after 30 sec for users cannnot load properly.
