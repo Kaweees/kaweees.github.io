@@ -5,6 +5,7 @@
 #header .social-links {
   margin-top: 40px;
   display: flex;
+  flex-wrap: wrap;
 }
 
 #header .social-links a {
@@ -15,24 +16,25 @@
 }
 
 #header .social-links .icon-button i {
-  border-radius: 2.6rem;
   cursor: pointer;
   display: inline-block;
-  font-size: 1.3rem;
-  height: 2.6rem;
-  line-height: 2.6rem;
-  margin: 0 1px;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  height: 3rem;
+  line-height: 3rem;
+  width: 3rem;
+  margin: 0;
   position: relative;
   text-align: center;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  width: 2.6rem;
-  margin-bottom: 10px;
   transition: 0.2s ease-in;
   color: white;
-  border: 2px solid #D8C787;
+  border: 3px solid #D8C787;
+  border-radius: 50%;
 }
 
 @media (max-width: 992px) {
