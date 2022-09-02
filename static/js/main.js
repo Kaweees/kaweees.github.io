@@ -41,15 +41,6 @@ function ready() {
   })
 }
 
-window.addEventListener('scroll', () => {
-  if (window.innerWidth <= 820) {
-    // For smaller screen, show shadow earlier
-    toggleHeaderShadow(50);
-  } else {
-    toggleHeaderShadow(100);
-  }
-});
-
 function fixTocItemsIndent() {
   document.querySelectorAll('#TableOfContents a').forEach($tocItem => {
     const itemId = $tocItem.getAttribute("href").substring(1)
@@ -82,18 +73,6 @@ function createScrollSpy() {
       }
     });
   });
-}
-
-function toggleHeaderShadow(scrollY) {
-  if (window.scrollY > scrollY) {
-    document.querySelectorAll('.header').forEach(function(item) {
-      item.classList.add('header-shadow')
-    })
-  } else {
-    document.querySelectorAll('.header').forEach(function(item) {
-      item.classList.remove('header-shadow')
-    })
-  }
 }
 
 function setThemeByUserPref() {

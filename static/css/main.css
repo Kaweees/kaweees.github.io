@@ -153,10 +153,6 @@ img {
   visibility: hidden;
 }
 
-.header-shadow {
-  box-shadow: rgb(220, 220, 220) 0px 1px 5px;
-}
-
 /* TAGS */
 .post-tags {
   list-style-type: none;
@@ -250,67 +246,6 @@ table th {
 
 table td {
   border-bottom: 1px solid var(--light-secondary-color);
-}
-
-/* HOME PAGE */
-.home-about, .home-content {
-  text-align: center;
-}
-
-.home-about .avatar img {
-  border-radius: 50%;
-  height: auto;
-  object-fit: cover;
-}
-
-/* Avatar sizes (default is M) - XS, S, M, L, XL */
-.home-about .avatar img.size-xs {
-  height: 7rem;
-  width: 7rem;
-}
-
-.home-about .avatar img.size-s {
-  height: 9rem;
-  width: 9rem;
-}
-
-.home-about .avatar img.size-m {
-  height: 11rem;
-  width: 11rem;
-}
-
-.home-about .avatar img.size-l {
-  height: 13rem;
-  width: 13rem;
-}
-
-.home-about .avatar img.size-xl {
-  height: 15rem;
-  width: 15rem;
-}
-
-.social-icons {
-  text-align: center;
-}
-
-.social-icons .social-icons-list {
-  display: inline-block;
-  list-style-type: none;
-  padding: 0;
-  text-align: center;
-}
-
-.social-icons-list .social-icon {
-  box-sizing: border-box;
-  display: inline-block;
-  fill: var(--light-text-color);
-  height: 24px;
-  margin: 0 6px;
-  width: 24px;
-}
-
-.social-icon a svg path {
-  transition: fill 0.15s ease;
 }
 
 .home-posts {
