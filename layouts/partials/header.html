@@ -1,3 +1,4 @@
+{{ if not .IsHome }}
 <div class="overlay">
   <div class="overlayDoor"></div>
   <div class="overlayContent">
@@ -11,6 +12,7 @@
     </div>
   </div>
 </div>
+{{ end }}
 {{ if .IsHome }}
 <header id="header" class="header">
 {{ else }}

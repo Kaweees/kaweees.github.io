@@ -43,6 +43,11 @@
   <link disabled id="dark-theme" rel="stylesheet" href="{{ .Site.BaseURL }}css/dark.css">
   <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/normalize.min.css" media="print" onload="this.media='all'">
 
+  {{ if .IsHome }}
+  <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/rotate.css">
+  <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/index.css">
+  {{ end }}
+  
   <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
   <!-- Typed.js -  JavaScript Typing Animation Library -->
