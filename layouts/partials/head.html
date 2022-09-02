@@ -36,10 +36,12 @@
   <!-- SEO canonicals: helps Google understand your site better when using marketing campaign tagging etc -->
   <link rel="canonical" href="{{ .Permalink }}" />
 
-  <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/normalize.min.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/loader.css">
+  <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/load-spinner.css">
   <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/main.css">
   <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/navbar.css">
   <link disabled id="dark-theme" rel="stylesheet" href="{{ .Site.BaseURL }}css/dark.css">
+  <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/normalize.min.css" media="print" onload="this.media='all'">
 
   <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>

@@ -5,14 +5,12 @@
     <p class="post-date">
       {{ dateFormat "January 2, 2006" .Date }}
     </p>
-
     <ul class="post-tags">
     {{ range .Params.tags }}
       <li class="post-tag"><a href="{{ "/tags/" | absLangURL }}{{ . | urlize }}">{{ . }}</a></li>
     {{ end }}
     </ul>
   </div>
-
   <div class="post-content">
     <p>
       {{ .Content }}
