@@ -1,0 +1,38 @@
+{{ define "main" }}
+
+<div class="overlay">
+  <div class="overlayDoor"></div>
+  <div class="overlayContent">
+    <div class="loader">
+      <span id="loading1">
+        <span id="outerCircle"></span>
+        <span id="innerCircle"></span>
+        <span id="center"></span>
+      </span>
+      <p class="loading-text">Loading...</p>
+    </div>
+  </div>
+</div>
+
+<div class="home" style="position: absolute;">
+  <div class="intro">
+    <div class="profileImage">
+      <img class="introImage" src="logo.png" alt="profile">
+      <div class="ringCircle innerCircle">
+        <a class="icon-button planetCircle" rel="noopener noreferrer"><i class="devicon-python-plain colored"></i><span></span></a>
+        <a class="icon-button planetCircle" rel="noopener noreferrer"><i class="devicon-javascript-plain colored"></i><span></span></a>
+      </div>
+      <div class="ringCircle outerCircle">
+        <a class="icon-button planetCircle" rel="noopener noreferrer"><i class="devicon-typescript-plain colored"></i><span></span></a>
+        <a class="icon-button planetCircle" rel="noopener noreferrer"><i class="devicon-jupyter-plain colored"></i><span></span></a>
+        <a class="icon-button planetCircle" rel="noopener noreferrer"><i class="devicon-arduino-plain colored"></i><span></span></a>
+        <a class="icon-button planetCircle" rel="noopener noreferrer"><i class="devicon-nodejs-plain colored"></i><span></span></a>
+        <a class="icon-button planetCircle" rel="noopener noreferrer"><i class="devicon-cplusplus-plain colored"></i><span></span></a>
+        <a class="icon-button planetCircle" rel="noopener noreferrer"><i class="devicon-lua-plain colored"></i><span></span></a>
+      </div>  
+    </div>
+  </div>
+</div>
+<!-- ======= Header ======= -->
+{{- partial "header.html" . -}}
+{{ end }}

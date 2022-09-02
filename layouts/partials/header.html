@@ -1,0 +1,55 @@
+{{ if not .IsHome }}
+<div class="overlay">
+  <div class="overlayDoor"></div>
+  <div class="overlayContent">
+    <div class="loader">
+      <span id="loading1">
+        <span id="outerCircle"></span>
+        <span id="innerCircle"></span>
+        <span id="center"></span>
+      </span>
+      <p class="loading-text">Loading...</p>
+    </div>
+  </div>
+</div>
+{{ end }}
+{{ if .IsHome }}
+<header id="header" class="header">
+{{ else }}
+<header id="header" class="header-top">
+{{ end }}
+  <div class="container">
+    <h1><a href="{{ .Site.BaseURL }}" class="typewriter"></a></h1>
+    {{ if .IsHome }}
+    <h2>I'm a curious <span>programmer</span> from Los Angeles</h2>
+    {{ end }}
+    <nav id="navbar" class="navbar">
+      <ul>
+        {{ range .Site.Menus.main }}
+        <li>
+          <a class="nav-link" href="{{ .URL | absURL }}">
+            {{- .Pre | safeHTML }} {{ .Name }} {{ .Post | safeHTML -}}
+          </a>
+        </li>
+        {{ end }}
+        <li>
+          <div class="nav-link dark-theme-toggle">
+            <a style="padding: 0 !important;">
+              <span id="theme-toggle-icon" data-feather="moon" style="width: 26px !important; height: 26px !important;"></span>
+            </a>
+          </div>
+        </li>
+      </ul>
+      <span id="hamburger-menu-toggle" data-feather="menu"></span>
+    </nav><!-- .navbar -->
+    {{ if .IsHome }}
+    <div class="social-links">
+      <a href="https://github.com/kaweees/" class="icon-button github" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i><span></span></a>
+      <a href="https://www.linkedin.com/in/miguel-vf/" class="icon-button twitter" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i><span></span></a>
+      <a href="mailto:miguelvillafloran@gmail.com" class="icon-button envelope" target="_blank" rel="noopener noreferrer"><i class="far fa-envelope"></i><span></span></a>
+      <a href="https://www.instagram.com/kaweees/" class="icon-button instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i><span></span></a>
+      <a href="https://discord.com/users/489505423968436224/" class="icon-button discord" target="_blank" rel="noopener noreferrer"><i class="fab fa-discord"></i><span></span></a>
+    </div>
+    {{ end }}
+  </div>
+</header><!-- End Header -->

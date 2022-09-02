@@ -1,0 +1,38 @@
+baseURL = "https://miguelvf.dev/"
+defaultContentLanguage = "en"
+languageCode = "en"
+
+title = "My New Hugo Site"
+
+# theme = "gokarna"
+
+# Automatically generate robots.txt
+enableRobotsTXT = true
+
+# Choose one of emacs, trac or perldoc
+pygmentsStyle = "native"
+
+[menu]
+  [[menu.main]]
+    # Unique identifier for a menu item
+    identifier = "posts"
+
+    url = "/posts/"
+    
+    # You can add extra information before the name (HTML format is supported), such as icons
+    pre = ""
+
+    # You can add extra information after the name (HTML format is supported), such as icons
+    post = ""
+
+    # Display name
+    name = "Posts"
+
+    # Weights are used to determine the ordering
+    weight = 1
+
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 2
