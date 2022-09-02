@@ -6,10 +6,14 @@
       // Immediately set theme on page load
       setThemeByUserPref();
     </script>
+    {{if not .IsHome}}
     {{- partial "header.html" . -}}
     <main id="content">
       {{- block "main" . }}{{- end }}
     </main>
     {{- partial "footer.html" . -}}
+    {{ else }}
+    {{- block "main" . }}{{- end }}
+    {{ end }}
   </body>
 </html>
