@@ -11,6 +11,7 @@
   {{ $siteKeywords := .Site.Params.MetaKeywords | default (slice) }}
   {{ $postKeywords := .Params.tags | default (slice) }}
   {{ $keywords := union $siteKeywords $postKeywords }}
+  {{ $themeColor := .Site.Params.themeColor }}
 
   <!-- SEO titles & descriptions -->
   <title>{{ $title }}</title>
