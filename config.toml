@@ -2,7 +2,7 @@ baseURL = "https://miguelvf.dev/"
 defaultContentLanguage = "en"
 languageCode = "en"
 
-title = "My New Hugo Site"
+title = "Miguel Villa Floran"
 
 # theme = "gokarna"
 
@@ -11,6 +11,22 @@ enableRobotsTXT = true
 
 # Choose one of emacs, trac or perldoc
 pygmentsStyle = "native"
+
+[params]
+  # Description to display on homepage
+  description = "Curious, Creative, and Clever. A programmer, robotics enthusiast, and continuous learner.""
+
+  # URL for the avatar on homepage
+  avatarURL = "logo.png"
+
+  # You can use this to inject any HTML in the <head> tag.
+  # Ideal usecase for this is to import custom js/css or add your analytics snippet
+  customHeadHTML = ""
+
+  themeColor = "#D8C787"
+
+  # Keywords relevant for SEO
+  metaKeywords = ["miguel villa floran", "miguel vf", "miguel villa", "kaweees", "kiwis", "blog", "robotics"]
 
 [menu]
   [[menu.main]]
