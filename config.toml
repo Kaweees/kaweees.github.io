@@ -14,7 +14,7 @@ pygmentsStyle = "native"
 
 [params]
   # Description to display on homepage
-  description = "Curious, Creative, and Clever. A programmer, robotics enthusiast, and continuous learner.""
+  description = "Curious, Creative, and Clever. A programmer, robotics enthusiast, and continuous learner."
 
   # URL for the avatar on homepage
   avatarURL = "logo.png"
