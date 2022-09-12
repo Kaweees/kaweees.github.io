@@ -95,9 +95,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-decoration: none !important;
 }
 
-#header .social-links .icon-button i {
+#header .social-links .icon-button i, #header .social-links .icon-button img  {
   cursor: pointer;
   display: inline-block;
   justify-content: center;
