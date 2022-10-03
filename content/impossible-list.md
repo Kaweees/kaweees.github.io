@@ -1,7 +1,7 @@
 ---
 title: "My Impossible List"
 type: page
-description: "Sample article showcasing basic Markdown syntax and formatting for HTML elements."
+description: "My attempt to live forever or die trying, by doing what I want to do with my life. Do the things I want to do, see the places I want to see, meet the people I want to meet, and live the life I want to live."
 ---
 
 This page was last edited on **September 11, 2022**
