@@ -52,3 +52,9 @@ pygmentsStyle = "native"
     name = "Tags"
     url = "/tags/"
     weight = 2
+
+[markup]
+  [markup.tableOfContents]
+    startLevel = 1
+    endLevel = 4
+    ordered = false
