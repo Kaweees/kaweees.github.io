@@ -26,7 +26,7 @@ $$
 
 There two types of off-by-one errors: undershooting and overshooting. Undershooting occurs when the loop iterates one less time than intended, while overshooting occurs when the loop iterates one more time than intended. Let's look at an example of each case, where $n$ represents the amount of times we intend to loop and $i$ represents the current iteration:
 
-```python
+```c++
 # Case Study A
 for (int i = 1; i < n; i++) {
   /* Body of the loop */
@@ -41,7 +41,7 @@ This is because, at that point where $i$ becomes $10$, the conditional statement
 * If you build a straight fence 30 feet long with posts spaced 3 feet apart, how many posts do you need?
   * (The common answer is one less than the correct answer)
 
-```python
+```c++
 # Case Study B
 for (int i = 0; i <= n; i++) {
   /* Body of the loop */
@@ -58,7 +58,7 @@ This is because, at that point where $i$ becomes $10$, the conditional statement
 
 Note that a for loop is simply a special case of a while loop where the number of iterations to be done is already known, whereas a while loop has an indefinite number of iterations. This means that an off-by-one error can occur in while loops, although it is less common, as while loop definitions are based around the output of logical expressions, whereas for loop definitions are based around the repetition of an iterable object. One of the correct ways to write the loop is:
 
-```python
+```c++
 for (int i = 0; i < n; i++) {
   /* Body of the loop */
 }
