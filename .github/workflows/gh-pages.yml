@@ -3,8 +3,10 @@ name: Deploy to GitHub Pages
 on:
   # run on every push on the master/main branch
   push:
+    # Set a branch to deploy
     branches:
-      - main  # Set a branch to deploy
+      - master
+      - main
   pull_request:
 # The sequence of runs in this workflow:
 jobs:
@@ -25,7 +27,7 @@ jobs:
       - name: Build
         run: hugo --minify
       - name: Deploy to gh-pages
-        uses: crazy-max/ghaction-github-pages@v3.1.0
+        uses: crazy-max/ghaction-github-pages@v3
         if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main'
         with:
         # the output branch mentioned above
