@@ -1,32 +1,35 @@
-name: github pages
+name: Deploy to GitHub Pages
 
 on:
+  # run on every push on the master/main branch
   push:
     branches:
       - main  # Set a branch to deploy
   pull_request:
-
+# The sequence of runs in this workflow:
 jobs:
+  # This workflow contains a single job called "generate"
   deploy:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v2
         with:
           submodules: true  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
-
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: 'latest'
           # extended: true
-
       - name: Build
         run: hugo --minify
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        if: github.ref == 'refs/heads/main'
+      - name: Deploy to gh-pages
+        uses: crazy-max/ghaction-github-pages@v3.1.0
+        if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main'
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+        # the output branch mentioned above
+          target_branch: gh-pages
+          build_dir: ./public
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
