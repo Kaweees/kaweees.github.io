@@ -1,5 +1,6 @@
 .loaded {
   overflow-y: auto;
+  display: none;
 }
 
 .overlay {
