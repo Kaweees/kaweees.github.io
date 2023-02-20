@@ -25,9 +25,6 @@
 .overlay .overlayDoor:after {
   right: 0;
 }
-.overlay.loaded {
-  display: none;
-}
 .overlay.loaded .overlayDoor:before {
   left: -50%;
 }
