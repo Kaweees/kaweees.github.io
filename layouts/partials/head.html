@@ -64,8 +64,11 @@
   <script src="{{ .Site.BaseURL }}js/main.js"></script>
 
   <!-- Custom JS -->
+  {{ if .IsHome }}
+  <script	src="{{ .Site.BaseURL }}js/load-site-home.js"></script>
+  {{ else }}
   <script	src="{{ .Site.BaseURL }}js/load-site.js"></script>
-
+  {{ end }}
   <!-- KaTeX -->
 
   {{ if eq .Type "post" }}
