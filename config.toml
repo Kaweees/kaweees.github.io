@@ -1,10 +1,9 @@
 baseURL = "https://miguelvf.dev/"
 defaultContentLanguage = "en"
 languageCode = "en"
-
 title = "Miguel Villa Floran"
-
 # theme = "gokarna"
+copyright = "Miguel Villa Floran"
 
 # Automatically generate robots.txt
 enableRobotsTXT = true
@@ -52,3 +51,8 @@ pygmentsStyle = "native"
     startLevel = 1
     endLevel = 4
     ordered = false
+
+[sitemap]
+  changefreq = 'hourly'
+  filename = 'sitemap.xml'
+  priority = 0.5
