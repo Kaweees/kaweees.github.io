@@ -1,0 +1,84 @@
+name: Publish Hugo Site
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update_hugo_npm_dependencies:
+    name: Update Hugo npm Dependencies
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    outputs:
+      commit_hash: ${{ steps.commit_changes.outputs.commit_hash }}
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Install Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+
+      - name: Install Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: "0.111.3"
+          extended: true
+
+      - name: Write composite package.json
+        run: hugo mod npm pack
+
+      - name: Install npm Packages
+        run: npm install
+
+      - name: Display Changes
+        run: git status
+
+      - name: Commit Changes
+        id: commit_changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Update Hugo npm Dependencies
+
+  publish:
+    name: Publish Hugo Site
+    needs: update_hugo_npm_dependencies
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
+          ref: ${{ needs.update_hugo_npm_dependencies.outputs.commit_hash }}
+
+      - name: Install Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+
+      - name: Install Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: "0.111.3"
+          extended: true
+
+      - name: Install npm Packages
+        run: npm ci
+
+      - name: Build Hugo
+        run: hugo --minify
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: hugo-theme-gruvbox
+          directory: ./public
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
