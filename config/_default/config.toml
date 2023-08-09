@@ -39,7 +39,9 @@ enableInlineShortcodes = true
       "javascript",
       "bash",
       "diff",
-      "toml"
+      "toml",
+      "python",
+      "c",
     ]
     plugins = [
       "normalize-whitespace",

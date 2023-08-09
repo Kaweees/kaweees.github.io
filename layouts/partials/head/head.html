@@ -15,6 +15,10 @@
 
   {{ partial "head/favicons.html" . }}
 
+  {{ if or .Page.Params.math .Site.Params.math }}
+    {{ partial "math.html" . }}
+  {{ end }}
+
 
   <!-- Extensibility -->
   {{ partial "head/head_end.html" . }}

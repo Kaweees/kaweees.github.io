@@ -9,7 +9,7 @@ date: 2022-09-15
 # cover:
 #   src: cover.jpg
 draft: false
-math: true
+math: false
 comments: true
 socialShare: true
 tags:
