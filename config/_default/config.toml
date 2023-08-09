@@ -1,8 +1,9 @@
 baseURL = "http://localhost"
-copyright = "Copyright © 2021"
 title = "hugo-theme-gruvbox"
 #paginate = 10
 enableRobotsTXT = true
+enableEmoji = true
+enableInlineShortcodes = true
 # Enable to calculate the last modified date from Git history and show it in the post header
 #enableGitInfo = true
 
@@ -67,54 +68,6 @@ enableRobotsTXT = true
   #   - {url} placeholder for post .Permalink
   #   - {title} placeholder for post .Title
   # See  https://github.com/bradvin/social-share-urls for more format strings
-  [[params.socialShare]]
-    iconSuite = "simple-icon"
-    iconName = "facebook"
-    formatString = "https://www.facebook.com/sharer.php?u={url}"
-  [[params.socialShare]]
-    iconSuite = "simple-icon"
-    iconName = "reddit"
-    formatString = "https://reddit.com/submit?url={url}&title={title}"
-  [[params.socialShare]]
-    iconSuite = "simple-icon"
-    iconName = "twitter"
-    formatString = "https://twitter.com/intent/tweet?url={url}&text={title}"
-  [[params.socialShare]]
-    iconSuite = "simple-icon"
-    iconName = "linkedin"
-    formatString = "https://www.linkedin.com/sharing/share-offsite/?url={url}"
-  [[params.socialShare]]
-    iconSuite = "simple-icon"
-    iconName = "whatsapp"
-    formatString = "whatsapp://send/?text={title}%20{url}"
-  [[params.socialShare]]
-    iconSuite = "simple-icon"
-    iconName = "tumblr"
-    formatString = "https://www.tumblr.com/widgets/share/tool?canonicalUrl={url}&title={title}&caption={title}"
-  [[params.socialShare]]
-    iconSuite = "simple-icon"
-    iconName = "pinterest"
-    formatString = "http://pinterest.com/pin/create/button/?url={url}"
-  [[params.socialShare]]
-    iconSuite = "simple-icon"
-    iconName = "ycombinator"
-    formatString = "https://news.ycombinator.com/submitlink?u={url}&t={title}"
-  [[params.socialShare]]
-    iconSuite = "simple-icon"
-    iconName = "vk"
-    formatString = "http://vk.com/share.php?url={url}&title={title}&comment={title}"
-  [[params.socialShare]]
-    iconSuite = "simple-icon"
-    iconName = "xing"
-    formatString = "https://www.xing.com/spi/shares/new?url={url}"
-  [[params.socialShare]]
-    iconSuite = "simple-icon"
-    iconName = "telegram"
-    formatString = "https://telegram.me/share/url?url={url}&text={title}"
-  [[params.socialShare]]
-    iconSuite = "tabler-icon"
-    iconName = "mail"
-    formatString = "mailto:?subject={title}&body={url}"
 
 [menu]
   [[menu.main]]

@@ -2,43 +2,29 @@
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
     "name": "Miguel Villa Floran",
-    "label": "Curious, Creative, and Clever. Aspiring Computer Engineer, Avid Learner, and Ardent Problem Solver.",
+    "label": "Computer Enginner in Training.",
     "image": "https://miguelvf.dev/miguel-vf.png",
-    "email": "richard.hendricks@piedpiper.com",
-    "summary": "Richard hails from Tulsa. He has earned degrees from the University of Oklahoma and Stanford. Before starting Pied Piper, he worked for Hooli as a part time software developer. While his work focuses on applied information theory, mostly optimizing lossless compression schema of both the length-limited and adaptive variants, his non-work interests range widely, everything from quantum computing to chaos theory.",
+    "email": "mavillaf@calpoly.edu",
+    "summary": "Curious, Creative, and Clever. Aspiring Programming Wizard, Avid Learner, and Ardent Problem Solver. 7 years of experience in the field of Computer Science, specifically in embedded linux, robotics and web development. I'm currently a Software Engineer @DeepWater Exploration, and pursuing a B.S. in Computer Engineering at Cal Poly.",
     "location": {
-      "city": "San Francisco"
+      "city": "San Luis Obispo, CA"
     },
     "profiles": [
       {
         "network": "GitHub",
-        "username": "hugo-theme-gruvbox",
-        "url": "https://github.com/schnerring/hugo-theme-gruvbox"
+        "url": "https://github.com/kaweees/"
       },
       {
-        "network": "GitHub",
-        "username": "hugo-mod-json-resume",
-        "url": "https://github.com/schnerring/hugo-mod-json-resume"
+        "network": "LinkedIn",
+        "url": "https://www.linkedin.com/in/miguel-vf/"
       },
       {
-        "network": "Twitter",
-        "url": "https://twitter.com/SiliconHBO"
+        "network": "RSS",
+        "url": "https://schnerring.net/index.xml"
       },
       {
-        "network": "fandom",
-        "url": "https://silicon-valley.fandom.com/wiki/Richard_Hendricks"
-      },
-      {
-        "network": "HBO",
-        "url": "https://www.hbo.com/silicon-valley"
-      },
-      {
-        "network": "IMDB",
-        "url": "https://www.imdb.com/title/tt2575988/"
-      },
-      {
-        "network": "Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/List_of_Silicon_Valley_characters#Richard_Hendricks"
+        "network": "Instagram",
+        "url": "https://instagram.com/kaweees/"
       }
     ]
   },

@@ -81,7 +81,7 @@
 }
 
 :root {
-  {{ $themeColor := .Param "themeColor" | default "blue" }}
+  {{ $themeColor := .Param "themeColor" | default "aqua" }}
   --primary: var(--{{ $themeColor }}1);
   --primary-alt: var(--{{ $themeColor }}2);
 }

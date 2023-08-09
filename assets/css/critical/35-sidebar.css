@@ -53,6 +53,10 @@ aside.toc {
   border: 2px solid var(--bg2);
 }
 
+.jr-basics__label {
+  margin: 0.75rem 0;
+}
+
 .jr-basics__summary {
   color: var(--fg3);
   font-family: var(--font-serif);
@@ -60,6 +64,7 @@ aside.toc {
 }
 
 .jr-basics__profile {
+  transition: 0.2s ease-in;
   & a:hover {
     color: var(--fg3);
 
