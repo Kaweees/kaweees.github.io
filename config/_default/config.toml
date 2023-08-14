@@ -36,12 +36,13 @@ enableInlineShortcodes = true
       "markup",
       "css",
       "clike",
+      "c",
+      "cpp",
       "javascript",
       "bash",
       "diff",
       "toml",
       "python",
-      "c",
     ]
     plugins = [
       "normalize-whitespace",

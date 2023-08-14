@@ -29,19 +29,22 @@ aliases:
 > man has ever embarked.<br> — <cite>John F. Kennedy[^1]</cite>
 
 [^1]:
-    The above quote is excerpted from former President John F. Kennedy's Address
-    at Rice University on the Nation's Space Effort, on September 12, 1962
+    The above quote is excerpted from former President John F. Kennedy's
+    [Address at Rice University on the Nation's Space Effort](https://en.wikipedia.org/wiki/We_choose_to_go_to_the_Moon),
+    on September 12, 1962
 
-This page was last edited on **August 9, 2023**
+This page was last edited on **August 14, 2023**
+
+The impossible list traces its origins to its creator,
+[Joel Runyon](https://impossiblehq.com/impossible-list/). It's essentially an
+aspirational catalog of personal challenges, goals, and experiences that push
+the boundaries of what an individual believes they can achieve.
 
 The impossible list is not a bucket list, but very is similar to one. The bucket
 list has this stigma attached to it which is that if the creator of it does not
 complete it, they have "failed" themselves. I would not like to self impose this
-pressure onto myself, but have a long-term roadmap for myself
-
-The impossible list traces its origins to its creator,
-[Joel Runyon](https://impossiblehq.com/impossible-list/). An impossible list is
-essentially
+pressure onto myself, but have a dynamic long-term roadmap for myself, that
+changes and evolves along with me.
 
 I will attempt to update this list regularly, in the case where I complete
 something or have something to add, with the later being most likely.
