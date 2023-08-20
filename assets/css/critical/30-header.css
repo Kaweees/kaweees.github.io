@@ -17,7 +17,7 @@ header {
   font-size: 30px !important;
 }
 
-.typed-cursor {
+.typed-cursor, .typed-cursor typed-cursor--blink {
   font-size: 30px !important;
 }
 
