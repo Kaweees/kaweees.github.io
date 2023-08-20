@@ -27,8 +27,8 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: 'latest'
-          # extended: true
+          hugo-version: '0.111.3'
+          extended: true
       - name: Write composite package.json
         run: hugo mod npm pack
       - name: Install npm Packages
