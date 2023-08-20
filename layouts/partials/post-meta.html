@@ -3,8 +3,22 @@
     <span>{{ .Format "2006-01-02" }}</span>
   {{- end -}}
   {{- with .page.Params.Author -}}
-    <span> by </span><span class="post-meta__author">{{ . }}</span>
+    <span> by </span>
+    <a class="post-meta__author" target="_blank" href="{{ .website }}"
+      >{{ .name }}</a
+    >
   {{- end -}}
+  {{ with .page.Params.authors }}
+    <span> by </span>
+    {{ $authorCount := len . }}
+    {{ range $index, $author := . }}
+      <a class="post-meta__author" target="_blank" href="{{ .website }}"
+        >{{ .name }}</a
+      >{{ if lt $index (sub $authorCount 2) }},{{ else if eq $index (sub $authorCount 2) }}{{ if eq $authorCount 2 }} and{{ else }}, and{{ end }}{{ end }}
+    {{ end }}
+  {{ end }}
+
+
   <!-- Don't show modified date when changed within the first 72 hours  -->
   {{- $hours := (.page.Lastmod.Sub .page.Date).Hours -}}
   {{- if and .page.Date .page.Lastmod (ge $hours 72) -}}

@@ -1,5 +1,7 @@
 ---
-author: Miguel Villa Floran
+author:
+  name: "Miguel Villa Floran"
+  website: "https://miguelvf.dev"
 title: "Off-By-One Errors and How to Avoid Them"
 description: How to never overshoot or undershoot for loops again.
 date: 2022-04-23

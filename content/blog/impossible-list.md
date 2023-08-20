@@ -1,5 +1,7 @@
 ---
-author: Miguel Villa Floran
+author:
+  name: "Miguel Villa Floran"
+  website: "https://miguelvf.dev"
 title: "My Impossible List"
 description:
   My attempt to live forever or die trying, by doing what I want to do with my
