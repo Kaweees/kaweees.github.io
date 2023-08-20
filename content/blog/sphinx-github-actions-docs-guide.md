@@ -1,5 +1,8 @@
 ---
-author: Miguel Villa Floran
+author:
+  name: "Miguel Villa Floran"
+  website: "https://example.com"
+
 title: "Documentation with Sphinx and GitHub Actions the Right Way"
 description:
   A brief guide to setting up Sphinx and GitHub Actions to automatically build
