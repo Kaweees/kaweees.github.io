@@ -1,35 +1,44 @@
-baseURL = "http://localhost"
-title = "hugo-theme-gruvbox"
+baseURL = "https://miguelvf.dev/"
+defaultContentLanguage = "en"
+languageCode = "en"
+title = "Miguel Villa Floran"
 #paginate = 10
 enableRobotsTXT = true
 enableEmoji = true
 enableInlineShortcodes = true
+pluralizeListTitles = false
 # Enable to calculate the last modified date from Git history and show it in the post header
 #enableGitInfo = true
 
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
-      # This setting allows inlining <script> and <style> tags in markdown, 
-      # which is useful and required to use Prism plugins, but may be dangerous 
-      # if the content isn't trustworthy.
+      # Allow inlining <script> and <style> tags in markdown, be wary of using with trustworthy content
       unsafe = true
 
 [imaging]
   # JPEG and WebP image processing quality, defaults to 75%
-  #quality = 75
+  quality = 75
 
 [params]
-  # dark or light, defaults to light. Local storage and OS preference override this param. For more details see: 
-  # https://github.com/schnerring/hugo-theme-gruvbox/issues/34#issuecomment-1235870375
-  #defaultTheme = "light"
-  # gray red green yellow blue purple aqua orange, defaults to blue
-  #themeColor = "blue"
-  # soft medium hard, defaults to medium
-  #themeContrast = "medium"
-  author = "Michael Schnerring"
-  subtitle = "Theme Demo"
-  description = "A retro-looking Hugo theme inspired by gruvbox. The pastel colors are high contrast, easily distinguishable, pleasing to the eye, and feature light and dark color palettes."
+  # Description to display on homepage
+  description = "Curious, Creative, and Clever. A programmer, robotics enthusiast, and continuous learner."
+  
+  # Theme color for browsers
+  themeColorSEO = "#D8C787"
+
+  # Keywords relevant for SEO
+  metaKeywords = ["miguel villa floran", "miguel vf", "miguel villa", "kaweees", "kiwis", "blog", "robotics"]
+
+  # Default theme, overriden by local storage and OS preferences
+  defaultTheme = "dark"
+
+  # Magnitude of the theme contrast, can be "light", "medium", or "dark"
+  themeContrast = "medium"
+
+  author = "Miguel Villa Floran"
+  
+  subtitle = "Home"
 
   [params.prism]
     languages = [
@@ -65,13 +74,6 @@ enableInlineShortcodes = true
     minFontSizeRem = 0.8
     maxFontSizeRem = 2.0
 
-  # Social share links for posts:
-  #   - iconSuite: "simple-icon" or "tabler-icon"
-  #   - iconName: name of the icon from the "iconSuite"
-  #   - {url} placeholder for post .Permalink
-  #   - {title} placeholder for post .Title
-  # See  https://github.com/bradvin/social-share-urls for more format strings
-
 [menu]
   [[menu.main]]
     identifier = "about"
@@ -95,8 +97,3 @@ enableInlineShortcodes = true
     weight = 10
     [languages.en.params.jsonResume]
       present = "present"
-  [languages.de]
-    languageName = "Deutsch"
-    weight = 20
-    [languages.de.params.jsonResume]
-      present = "heute"
