@@ -1,3 +1,5 @@
+/*! purgecss start ignore */
+
 header {
   display: grid;
   font-family: var(--font-monospace);
@@ -18,13 +20,14 @@ header {
   font-size: 30px !important;
 }
 
-.typed-cursor,
-.typed-cursor.typed-cursor--blink {
+header .typed-cursor {
   font-size: 30px !important;
   color: var(--title-secondary-color);
+  opacity: 1;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
 }
-
-/*! purgecss start ignore */
 
 .search {
   display: flex;
