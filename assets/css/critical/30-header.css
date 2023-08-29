@@ -7,18 +7,21 @@ header {
   padding: 0.75rem;
   padding-right: 30px;
   padding-left: 30px;
+  height: 51px;
 }
 
 .typewriter {
-  color: #fff;
+  color: var(--title-primary-color);
   display: flex;
   font-weight: 700;
   grid-area: heading;
   font-size: 30px !important;
 }
 
-.typed-cursor, .typed-cursor typed-cursor--blink {
+.typed-cursor,
+.typed-cursor.typed-cursor--blink {
   font-size: 30px !important;
+  color: var(--title-secondary-color);
 }
 
 /*! purgecss start ignore */

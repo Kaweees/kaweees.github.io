@@ -2,7 +2,7 @@ import Typed from "./typed.js";
 
 var options = {
   strings: [
-    '<span style="margin-right: 10px;">> Miguel </span><span style="color: #D8C787;">VF</span>',
+    '<span style="margin-right: 10px;">> Miguel </span><span style="color: var(--title-secondary-color);">VF</span>',
   ],
   typeSpeed: 75,
   backSpeed: 50,
