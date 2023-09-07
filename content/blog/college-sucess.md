@@ -59,20 +59,51 @@ The trick to studying is to studying smarter, not harder is doing it in such a w
 - The current assignments and material serve to build mastery which is a prerequisite for the subsequent material, whether it be in this course or in future courses. If you pass by holes in your knowledge without patching them, material that uses it as a foundation will become exponentially harder to understand.
 - If you really understand what you're learning, you will dramatically increase the chances that you will find it interesting. A lot of the things taught in college classes are actually interesting, and if you take the time to actually understand its intricacies, you're going to be able to discovery its beauty within and your college experience will become more fun.
 
-## Learn to Read a Syllabus
+## Read a Syllabus the Right Way
 
+- Take note of the office hours. List them on your calendar, and **_go to them_**
+- Don't waste your professor's time asking about the course logistics, it can be found here.
+- Skip the Student Learning Outcomes, they're bureaucratic requirements not helpful to the student.
+- Form a strategy of how to approach studying for the class based on the described attendance, cheating/plagiarism, and grading policy.
+- Write all of the due dates on your calendar. The due date for reading in your calendar should be a day earlier than the date on the syllabus.
 
 ## Maintain a Calendar
 
+- Human beings need a place (that they know they will check regularly) where they write their thoughts down so they can reduce their cognitive load from remembering the details to remembering where the details are written down. A calendar serves this purpose specifically for commitments and deadlines, and this ensures we remain sane and not overloaded with stress by offloading the memory of these things to a calendar.
+- Make sure you routinely update and check your calendar. If you don't, you're going to forget about things and miss deadlines, which will cause you to stress out and feel bad about yourself.
+- If you think you're just going to just remember eveything you need to do, than either one of two things is the case:
+  1. You don't have that much to do, and thus you have no responsibilities.
+  2. You're going to forget things, and fail at life. You'll be the person who forgets to pay their bills, misses appointments and meetings with friends, and forgets to do their homework. Don't be that person.
 
 ## Defeat Procrastination
 
+- Procrastionaion is not a time management problem, it is an emotion management problem. When you procrastinate, it's not that you don't know how to allocate your time or how you should be spending your time, it's that the task at hand is associated with an unpleasant emotion, and thus you are avoiding doing it. Thus, you need to create a situation where can complete the task regarless of the emotions assocatiated with it and whether you have the immediate desire to do so.
+
+Here's three methods to combat procrastionaion:
+  1. Rewards
+    - Break down the task into smaller tasks, and set up rewards along the way after completing each task. This will help you associate the task with the reward, and thus you will be more motivated to do the task.
+  2. Temptation Removal
+    - If you have a task with a negative emotion associated with it and there's a tempting alternative nearby, then you're essentially forcing yourself to choose between a negative emotion and a positive emotion. For example, if you have a paper do, which instils fear in you, and you have a video game console nearby, which instils joy, then you're forcing yourself to choose between fear and joy. You're going to choose joy, and thus you're going to procrastinate. 
+    - Remove the temptations that distract you from doing the task. Set up a website blocker on your computer to block distracting websites. Do work in a barren room free of distractions, and leave your phone in another room. Set yourself up for succes by removing the temptations that distract you from doing the task.
+  3. (Most Potent) Motivation Harvesting
+    - You already are motivated to impress people. Thus, you should set up a scenario where in order to impress others, you have to do what you need to get done. Here's how to use that to your advantage:
+      - Work Accountability Group - Find a group of people to work in the presense of independently. Set up a time to work together. Declare what you're going to work on, and then work on it. After an hour, take a break and check in with each other and state what you accomplished. This will help you stay on task, as you don't want to be the person who is not working while everyone else is.
+      - Public Accountability - Find a common place with a lot of foot traffic, like a library or study hall. Hook up your laptop to a projector oriented in such a way passerbys can see what's on your screen and thus what you're doing. Work on your task. The fact that people can see what you're doing will prevent you from doing anything that you don't want people to see.
+
 ## Learn to Read for College Classes
+
+-
 
 ## Learn to Retain what you Read
 
+-
+
 ## How to Memorize
 
+-
+
 ## How to Take Notes
+
+-
 
 With all of that being said, your success in college will depend on your determination and consistency. It's that simple. It will take a lot of hard work, dedication, and the ability to walk away from unnecessary temptations, but it will be worth it in the end.
