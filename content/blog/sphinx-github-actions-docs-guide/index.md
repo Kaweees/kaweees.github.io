@@ -11,29 +11,17 @@ date: 2023-08-09
 # cover:
 #   src: cover.jpg
 draft: false
-math: true
-comments: true
-socialShare: true
 tags:
-  - Sphinx
   - Documentation
   - GitHub Actions
   - GitHub Pages
+  - Sphinx
 aliases:
-  - /posts/sphinx-github-actions-docs-guide
+  - /posts/sphinx-github-actions/
+cover:
+  src: ./code-comment.png
+  caption: A cautinary tale of the dangers of an undocumented codebase by [Jens Roland](http://jensroland.com/)
 ---
-
-> // <br> // Dear maintainer:<br> // <br> // Once you are done trying to
-> 'optimize' this routine, <br> // and have realized what a terrible mistake
-> that was, <br> // please increment the following counter as a warning <br> //
-> to the next guy: <br> // <br> // total_hours_wasted_here = 42 <br> // <br> —
-> <cite>Jens Roland [^1]</cite>
-
-[^1]:
-    The above quote is excerpted from a post by
-    [Jens Roland](http://jensroland.com/) on
-    [a Stack Overflow thread](https://stackoverflow.com/questions/184618/what-is-the-best-comment-in-source-code-you-have-ever-encountered),
-    on Nov 19, 2011
 
 One of the things I value the most when it comes to when it comes to writing
 software I publish is its maintainability, from the obscure and simple bash
