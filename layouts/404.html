@@ -3,11 +3,14 @@
     <h1 class="error-emoji">{{ .Title | markdownify }}</h1>
     <div class="post-content">
       <p>This is not the page you're looking for <(-_-)> .</p>
+      <p class="error-quote"></p>
     </div>
   </article>
   <script>
     const errorEmojiContainer =
       document.getElementsByClassName("error-emoji")[0];
+    const errorQuoteContainer =
+      document.getElementsByClassName("error-quote")[0];
     const emojiArray = [
       "\\(o_o)/",
       "(o^^)o",
@@ -21,10 +24,19 @@
       "(;-;)",
       "\\(^Д^)/",
     ];
+    const quoteArray = [
+      "“Man is still the most extraordinary computer of all.” ― JFK",
+      "“Nothing great in the world was accomplished without passion.” ― Georg Wilhelm Friedrich Hegel",
+      "“The struggle itself towards the heights is enough to fill a man's heart. One must imagine Sisyphus happy.” ― Albert Camus, The Myth of Sisyphus",
+    ];
     const errorEmoji =
       emojiArray[Math.floor(Math.random() * emojiArray.length)];
+    const errorQuote =
+      quoteArray[Math.floor(Math.random() * quoteArray.length)];
     const spaceTextNode = document.createTextNode(" ");
     errorEmojiContainer.appendChild(spaceTextNode);
     errorEmojiContainer.appendChild(document.createTextNode(errorEmoji));
+    errorQuoteContainer.appendChild(spaceTextNode);
+    errorQuoteContainer.appendChild(document.createTextNode(errorQuote));
   </script>
 {{ end }}
