@@ -50,6 +50,9 @@ pluralizeListTitles = false
       "javascript",
       "bash",
       "diff",
+      "yaml",
+      "bash",
+      "makefile",
       "toml",
       "python",
     ]
