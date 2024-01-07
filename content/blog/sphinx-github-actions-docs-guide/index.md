@@ -1,7 +1,7 @@
 ---
 author:
   name: "Miguel Villa Floran"
-  website: "https://example.com"
+  website: "https://miguelvf.dev"
 
 title: "Documentation with Sphinx and GitHub Actions the Right Way"
 description:
@@ -18,11 +18,11 @@ tags:
   - Sphinx
 aliases:
   - /posts/sphinx-github-actions/
-cover:
-  src: ./code-comment.png
-  caption:
-    A cautinary tale of the dangers of an undocumented codebase by [Jens
-    Roland](http://jensroland.com/)
+# cover:
+#   src: ./code-comment.png
+#   caption:
+#     A cautinary tale of the dangers of an undocumented codebase by [Jens
+#     Roland](http://jensroland.com/)
 ---
 
 One of the things I value the most when it comes to when it comes to writing

@@ -1,7 +1,7 @@
 ---
 author:
   name: "Miguel Villa Floran"
-  website: "https://example.com"
+  website: "https://miguelvf.dev"
 
 title: "Writing a Production-grade C99 Makefile"
 description:
