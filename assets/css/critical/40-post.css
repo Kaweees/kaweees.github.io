@@ -39,7 +39,8 @@
   }
 
   & a:hover {
-    color: var(--primary);
+    color: transparent var(--bg2);
+    background-color: var(--primary);
   }
 }
 

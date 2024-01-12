@@ -19,7 +19,7 @@ aliases:
   - /posts/uses/
 ---
 
-> Getting closer to how your environment actualy works will only expland your
+> Getting closer to how your environment actualy works will only expand your
 > mind <br> — <cite>Michael B. Paulson, otherwise known as
 > [ThePrimeagen](https://www.youtube.com/@ThePrimeagen)</cite>
 
