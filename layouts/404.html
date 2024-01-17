@@ -35,10 +35,7 @@
       emojiArray[Math.floor(Math.random() * emojiArray.length)];
     const errorQuote =
       quoteArray[Math.floor(Math.random() * quoteArray.length)];
-    const spaceTextNode = document.createTextNode(" ");
-    errorEmojiContainer.appendChild(spaceTextNode);
-    errorEmojiContainer.appendChild(document.createTextNode(errorEmoji));
-    errorQuoteContainer.appendChild(spaceTextNode);
+    errorEmojiContainer.appendChild(document.createTextNode(" " + errorEmoji));
     errorQuoteContainer.appendChild(document.createTextNode(errorQuote));
   </script>
 {{ end }}
