@@ -59,6 +59,18 @@ steps:
    hugo server -D
    ```
 
+To update the projects modules, run the following commands:
+
+```sh
+# Update the Hugo modules
+hugo mod get -u
+hugo mod tidy
+
+# Update the NPM dependencies
+hugo mod npm pack
+npm install
+```
+
 ## License
 
 The source code for my website is distributed under the terms of the GNU General Public License v3.0, as I firmly believe that collaborating on free and open-source software fosters innovations that mutually and equitably beneficial to both collaborators and users alike. See [`LICENSE`](./LICENSE) for details and more information.
