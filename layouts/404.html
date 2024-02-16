@@ -1,8 +1,45 @@
 {{ define "main" }}
   <article class="post">
-    <h1>{{ .Title | markdownify }}</h1>
+    <h1 class="error-emoji">{{ .Title | markdownify }}</h1>
     <div class="post-content">
-      <p>This is not the page you're looking for.</p>
+      <p>This is not the page you're looking for <(-_-)> .</p>
+      <p class="error-quote"></p>
     </div>
   </article>
+  <script>
+    const errorEmojiContainer =
+      document.getElementsByClassName("error-emoji")[0];
+    const errorQuoteContainer =
+      document.getElementsByClassName("error-quote")[0];
+    const emojiArray = [
+      "\\(o_o)/",
+      "(o^^)o",
+      "(˚Δ˚)b",
+      "(^-^*)",
+      "(≥o≤)",
+      "(^_^)b",
+      "(·_·)",
+      "(='X'=)",
+      "(>_<)",
+      "(;-;)",
+      "\\(^Д^)/",
+    ];
+    const quoteArray = [
+      "“What I cannot create, I do not understand.” ― Richard Feynman",
+      "“However much you deny the truth, the truth goes on existing” ― George Orwell",
+      "“Man is still the most extraordinary computer of all.” ― JFK",
+      "“Nothing great in the world was accomplished without passion.” ― Georg Wilhelm Friedrich Hegel",
+      "“The struggle itself towards the heights is enough to fill a man's heart. One must imagine Sisyphus happy.” ― Albert Camus, The Myth of Sisyphus",
+      "“In 20 years you're going to look back and realize that the most lucrative decision you ever made was investing in yourself.” ― ColorStack",
+      "“We who cut mere stones must always be envisioning cathedrals.” - the Quarry Worker's Creed",
+      "“Science is not only a disciple of reason but, also, one of romance and passion.” ― Stephen Hawking",
+      "“Man cannot remake himself without suffering, for he is both the marble and the sculptor.” ― Alexis Carrel",
+    ];
+    const errorEmoji =
+      emojiArray[Math.floor(Math.random() * emojiArray.length)];
+    const errorQuote =
+      quoteArray[Math.floor(Math.random() * quoteArray.length)];
+    errorEmojiContainer.appendChild(document.createTextNode(" " + errorEmoji));
+    errorQuoteContainer.appendChild(document.createTextNode(errorQuote));
+  </script>
 {{ end }}
