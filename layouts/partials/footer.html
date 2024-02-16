@@ -1,7 +1,8 @@
 <footer class="footer">
   <div class="copyright">
     <span>
-      Made with <span class="emojify" style="font-size: 0.8rem !important;">❤️</span> by
+      Made with
+      <span class="emojify" style="font-size: 0.8rem !important;">❤️</span> by
       <strong
         ><a target="_blank" href="https://github.com/kaweees/"
           >Miguel Villa Floran</a
@@ -35,6 +36,3 @@
 <script src="{{ $typed.RelPermalink }}" {{ if hugo.IsProduction }}integrity="{{ $typed.Data.Integrity }}"{{ end }}></script>
 <script src="{{ $loadSite.RelPermalink }}" {{ if hugo.IsProduction }}integrity="{{ $loadSite.Data.Integrity }}"{{ end }}></script>
 {{/* prettier-ignore-end */}}
-
-<!-- Extensibility -->
-{{ partial "footer_end.html" . }}

@@ -1,0 +1,28 @@
+.job-place {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border: 0 dashed;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  align-items: center;
+  width: 100%;
+}
+
+.job-place a {
+  display: flex;
+  flex-direction: row;
+}
+.job-place a .job-stat {
+  align-items: center;
+  display: flex;
+  font-size: 0.9rem;
+}
+
+.job-place a .job-stat:nth-child(2) {
+  font-weight: 800;
+  font-size: 1.125rem;
+}
+
+.job-place a .job-stat:last-child {
+  margin-left: auto !important;
+}

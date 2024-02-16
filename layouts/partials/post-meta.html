@@ -14,7 +14,11 @@
     {{ range $index, $author := . }}
       <a class="post-meta__author" target="_blank" href="{{ .website }}"
         >{{ .name }}</a
-      >{{ if lt $index (sub $authorCount 2) }},{{ else if eq $index (sub $authorCount 2) }}{{ if eq $authorCount 2 }} and{{ else }}, and{{ end }}{{ end }}
+      >{{ if lt $index (sub $authorCount 2) }}
+        ,
+      {{ else if eq $index (sub $authorCount 2) }}
+        {{ if eq $authorCount 2 }}and{{ else }}, and{{ end }}
+      {{ end }}
     {{ end }}
   {{ end }}
 

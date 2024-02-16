@@ -18,7 +18,7 @@
     </div>
     <ul class="list">
       {{ range $project := .languages }}
-        <li>{{ $project }}</li>
+        <li class="language {{ $project }}">{{ $project }}</li>
       {{ end }}
     </ul>
     <div class="project-links">

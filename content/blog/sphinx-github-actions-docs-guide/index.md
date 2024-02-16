@@ -2,14 +2,11 @@
 author:
   name: "Miguel Villa Floran"
   website: "https://miguelvf.dev"
-
 title: "Documentation with Sphinx and GitHub Actions the Right Way"
 description:
   A brief guide to setting up Sphinx and GitHub Actions to automatically build
   and deploy your code documentation to GitHub Pages.
 date: 2023-08-09
-# cover:
-#   src: cover.jpg
 draft: false
 tags:
   - Documentation
@@ -18,11 +15,6 @@ tags:
   - Sphinx
 aliases:
   - /posts/sphinx-github-actions/
-# cover:
-#   src: ./code-comment.png
-#   caption:
-#     A cautinary tale of the dangers of an undocumented codebase by [Jens
-#     Roland](http://jensroland.com/)
 ---
 
 One of the things I value the most when it comes to when it comes to writing

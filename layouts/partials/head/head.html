@@ -4,8 +4,6 @@
 
 
   <!-- Extensibility -->
-  {{ partial "head/head_start.html" . }}
-
   {{ partial "head/stylesheets.html" . }}
 
   {{ partial "head/dark-mode.html" . }}
@@ -15,8 +13,4 @@
   {{ if or .Page.Params.math .Site.Params.math }}
     {{ partial "math.html" . }}
   {{ end }}
-
-
-  <!-- Extensibility -->
-  {{ partial "head/head_end.html" . }}
 </head>

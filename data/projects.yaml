@@ -7,5 +7,5 @@
   image: "https://th.bing.com/th/id/OIP.enHnJ33r9erP04V1MdL9iwHaE7?rs=1&pid=ImgDetMain"
   languages:
     - Rust
+    - Docker
     - WebAssembly
-    - GitHub Actions

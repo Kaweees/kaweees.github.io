@@ -14,4 +14,5 @@ var options = {
 
 window.addEventListener("load", function () {
   var typed = new Typed(".typewriter", options);
+  console.log("Site loaded");
 });
