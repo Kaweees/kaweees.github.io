@@ -19,6 +19,7 @@
 }
 
 .post-meta__author {
+  color: var(--fg) !important;
   font-weight: 700;
 }
 
@@ -38,7 +39,8 @@
   }
 
   & a:hover {
-    color: var(--primary);
+    color: transparent var(--bg2);
+    background-color: var(--primary);
   }
 }
 

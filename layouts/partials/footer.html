@@ -1,8 +1,16 @@
-<footer>
+<footer class="footer">
   <div class="copyright">
-    {{ with $.Site.Copyright }}
-      {{ . | safeHTML }}
-    {{ end }}
+    <span>
+      Made with
+      <span class="emojify" style="font-size: 0.8rem !important;">❤️</span> by
+      <strong
+        ><a target="_blank" href="https://github.com/kaweees/"
+          >Miguel Villa Floran</a
+        ></strong
+      >
+      &copy;
+      {{ now.Year }}
+    </span>
   </div>
 </footer>
 
@@ -14,6 +22,8 @@
 {{ $prism := resources.Get "js/prism.js" | resources.ExecuteAsTemplate "js/prism.js" . }}
 {{ $bundle := slice $prism | resources.Concat "js/main.js" | js.Build $jsBuildOptions }}
 {{ $flexsearch := resources.Get "js/flexsearch.js" | resources.ExecuteAsTemplate "js/flexsearch.js" . | js.Build $jsBuildOptions }}
+{{ $typed := resources.Get "js/typed.js" | resources.ExecuteAsTemplate "js/typed.js" . | js.Build $jsBuildOptions }}
+{{ $loadSite := resources.Get "js/load-site.js" | resources.ExecuteAsTemplate "js/load-site.js" . | js.Build $jsBuildOptions }}
 
 {{ if hugo.IsProduction }}
   {{ $bundle = $bundle | fingerprint "sha512" }}
@@ -23,6 +33,8 @@
 {{/* prettier-ignore-start */}}
 <script src="{{ $bundle.RelPermalink }}" {{ if hugo.IsProduction }}integrity="{{ $bundle.Data.Integrity }}"{{ end }}></script>
 <script src="{{ $flexsearch.RelPermalink }}" {{ if hugo.IsProduction }}integrity="{{ $flexsearch.Data.Integrity }}"{{ end }}></script>
+<script src="{{ $typed.RelPermalink }}" {{ if hugo.IsProduction }}integrity="{{ $typed.Data.Integrity }}"{{ end }}></script>
+<script src="{{ $loadSite.RelPermalink }}" {{ if hugo.IsProduction }}integrity="{{ $loadSite.Data.Integrity }}"{{ end }}></script>
 {{/* prettier-ignore-end */}}
 
 <!-- Extensibility -->
