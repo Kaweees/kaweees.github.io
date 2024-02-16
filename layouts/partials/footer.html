@@ -36,6 +36,3 @@
 <script src="{{ $typed.RelPermalink }}" {{ if hugo.IsProduction }}integrity="{{ $typed.Data.Integrity }}"{{ end }}></script>
 <script src="{{ $loadSite.RelPermalink }}" {{ if hugo.IsProduction }}integrity="{{ $loadSite.Data.Integrity }}"{{ end }}></script>
 {{/* prettier-ignore-end */}}
-
-<!-- Extensibility -->
-{{ partial "footer_end.html" . }}
