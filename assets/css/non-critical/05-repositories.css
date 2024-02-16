@@ -1,0 +1,140 @@
+/* COLORS */
+.C {
+  --color: #555555;
+  background-color: var(--color) !important;
+  font-weight: bold !important;
+}
+.cpp {
+  --color: #f34b7d;
+  background-color: var(--color) !important;
+  font-weight: bold !important;
+}
+.Docker {
+  --color: #1d63ed;
+  color: white !important;
+  background-color: var(--color) !important;
+  font-weight: bold !important;
+}
+.Dogescript {
+  --color: #cca760;
+  background-color: var(--color) !important;
+  font-weight: bold !important;
+}
+.FreeRTOS {
+  --color: #8ac657;
+  background-color: var(--color) !important;
+  font-weight: bold !important;
+}
+.GitHub.Actions {
+  --color: #2088ff;
+  color: white !important;
+  background-color: var(--color) !important;
+  font-weight: bold !important;
+}
+.Go {
+  --color: #00add8;
+  background-color: var(--color) !important;
+  font-weight: bold !important;
+}
+.JavaScript {
+  --color: #f1e05a;
+  background-color: var(--color) !important;
+  font-weight: bold !important;
+}
+.Makefile {
+  --color: #427819;
+  background-color: var(--color) !important;
+  font-weight: bold !important;
+}
+.Matlab {
+  --color: #e16737;
+  background-color: var(--color) !important;
+  font-weight: bold !important;
+}
+.Nix {
+  --color: #7e7eff;
+  background-color: var(--color) !important;
+  font-weight: bold !important;
+}
+.Python {
+  --color: #3572a5;
+  background-color: var(--color) !important;
+  font-weight: bold !important;
+}
+.R {
+  --color: #198ce7;
+  background-color: var(--color) !important;
+  font-weight: bold !important;
+}
+.Racket {
+  --color: #22228f;
+  background-color: var(--color) !important;
+  font-weight: bold !important;
+}
+.Rust {
+  color: black !important;
+  --color: #dea584;
+  background-color: var(--color) !important;
+  font-weight: bold !important;
+}
+.Shell {
+  --color: #89e051;
+  background-color: var(--color) !important;
+  font-weight: bold !important;
+}
+.SuperCollider {
+  --color: #46390b;
+  background-color: var(--color) !important;
+  font-weight: bold !important;
+}
+.Swift {
+  --color: #ffac45;
+  background-color: var(--color) !important;
+  font-weight: bold !important;
+}
+.SystemVerilog {
+  --color: #dae1c2;
+  background-color: var(--color) !important;
+  font-weight: bold !important;
+}
+.Tcl {
+  --color: #e4cc98;
+  background-color: var(--color) !important;
+  font-weight: bold !important;
+}
+.TeX {
+  --color: #3d6117;
+  background-color: var(--color) !important;
+  font-weight: bold !important;
+}
+.Turing {
+  --color: #cf142b;
+  background-color: var(--color) !important;
+  font-weight: bold !important;
+}
+.TypeScript {
+  --color: #2b7489;
+  background-color: var(--color) !important;
+  font-weight: bold !important;
+}
+.Verilog {
+  --color: #b2b7f8;
+  background-color: var(--color) !important;
+  font-weight: bold !important;
+}
+.VHDL {
+  --color: #adb2cb;
+  background-color: var(--color) !important;
+  font-weight: bold !important;
+}
+.WebAssembly {
+  --color: #232671;
+  color: white !important;
+  background-color: var(--color) !important;
+  font-weight: bold !important;
+}
+.Zephir {
+  --color: #118f9e;
+  background-color: var(--color) !important;
+  font-weight: bold !important;
+}

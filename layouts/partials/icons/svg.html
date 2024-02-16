@@ -1,0 +1,2 @@
+{{ $path := lower . }}
+{{ (resources.Get $path).Content | safeHTML }}
