@@ -1,86 +1,46 @@
-name: Publish Hugo Site
-
+---
+name: Deploy to GitHub Pages
+# Controls when the workflow will run
 on:
   push:
     branches:
+      - master
       - main
-
+  pull_request:
+# The sequence of runs in this workflow:
 jobs:
-  update_hugo_npm_dependencies:
-    name: Update Hugo npm Dependencies
+  deploy:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    outputs:
-      commit_hash: ${{ steps.commit_changes.outputs.commit_hash }}
+    timeout-minutes: 10
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-
-      - name: Install Node
-        uses: actions/setup-node@v4
+      - run: lsb_release -a
+      - run: uname -a
+      - name: Check out Repository Code
+        uses: actions/checkout@v3
         with:
-          node-version: "20"
-
-      - name: Install Hugo
+          submodules: true # Fetch submodules
+          fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
+      - name: Set Up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: ".nvmrc"
+      - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: "0.122.0"
           extended: true
-
       - name: Write composite package.json
         run: hugo mod npm pack
-
-      - name: Install npm Packages
-        run: npm install
-
-      - name: Display Changes
-        run: git status
-
-      - name: Commit Changes
-        id: commit_changes
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: Update Hugo npm Dependencies
-          commit_author:
-            renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
-
-  publish:
-    name: Publish Hugo Site
-    needs: update_hugo_npm_dependencies
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      deployments: write
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
-          ref: ${{ needs.update_hugo_npm_dependencies.outputs.commit_hash }}
-
-      - name: Install Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: "20"
-
-      - name: Install Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: "0.122.0"
-          extended: true
-
       - name: Install npm Packages
         run: npm ci
-
       - name: Build Hugo
         run: hugo --minify
-
-      - name: Deploy to Cloudflare Pages
-        uses: cloudflare/pages-action@v1
+      - name: Deploy to gh-pages
+        uses: crazy-max/ghaction-github-pages@v3
+        if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main'
         with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: hugo-theme-gruvbox
-          directory: ./public
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          # the output branch mentioned above
+          target_branch: gh-pages
+          build_dir: ./public
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
