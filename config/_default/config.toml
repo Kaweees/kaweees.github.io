@@ -10,15 +10,26 @@ pluralizeListTitles = false
 # Enable to calculate the last modified date from Git history and show it in the post header
 #enableGitInfo = true
 
+[build]
+  noJSConfigInAssets = true
+  [build.buildStats]
+    # With each build, Hugo writes a hugo_stats.json file that contains arrays
+    # of the class attributes, id attributes, and tags of each HTML element
+    # within the published site. For production builds, this file is required
+    # by PurgeCSS to prune unused CSS.
+    enable = true
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
-      # Allow inlining <script> and <style> tags in markdown, be wary of using with trustworthy content
+      # This setting allows inlining <script> and <style> tags in markdown,
+      # which is useful and required to use Prism plugins, but may be dangerous
+      # if the content isn't trustworthy.
       unsafe = true
 
 [imaging]
   # JPEG and WebP image processing quality, defaults to 75%
-  quality = 75
+  quality = 90
 
 [params]
   # Description to display on homepage
