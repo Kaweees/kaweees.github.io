@@ -4,13 +4,13 @@ title: Greetings, I'm Miguel 👋
 
 I'm an engineer & entrepreneur focusing on applied robotics & embedded systems.
 I'm also currently researching Large Language Models and building AI projects in
-stealth. I also [write](http://localhost:1313/blog/) occasionally about
-philosophy and computers.
+stealth. I also [write](http://miguelvf.dev/blog/) occasionally about philosophy
+and computers.
 
 I'm a sophomore at [Cal Poly](https://csc.calpoly.edu/) studying Computer
 Engineering. I am currently writing drivers and firmware for electric vehicles
 at [Cal Poly Racing](https://www.calpolyracing.org/). Here are some of the
-projects I work on at USC.
+[projects](http://miguelvf.dev/calpoly/) I've work on at Cal Poly.
 
 This past summer, I worked at [DeepWater Exploration](https://dwe.ai/) to ship
 some [streaming software](https://dwe.ai/products/discovery) ,which outperformed
