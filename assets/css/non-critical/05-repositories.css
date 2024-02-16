@@ -41,6 +41,18 @@
   background-color: var(--color) !important;
   font-weight: bold !important;
 }
+.LaTeX {
+  --color: #008080;
+  color: white !important;
+  background-color: var(--color) !important;
+  font-weight: bold !important;
+}
+.LTSpice {
+  --color: #910029;
+  color: white !important;
+  background-color: var(--color) !important;
+  font-weight: bold !important;
+}
 .Makefile {
   --color: #427819;
   background-color: var(--color) !important;

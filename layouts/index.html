@@ -7,13 +7,13 @@
   </div>
   <h3>Things I've Built</h3>
   {{ range $index, $project := .Site.Data.projects }}
-    {{ if mod $index 2 | eq 0 }}
+    {{ if mod $index 2 | eq 1 }}
       {{ partial "project-item-left.html" . $project }}
     {{ else }}
       {{ partial "project-item-right.html" . $project }}
     {{ end }}
   {{ end }}
-  <h3>Places I've Worked</h3>
+  <h3 style="margin: 0 !important; margin-bottom: 28px;">Places I've Worked</h3>
   {{ range $index, $place := .Site.Data.jobs }}
     {{ partial "job-item.html" . $place }}
   {{ end }}

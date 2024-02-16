@@ -4,7 +4,7 @@
   align-items: center;
   border: 0 !important;
   padding: 0 !important;
-  margin: 0 !important;
+  margin-bottom: 28px !important;
 }
 .projects.project-left {
   grid-template-columns: repeat(3, 1fr);
@@ -44,6 +44,8 @@
   font-weight: 800;
   margin: 0 !important;
   border: 0 !important;
+  backdrop-filter: blur(1px); /* Adjust the blur radius as needed */
+  -webkit-backdrop-filter: blur(1px); /* For Safari */
 }
 .projects .project-info .project-description {
   position: relative;
@@ -101,4 +103,7 @@
 .projects .project-links {
   margin-top: 0.75rem !important;
   width: 100%;
+}
+.projects .project-links .project-link {
+  margin-right: 0.25rem !important;
 }

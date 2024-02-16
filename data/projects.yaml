@@ -1,11 +1,22 @@
-- title: "rustyNES"
+- title: "Low Supply Indicator"
   description:
     "An NES emulator and implementation of the MOS Technology 6502 processor
     written in Rust."
-  repo: "https://github.com/Kaweees/rustyNES"
-  link: "https://miguelvf.dev/rustyNES/"
-  image: "https://th.bing.com/th/id/OIP.enHnJ33r9erP04V1MdL9iwHaE7?rs=1&pid=ImgDetMain"
+  repo: "https://github.com/Kaweees/supply-indicator"
+  link: "https://miguelvf.dev/supply-indicator/"
+  image: "/projects/supply-indicator.png"
   languages:
-    - Rust
-    - Docker
-    - WebAssembly
+    - LaTeX
+    - LTSpice
+    - GitHub Actions
+# - title: "rustyNES"
+#   description:
+#     "An NES emulator and implementation of the MOS Technology 6502 processor
+#     written in Rust."
+#   repo: "https://github.com/Kaweees/rustyNES"
+#   link: "https://miguelvf.dev/rustyNES/"
+#   image: "https://th.bing.com/th/id/OIP.enHnJ33r9erP04V1MdL9iwHaE7?rs=1&pid=ImgDetMain"
+#   languages:
+#     - Rust
+#     - Docker
+#     - WebAssembly
