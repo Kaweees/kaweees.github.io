@@ -1,9 +1,42 @@
 {{ define "main" }}
   <div class="content-section">
     <h1>{{ .Title | markdownify }}</h1>
+    <h5
+      class="blog-phrase"
+      style="border: 0 !important; margin: 0 !important; font-size: 1.5rem !important;"
+    ></h5>
     {{ with .Content }}
       <div>{{ . }}</div>
     {{ end }}
   </div>
   {{ partial "post-list.html" .Paginator }}
+  <script>
+    const blogPhraseContainer =
+      document.getElementsByClassName("blog-phrase")[0];
+    const errorQuoteContainer =
+      document.getElementsByClassName("error-quote")[0];
+    const blogQuoteArray = [
+      {
+        emoji: "🌠",
+        quote: "Reaching for eternity",
+      },
+      {
+        emoji: "💾",
+        quote: "Life is short and ROM is full",
+      },
+      {
+        emoji: "🐛",
+        quote: "Learning one bug at a time",
+      },
+    ];
+    const blogQuote =
+      blogQuoteArray[Math.floor(Math.random() * blogQuoteArray.length)];
+    var blogEmoji = document.createElement("span");
+    blogEmoji.innerHTML = blogQuote.emoji;
+    blogEmoji.classList.add("emojify");
+    blogPhraseContainer.appendChild(blogEmoji);
+    blogPhraseContainer.appendChild(
+      document.createTextNode(" " + blogQuote.quote),
+    );
+  </script>
 {{ end }}
