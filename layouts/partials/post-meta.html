@@ -21,6 +21,21 @@
       {{ end }}
     {{ end }}
   {{ end }}
+  {{ if ge .page.ReadingTime 15 }}
+    <span title="yeah... this is gonna be long"> {{ .ReadingTime }} 🫠 </span>
+  {{ else if ge .page.ReadingTime 9 }}
+    <div title="better grab a snack">
+      About {{ .page.ReadingTime }} minutes long <span class="emojify">🍫</span>
+    </div>
+  {{ else if ge .page.ReadingTime 5 }}
+    <div title="do you wanna grab a tea first?">
+      About {{ .page.ReadingTime }} minutes long <span class="emojify">☕</span>
+    </div>
+  {{ else }}
+    <div title="this is a short one!">
+      About {{ .page.ReadingTime }} minutes long <span class="emojify">🤏</span>
+    </div>
+  {{ end }}
 
 
   <!-- Don't show modified date when changed within the first 72 hours  -->
