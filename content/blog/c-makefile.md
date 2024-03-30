@@ -114,7 +114,9 @@ BUILD_DIR := $(TOP_DIR)/target/release/
 
 # Targets
 
-Now that we have defined all the necessary variables, we can start defining the targets that will be used to build our project. The first target that we will define is the `all` target, which will build the program.
+Now that we have defined all the necessary variables, we can start defining the
+targets that will be used to build our project. The first target that we will
+define is the `all` target, which will build the program.
 
 ```makefile
 # The default target.
