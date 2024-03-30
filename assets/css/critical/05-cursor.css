@@ -1,0 +1,13 @@
+/* CSS file just for animated cursors hehe*/
+
+/*Default cursor*/
+
+html {
+  cursor: url(/cursors/marshmallonyuug.gif), auto;
+}
+
+/* Link cursor */
+
+a {
+  cursor: url(/cursors/gracefuldice.gif), pointer;
+}
