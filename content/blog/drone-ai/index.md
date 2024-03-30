@@ -8,7 +8,7 @@ description:
   and deploy your code documentation to GitHub Pages.
   My proposition of a potential software architecture for a drone that is desgined to identifty, intercept, and neturalize an enemy drone.
 date: 2024-03-24
-draft: false
+draft: true
 tags:
   - Defense
   - Robotics
