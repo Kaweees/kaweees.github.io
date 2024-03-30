@@ -1,3 +1,11 @@
+:root {
+  --marquee-width: 90px;
+  --marquee-height: 30px;
+  --marquee-elements: 15;
+  --marquee-element-width: calc(var(--marquee-width) * var(--marquee-elements));
+  --marquee-animation-duration: calc(var(--marquee-elements) * 4s);
+}
+
 .layout {
   display: grid;
   grid-template-areas:
@@ -32,6 +40,14 @@ footer {
 
 .content {
   grid-area: content;
+  margin: 0 0.25rem;
+}
+
+.content-bordered {
+  border: 2px solid #383838;
+  border-radius: 4px;
+  padding: 10px 15px;
+  margin: 1rem 0.25rem;
 }
 
 .sidebar {
@@ -40,10 +56,38 @@ footer {
   grid-area: sidebar;
   margin-top: 3rem;
   position: sticky;
-  top: 2rem;
 
   @media (--lg) {
     display: flex;
+  }
+}
+
+.badge-buttons {
+  overflow: hidden;
+}
+
+.badge-buttons div {
+  animation: carousel var(--marquee-animation-duration) linear infinite;
+  display: flex;
+  flex-wrap: nowrap;
+  width: var(--marquee-element-width);
+}
+
+/* Home buttons */
+.badge-buttons img,
+.badge-buttons a {
+  flex-shrink: 0;
+  height: var(--marquee-height) !important;
+  width: var(--marquee-width) !important;
+  margin: 0 3px !important;
+}
+/* Carousel animation */
+@keyframes carousel {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(calc(19 * -96px), 0, 0);
   }
 }
 
