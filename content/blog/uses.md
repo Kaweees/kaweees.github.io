@@ -23,9 +23,9 @@ aliases:
 > mind <br> — <cite>Michael B. Paulson, otherwise known as
 > [ThePrimeagen](https://www.youtube.com/@ThePrimeagen)</cite>
 
-This page was last edited on **August 14, 2023**
+This page was last edited on **March 29, 2024**
 
-My former roomate and good friend,
+My former college roomate and good friend,
 [Hayden Buscher](https://techno-sorcery.com/), recently made a
 [post](https://techno-sorcery.com/coolstuff/things.html) about the things he
 uses to stay productive. Giving credit where its due, I thought it was a great

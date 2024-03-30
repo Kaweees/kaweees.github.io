@@ -64,6 +64,11 @@ figcaption {
 }
 
 h1,
+.neon {
+  text-shadow: 2px 2px 7px var(--fg1);
+}
+
+h1,
 h2,
 h3,
 h4,
