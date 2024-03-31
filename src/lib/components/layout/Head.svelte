@@ -32,6 +32,5 @@
 	<meta name="twitter:image" content={img} />
 
 	<!-- Stylesheets -->
-	<link rel="stylesheet" href="/css/custom.css" />
 	<link rel="stylesheet" href="/css/fonts.css" />
 </svelte:head>
