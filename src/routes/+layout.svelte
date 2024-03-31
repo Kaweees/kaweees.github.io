@@ -10,7 +10,7 @@
 	export let data = {};
 </script>
 
-<div class="mx-auto max-w-3xl px-4 sm:px-6 xl:max-w-5xl xl:px-0">
+<div class="mx-0">
 	<div class="flex flex-col justify-between">
 		<Header />
 		<main>
