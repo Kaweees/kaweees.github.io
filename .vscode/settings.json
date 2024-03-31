@@ -11,5 +11,8 @@
   },
   "emmet.includeLanguages": {
     "postcss": "css"
+  },
+  "[svelte]": {
+    "editor.defaultFormatter": "svelte.svelte-vscode"
   }
 }
