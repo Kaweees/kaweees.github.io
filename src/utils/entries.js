@@ -8,6 +8,10 @@ if (browser) {
 }
 
 // we have to have separate functions for this because Vite only accepts literal strings for import.meta.glob
+const getJobs = () => {
+	return Object.entries(import.meta.glob('/content/jobs/**/*.md', { eager: true }));
+};
+
 const getPosts = () => {
 	return Object.entries(import.meta.glob('/content/posts/**/*.md', { eager: true }));
 };
@@ -22,6 +26,8 @@ const getAuthors = () => {
 
 const getEntriesByType = (entryType) => {
 	switch (entryType) {
+		case 'jobs':
+			return getJobs();
 		case 'posts':
 			return getPosts();
 		case 'projects':
@@ -54,7 +60,7 @@ const getMetadata = (entryType, filepath, entry) => {
 			? entry.metadata.video.replace(
 					/(http(s)?:\/\/)?((w){3}.)?youtu(be|.be)(\.com)?\/(watch\?v=)?/,
 					''
-			  )
+				)
 			: null,
 
 		tag: entry.metadata.type?.split(' ').shift().toLowerCase() || null,

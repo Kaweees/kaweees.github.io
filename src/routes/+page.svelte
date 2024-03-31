@@ -4,12 +4,12 @@
 
 	export let data;
 	let posts = data.posts;
+	let jobs = data.jobs;
 </script>
 
 <Head />
 
-<!-- font-normal leading-9 tracking-tight sm:text-4xl sm:leading-10 md:text-6xl md:leading-14 -->
-<div>
+<div class="border-solid border-2 rounded-lg border-fg-light dark:border-fg-dark p-6 mx-7 my-4">
 	<h1
 		class="text-3xl py-4 text-gray-900 dark:text-gray-100 drop-shadow-lg dark:shadow-fg1-light shadow-fg1-dark"
 	>
@@ -77,6 +77,54 @@
 			target="_blank">mavillaf@calpoly.edu</a
 		>.
 	</p>
+</div>
+
+<div class="border-solid border-2 rounded-lg border-fg-light dark:border-fg-dark p-6 mx-7 my-4">
+	<h2
+		class="text-2xl py-4 text-gray-900 dark:text-gray-100 drop-shadow-lg dark:shadow-fg1-light shadow-fg1-dark"
+	>
+		Places I've Worked
+	</h2>
+	<div class="border-b border-dashed border-fg-light dark:border-fg-dark">
+		{#if !jobs.length}
+			<p>No jobs found.</p>
+		{:else}
+			{#each jobs as job}
+				<div
+					class="flex flex-col sm:flex-row items-center justify-between py-3 border-t border-dashed border-fg-light dark:border-fg-dark flex-wrap"
+				>
+					<a id="no-style" href={job.link} target="_blank"
+						><div class="flex flex-col sm:flex-row items-center space-x-2">
+							<div class="flex flex-row items-center justify-center space-x-3 flex-wrap">
+								<img src={job.image} alt="{job.company} logo" class="w-10 h-10" />
+								<div class="flex flex-row items-center space-x-1.5 text-md font-bold">
+									<span>{job.company}</span>
+								</div>
+							</div>
+							<div class="text-sm">Engineering, AI</div>
+						</div></a
+					>
+					<div class="flex flex-row items-center space-x-2">
+						<div class="text-sm">{job.time}</div>
+					</div>
+				</div>
+				<!-- <a
+          target="_blank"
+          class="flex flex-row py-3 border-dashed"
+        >
+          <img
+            style="border: 2px solid; height: 45px !important; width: 45px !important max-width: 100%;"
+          />
+          <span class="my-auto" style="font-size: 1.125rem; font-weight: 800;">{job.company}</span>
+          <span style="align-items: center; display: flex; font-size: .9rem;">{job.role}</span>
+          <span
+            style="margin-left: auto !important; align-items: center; display: flex; font-size: .9rem;"
+            ></span
+          >
+        </a> -->
+			{/each}
+		{/if}
+	</div>
 </div>
 
 <Blogs title="Latest Posts" h2 {posts} search={false} count={3} />

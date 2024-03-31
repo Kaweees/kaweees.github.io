@@ -1,12 +1,12 @@
 export const config = {
-	title: 'Pied Piper (un)official blog',
+	title: 'Miguel Villa Floran',
 	author: 'Ahmad Kiarostami',
 	headerTitle: 'Pied Piper',
 	description: 'Pied Piper (un)official blog, created with Sveltekit and Tailwind.css',
 	language: 'en-us',
 	theme: 'dark', // system, dark or light
 	domain: 'http://www.piedpiper.com/',
-	siteUrl: 'https://pied-piper-blog.netlify.app',
+	siteUrl: 'https://miguelvf.dev',
 	siteRepo: 'https://github.com/akiarostami/sveltekit-tailwind-blog-starter',
 	siteLogo: '/icon-512.png',
 	// image: '/img/avatar.png',
