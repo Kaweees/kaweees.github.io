@@ -31,7 +31,7 @@
 			{#each navLinks as link}
 				<a
 					href={link.href}
-					class=" p-1 sm:p-3 text-fg-light dark:text-fg-dark my-3 text-xl"
+					class=" p-1 sm:p-3 my-3 text-xl"
 					style="!important; font-family: 'Fira Code', 'Lucida Console', Monaco, monospace !important;"
 					>{link.title}</a
 				>

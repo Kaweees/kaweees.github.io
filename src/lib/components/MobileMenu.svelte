@@ -35,14 +35,14 @@
 		</svg>
 	</button>
 	<div
-		class="fixed top-0 left-0 z-10 h-full w-full transform bg-gray-200 opacity-95 duration-300 ease-in-out dark:bg-gray-800"
+		class="fixed top-0 left-0 z-10 h-full w-full transform bg-fg-light dark:bg-fg-dark opacity-95 duration-300 ease-in-out"
 		class:translate-x-0={isOpen}
 		class:translate-x-full={!isOpen}
 	>
 		<div class="flex justify-end">
 			<button
 				type="button"
-				class="mr-5 mt-11 h-8 w-8 rounded"
+				class="mr-8 mt-5 h-8 w-8 rounded"
 				aria-label="Toggle Menu"
 				on:click={toggleDarkMode}
 			>

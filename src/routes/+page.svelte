@@ -108,20 +108,6 @@
 						<div class="text-sm">{job.time}</div>
 					</div>
 				</div>
-				<!-- <a
-          target="_blank"
-          class="flex flex-row py-3 border-dashed"
-        >
-          <img
-            style="border: 2px solid; height: 45px !important; width: 45px !important max-width: 100%;"
-          />
-          <span class="my-auto" style="font-size: 1.125rem; font-weight: 800;">{job.company}</span>
-          <span style="align-items: center; display: flex; font-size: .9rem;">{job.role}</span>
-          <span
-            style="margin-left: auto !important; align-items: center; display: flex; font-size: .9rem;"
-            ></span
-          >
-        </a> -->
 			{/each}
 		{/if}
 	</div>
