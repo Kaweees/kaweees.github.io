@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import SocialIcon from '$lib/components/SocialIcon.svelte';
 	import formatDate from '$utils/formatDate';
 

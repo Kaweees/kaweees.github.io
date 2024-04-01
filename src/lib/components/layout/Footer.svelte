@@ -7,9 +7,7 @@
 </script>
 
 <footer
-	class="m-5 flex flex-row justify-center align-center
-
-"
+	class="text-center m-5 flex flex-row justify-center align-center"
 >
 	<div class="copyright">
 		<span>

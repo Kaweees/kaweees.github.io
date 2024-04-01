@@ -9,7 +9,7 @@
 	<a
 		class="typewriter neon font-bold font-title"
 		href="/"
-		style="font-size: 1.75rem !important; font-family: 'Fira Code', 'Lucida Console', Monaco, monospace !important;"
+		style="font-size: 1.5rem !important; font-family: 'Fira Code', 'Lucida Console', Monaco, monospace !important;"
 	>
 		<Typewriter
 			interval={200}

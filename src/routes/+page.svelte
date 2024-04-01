@@ -10,13 +10,13 @@
 
 <Head />
 
-<div class="border-solid border-2 rounded-lg border-fg-light dark:border-fg-dark p-6 mx-7 my-4">
+<div class="border-solid border-2 rounded-lg border-fg-light dark:border-fg-dark p-6 md:mx-7 my-4">
 	<h1
-		class="text-3xl py-4 text-gray-900 dark:text-gray-100 drop-shadow-lg dark:shadow-fg1-light shadow-fg1-dark"
+		class="text-xl md:text-3xl md:py-4 text-gray-900 dark:text-gray-100 drop-shadow-lg dark:shadow-fg1-light shadow-fg1-dark"
 	>
 		Greetings, I’m Miguel 👋
 	</h1>
-	<p class="text-base prose-xl my-3">
+	<p class="text-sm md:text-lg prose-xl my-3">
 		I’m an engineer & entrepreneur focusing on applied robotics & embedded systems. I’m also
 		currently researching Large Language Models and building AI projects in stealth. I also <a
 			href="/blog/"
@@ -24,7 +24,7 @@
 			target="_blank">write</a
 		> occasionally about philosophy and computers.
 	</p>
-	<p class="text-base prose-xl my-3">
+	<p class="text-sm md:text-lg prose-xl my-3">
 		I’m a sophomore at <a
 			href="https://csc.calpoly.edu/"
 			class="link text-aqua2-light dark:text-aqua2-dark hover:bg-aqua2-light dark:hover:bg-aqua2-dark hover:text-bg-light hover:dark:text-bg-dark"
@@ -43,7 +43,7 @@
 			target="_blank">projects</a
 		> I’ve worked on at Cal Poly.
 	</p>
-	<p class="text-base prose-xl my-3">
+	<p class="text-sm md:text-lg prose-xl my-3">
 		This past summer, I worked at <a
 			href="https://dwe.ai/"
 			class="link text-aqua2-light dark:text-aqua2-dark hover:bg-aqua2-light dark:hover:bg-aqua2-dark hover:text-bg-light hover:dark:text-bg-dark"
@@ -80,13 +80,14 @@
 	</p>
 </div>
 
-<div class="border-solid border-2 rounded-lg border-fg-light dark:border-fg-dark p-6 mx-7 my-4">
+<div class="border-solid border-2 rounded-lg border-fg-light dark:border-fg-dark p-6 md:mx-7 my-4">
 	<h2
-		class="text-2xl py-4 text-gray-900 dark:text-gray-100 drop-shadow-lg dark:shadow-fg1-light shadow-fg1-dark"
+		class="text-xl md:text-3xl md:py-4 text-gray-900 dark:text-gray-100 drop-shadow-lg dark:shadow-fg1-light shadow-fg1-dark"
 	>
 		Places I've Worked
 	</h2>
-	<div class="border-b border-dashed border-fg-light dark:border-fg-dark">
+
+	<div class="my-3 border-b border-dashed border-fg-light dark:border-fg-dark">
 		{#if !jobs.length}
 			<p>No jobs found.</p>
 		{:else}

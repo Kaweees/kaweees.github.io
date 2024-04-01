@@ -34,12 +34,12 @@
 </script>
 
 <div class="my-2 mx-8">
-	<div class="py-12 border-b-2 border-dashed border-bg1-light dark:border-bg1-dark">
-		<div class="grid lg:grid-cols-2 gap-4">
+	<div class="py-6 border-b-2 border-dashed border-bg1-dark dark:border-bg1-light">
+		<div class="">
 			<div>
 				<Title {title} {subtitle} {h2} />
 				{#if currentURL == '/blog'}
-					<p class="text-md">
+					<p class="my-2 text-md">
 						This is an archive of my journey to explore and conquer the inner workings of computers,
 						from the subatomic particles in transistors to the cool stuff we do with processors,
 						operating systems, and web browsers. Occasionaly, I’ll also give my two cents on
