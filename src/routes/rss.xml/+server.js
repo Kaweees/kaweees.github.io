@@ -1,5 +1,5 @@
 import RSS from 'rss';
-import { config } from '$lib/config.js';
+import { config } from '$lib/config.ts';
 import { getEntries } from '$utils/entries.js';
 
 export const prerender = true;

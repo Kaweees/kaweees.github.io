@@ -1,6 +1,7 @@
 <script>
 	import Head from '$lib/components/layout/Head.svelte';
 	import Blogs from '$lib/components/Blogs.svelte';
+	import { config } from '$lib/config.ts';
 
 	export let data;
 	let posts = data.posts;
@@ -18,7 +19,7 @@
 	<p class="text-base prose-xl my-3">
 		I’m an engineer & entrepreneur focusing on applied robotics & embedded systems. I’m also
 		currently researching Large Language Models and building AI projects in stealth. I also <a
-			href="https://miguelvf.dev/blog/"
+			href="/blog/"
 			class="link text-aqua2-light dark:text-aqua2-dark hover:bg-aqua2-light dark:hover:bg-aqua2-dark hover:text-bg-light hover:dark:text-bg-dark"
 			target="_blank">write</a
 		> occasionally about philosophy and computers.
@@ -37,7 +38,7 @@
 			target="_blank">Cal Poly Racing</a
 		>. Here are some of the
 		<a
-			href="https://miguelvf.dev/calpoly/"
+			href="/calpoly/"
 			class="link text-aqua2-light dark:text-aqua2-dark hover:bg-aqua2-light dark:hover:bg-aqua2-dark hover:text-bg-light hover:dark:text-bg-dark"
 			target="_blank">projects</a
 		> I’ve worked on at Cal Poly.
@@ -66,7 +67,7 @@
 	</p>
 	<p>
 		See more on my <a
-			href="https://miguelvf.dev/resume"
+			href="/resume/"
 			class="link text-aqua2-light dark:text-aqua2-dark hover:bg-aqua2-light dark:hover:bg-aqua2-dark hover:text-bg-light hover:dark:text-bg-dark"
 			target="_blank">resume</a
 		>

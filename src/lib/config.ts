@@ -1,3 +1,37 @@
+const blogQuoteArray = [
+	'🌠 Reaching for eternity',
+	'💾 Life is short and ROM is full',
+	'🐛 Learning one bug at a time',
+	'👞 If it fits the shoe, it be what it do'
+];
+
+const emojiArray = [
+	'\\(o_o)/',
+	'(o^^)o',
+	'(˚Δ˚)b',
+	'(^-^*)',
+	'(≥o≤)',
+	'(^_^)b',
+	'(·_·)',
+	"(='X'=)",
+	'(>_<)',
+	'(;-;)',
+	'\\(^Д^)/'
+];
+
+const quoteArray = [
+	'“What I cannot create, I do not understand.” ― Richard Feynman',
+	'“However much you deny the truth, the truth goes on existing” ― George Orwell',
+	'“Man is still the most extraordinary computer of all.” ― JFK',
+	'“Nothing great in the world was accomplished without passion.” ― Georg Wilhelm Friedrich Hegel',
+	"“The struggle itself towards the heights is enough to fill a man's heart. One must imagine Sisyphus happy.” ― Albert Camus, The Myth of Sisyphus",
+	"“In 20 years you're going to look back and realize that the most lucrative decision you ever made was investing in yourself.” ― ColorStack",
+	"“We who cut mere stones must always be envisioning cathedrals.” - the Quarry Worker's Creed",
+	'“Science is not only a disciple of reason but, also, one of romance and passion.” ― Stephen Hawking',
+	'“Man cannot remake himself without suffering, for he is both the marble and the sculptor.” ― Alexis Carrel',
+	"“It don't take much strength to pull a trigger but try getting up every morning day after day and work for a living.” ― Lorenzo, A Bronx Tale"
+];
+
 export const config = {
 	title: 'Miguel Villa Floran',
 	author: 'Ahmad Kiarostami',
@@ -24,7 +58,10 @@ export const config = {
 	// check .env.example for settings needed values for each service
 	newsletter: 'mailchimp',
 
-	multiuser: true
+	multiuser: true,
+	blogQuote: blogQuoteArray[Math.floor(Math.random() * blogQuoteArray.length)],
+	emoji: emojiArray[Math.floor(Math.random() * emojiArray.length)],
+  quote: quoteArray[Math.floor(Math.random() * quoteArray.length)],
 };
 
 export const user = {

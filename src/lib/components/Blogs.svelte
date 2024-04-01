@@ -1,4 +1,5 @@
 <script>
+	import { onMount } from 'svelte';
 	import Tag from '$lib/components/Tag.svelte';
 	import Title from '$lib/components/Title.svelte';
 	import Author from '$lib/components/Author.svelte';
@@ -21,6 +22,15 @@
 
 	$: filter = $page.url.searchParams.get('query');
 	$: currentPosts = filter ? fuzzySearch(posts, filter) : posts;
+	let currentURL = '';
+
+	onMount(() => {
+		// Get the route of the current page
+		currentURL = window.location.pathname;
+
+		// Log the route to the console (you can also use it in other parts of your code)
+		console.log('Route:', currentURL);
+	});
 </script>
 
 <div class="my-2 mx-8">
@@ -28,7 +38,7 @@
 		<div class="grid lg:grid-cols-2 gap-4">
 			<div>
 				<Title {title} {subtitle} {h2} />
-				{#if title}
+				{#if currentURL == '/blog'}
 					<p class="text-md">
 						This is an archive of my journey to explore and conquer the inner workings of computers,
 						from the subatomic particles in transistors to the cool stuff we do with processors,

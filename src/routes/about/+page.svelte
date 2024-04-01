@@ -1,7 +1,7 @@
 <script>
 	import Head from '$lib/components/layout/Head.svelte';
 	import SocialIcon from '$lib/components/SocialIcon.svelte';
-	import { config } from '$lib/config';
+	import { config } from '$lib/config.ts';
 	import Title from '$lib/components/Title.svelte';
 
 	export let data;

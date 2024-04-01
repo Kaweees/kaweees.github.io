@@ -30,7 +30,7 @@
 		</svg>
 	</button>
 	<div
-		class="fixed top-0 left-0 z-10 h-full w-full transform bg-fg0-light dark:bg-fg-dark opacity-95 duration-300 ease-in-out"
+		class="fixed top-0 left-0 z-10 h-full w-full transform bg-fg0-light dark:bg-fg0-dark opacity-95 duration-300 ease-in-out"
 		class:translate-x-0={isOpen}
 		class:translate-x-full={!isOpen}
 	>
@@ -56,7 +56,7 @@
 				<div class="px-12 py-4">
 					<a
 						href={link.href}
-						class="text-2xl font-bold tracking-widest text-fg-dark dark:text-fg-light"
+						class="text-2xl font-bold tracking-widest text-fg-dark dark:text-fg-light hover:bg-fg-light dark:hover:bg-fg-dark px-3 py-2 rounded-md"
 						on:click={toggleDarkMode}
 					>
 						{link.title}
