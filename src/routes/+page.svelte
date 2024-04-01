@@ -1,7 +1,6 @@
 <script>
 	import Head from '$lib/components/layout/Head.svelte';
 	import Blogs from '$lib/components/Blogs.svelte';
-	import { config } from '$lib/config.ts';
 
 	export let data;
 	let posts = data.posts;

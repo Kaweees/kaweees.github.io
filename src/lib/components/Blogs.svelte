@@ -76,18 +76,21 @@
 	{:else}
 		<ul>
 			{#each currentPosts as post}
-				<li class="py-12">
+				<li class="py-5 border-b-2 border-dashed border-bg1-dark dark:border-bg1-light">
 					<article>
-						<div class="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
-							<Author author={post.author} postDate={post.date} />
+						<div class=" space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
 							<div class="space-y-5 xl:col-span-3">
 								<div class="space-y-6">
 									<div>
 										<h2 class="text-2xl font-bold leading-8 tracking-tight">
-											<a href={`/blog/${post.slug}`} class="text-gray-900 dark:text-gray-100">
+											<a
+												href={`/blog/${post.slug}`}
+												class="text-primary_alt-light dark:text-primary_alt-dark hover:text-primary-light hover:dark:text-primary-dark"
+											>
 												{post.title}
 											</a>
 										</h2>
+										<Author author={post.author} postDate={post.date} />
 										<div class="flex flex-wrap">
 											{#each post.tags as tag}
 												<Tag text={tag} />

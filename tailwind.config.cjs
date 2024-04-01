@@ -1,5 +1,5 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
-const colors = require('tailwindcss/colors');
+// const colors = require('tailwindcss/colors');
 
 module.exports = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
@@ -31,8 +31,14 @@ module.exports = {
 				body: ['Mono  Lisa', ...defaultTheme.fontFamily.sans]
 			},
 			colors: {
-				primary: colors.green,
-				gray: colors.neutral,
+				primary: {
+					light: '#689d6a',
+					dark: '#689d6a'
+				},
+				primary_alt: {
+					light: '#427b58',
+					dark: '#8ec07c'
+				},
 				bg: {
 					light: '#fbf1c7',
 					dark: '#282828'
