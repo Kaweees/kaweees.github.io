@@ -23,11 +23,19 @@
 	$: currentPosts = filter ? fuzzySearch(posts, filter) : posts;
 </script>
 
-<div class="divide-y divide-gray-200 dark:divide-gray-700">
-	<div class="space-y-2 pt-6 pb-8 md:space-y-5">
+<div class="my-2 mx-8">
+	<div class="py-12 border-b-2 border-dashed border-bg1-light dark:border-bg1-dark">
 		<div class="grid lg:grid-cols-2 gap-4">
 			<div>
 				<Title {title} {subtitle} {h2} />
+				{#if title}
+					<p class="text-md">
+						This is an archive of my journey to explore and conquer the inner workings of computers,
+						from the subatomic particles in transistors to the cool stuff we do with processors,
+						operating systems, and web browsers. Occasionaly, I’ll also give my two cents on
+						philosophy. All opinions are my own.
+					</p>
+				{/if}
 			</div>
 
 			<div class="pl-4" class:border-l-2={search}>
