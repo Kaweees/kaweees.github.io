@@ -1,4 +1,5 @@
 <script lang="ts">
+	import BorderedElement from '$lib/components/BorderedElement.svelte';
 	import Head from '$lib/components/layout/Head.svelte';
 	import Blogs from '$lib/components/Blogs.svelte';
 
@@ -9,12 +10,7 @@
 
 <Head />
 
-<div class="border-solid border-2 rounded-lg border-fg-light dark:border-fg-dark p-6 md:mx-7 my-4">
-	<h1
-		class="text-xl md:text-3xl md:py-4 text-gray-900 dark:text-gray-100 drop-shadow-lg dark:shadow-fg1-light shadow-fg1-dark"
-	>
-		Greetings, I’m Miguel 👋
-	</h1>
+<BorderedElement className="overflow-hidden" title="Greetings, I’m Miguel 👋">
 	<p class="text-sm md:text-lg prose-xl my-3">
 		I’m an engineer & entrepreneur focusing on applied robotics & embedded systems. I’m also
 		currently researching Large Language Models and building AI projects in stealth. I also <a
@@ -77,15 +73,9 @@
 			target="_blank">mavillaf@calpoly.edu</a
 		>.
 	</p>
-</div>
+</BorderedElement>
 
-<div class="border-solid border-2 rounded-lg border-fg-light dark:border-fg-dark p-6 md:mx-7 my-4">
-	<h2
-		class="text-xl md:text-3xl md:py-4 text-gray-900 dark:text-gray-100 drop-shadow-lg dark:shadow-fg1-light shadow-fg1-dark"
-	>
-		Places I've Worked
-	</h2>
-
+<BorderedElement className="overflow-hidden" title="Places I've Worked">
 	<div class="my-3 border-b border-dashed border-fg-light dark:border-fg-dark">
 		{#if !jobs.length}
 			<p>No jobs found.</p>
@@ -112,6 +102,5 @@
 			{/each}
 		{/if}
 	</div>
-</div>
-
+</BorderedElement>
 <Blogs title="Latest Posts" h2 {posts} search={false} count={3} />

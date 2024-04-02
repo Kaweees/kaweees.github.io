@@ -13,10 +13,11 @@
 	};
 </script>
 
-<div class="mx-0">
-	<div class="flex flex-col justify-between">
+<!-- px-5 my-2 mx-8 -->
+<div class="m-0 p-0">
+	<div class="flex flex-col justify-between flex-nowrap h-screen">
 		<Header />
-		<main class="px-5 flex flex-col lg:flex-row my-2 mx-8">
+		<main class="mb-auto px-5 py-4 sm:px-8 flex flex-col lg:flex-row">
 			<Transition pathname={data?.pathname}>
 				<slot />
 			</Transition>

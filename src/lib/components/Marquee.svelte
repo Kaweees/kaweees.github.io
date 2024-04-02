@@ -4,7 +4,7 @@
 	export let pauseOnHover = false;
 	export let reverse = false;
 	export let fade = false;
-	export let className = '';
+	export let className;
 </script>
 
 <div
@@ -24,7 +24,6 @@
 >
 	{#each [0, 1] as i}
 		<div
-			key={i}
 			style="--gap: {gap};"
 			class={'flex shrink-0 justify-around gap-[var(--gap)] ' +
 				(direction === 'left' ? 'animate-marquee-left flex-row ' : 'animate-marquee-up flex-col ') +
