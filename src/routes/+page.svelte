@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Head from '$lib/components/layout/Head.svelte';
 	import Blogs from '$lib/components/Blogs.svelte';
 

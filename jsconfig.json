@@ -19,7 +19,7 @@
 			"$utils/*": ["./src/utils/*"]
 		}
 	},
-	"include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.svelte", "src/lib/config.ts"]
+	"include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.svelte", "src/lib/config.ts", "src/routes/+layout.ts", "src/routes/+page.server.ts", "src/utils/formatDate.ts", "src/utils/theme.ts"]
 	// Path aliases are handled by https://kit.svelte.dev/docs/configuration#alias and https://kit.svelte.dev/docs/configuration#files
 	//
 	// If you want to overwrite includes/excludes, make sure to copy over the relevant includes/excludes

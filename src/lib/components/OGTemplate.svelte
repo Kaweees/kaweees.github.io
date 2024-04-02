@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	// can use to design: https://og-playground.vercel.app/
 	export let text = 'Official Website';
 	import { config, openGraph } from '$lib/config';

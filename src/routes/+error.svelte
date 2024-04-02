@@ -1,6 +1,6 @@
-<script>
+<script lang="ts">
 	import { page } from '$app/stores';
-	import { config } from '$lib/config.ts';
+	import { config } from '$lib/config';
 	import Title from '$lib/components/Title.svelte';
 </script>
 

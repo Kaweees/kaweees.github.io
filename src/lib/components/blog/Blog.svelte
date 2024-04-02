@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { config } from '$lib/config';
 	import Tag from '$lib/components/Tag.svelte';
 	import Author from '$lib/components/Author.svelte';

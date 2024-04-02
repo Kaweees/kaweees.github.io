@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import IconMail from '$lib/icons/mail.svelte';
 	import IconGithub from '$lib/icons/github.svelte';
 	import IconFacebook from '$lib/icons/facebook.svelte';

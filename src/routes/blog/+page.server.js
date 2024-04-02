@@ -1,4 +1,4 @@
-import { getEntries, getTags } from '$utils/entries.js';
+import { getEntries, getTags } from '$utils/entries';
 // import { tags } from '$lib/data/tags';
 import { error } from '@sveltejs/kit';
 

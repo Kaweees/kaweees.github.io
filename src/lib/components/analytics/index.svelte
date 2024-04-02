@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { analytics } from '$lib/config';
 	import GoogleAnalytics from './GoogleAnalytics.svelte';
 	import Plausible from './Plausible.svelte';

@@ -1,4 +1,4 @@
-import { getEntries } from '$utils/entries.js';
+import { getEntries } from '$utils/entries';
 import { error } from '@sveltejs/kit';
 
 /** @type {import('./$types').PageServerLoad} */

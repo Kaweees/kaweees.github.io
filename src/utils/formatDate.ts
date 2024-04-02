@@ -1,4 +1,4 @@
-import { config } from '$lib/config.ts';
+import { config } from '$lib/config';
 
 const formatDate = (date) => {
 	return new Date(date).toLocaleDateString(config.locale, {

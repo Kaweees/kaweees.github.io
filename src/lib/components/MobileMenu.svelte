@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { navLinks } from '$lib/config';
 
 	let isOpen = false;

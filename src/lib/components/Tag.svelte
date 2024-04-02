@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { slug } from 'github-slugger';
 
 	export let text = '';

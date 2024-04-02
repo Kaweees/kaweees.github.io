@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	export let gap = '1rem';
 	export let direction = 'left';
 	export let pauseOnHover = false;

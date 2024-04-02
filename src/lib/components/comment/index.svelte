@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { comment } from '$lib/config';
 	import Giscus from './Giscus.svelte';
 	import Utterances from './Utterances.svelte';

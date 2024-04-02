@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	export const prerender = true;
 
 	import Transition from '$lib/components/layout/Transition.svelte';
@@ -8,13 +8,15 @@
 	import Analytics from '$lib/components/analytics/index.svelte';
 	import '../app.css';
 
-	export let data = {};
+	export let data = {
+		pathname: ''
+	};
 </script>
 
 <div class="mx-0">
 	<div class="flex flex-col justify-between">
 		<Header />
-		<main class="px-5 flex flex-col lg:flex-row">
+		<main class="px-5 flex flex-col lg:flex-row my-2 mx-8">
 			<Transition pathname={data?.pathname}>
 				<slot />
 			</Transition>

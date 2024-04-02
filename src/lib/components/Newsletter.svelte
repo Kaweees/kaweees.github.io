@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	let email = '';
 	let error = false;
 	let submitted = false;

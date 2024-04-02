@@ -1,6 +1,6 @@
 import { error } from '@sveltejs/kit';
 import { slug } from 'github-slugger';
-import { getEntries } from '$utils/entries.js';
+import { getEntries } from '$utils/entries';
 
 function slugsArray(tags) {
 	return tags?.map((t) => slug(t)) || [];

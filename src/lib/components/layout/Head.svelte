@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { config } from '$lib/config';
 
 	export let title = 'Official Website';

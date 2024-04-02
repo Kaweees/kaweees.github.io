@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { config, navLinks } from '$lib/config';
 	import ThemeSwitch from '$lib/components/ThemeSwitch.svelte';
 	import MobileMenu from '$lib/components/MobileMenu.svelte';

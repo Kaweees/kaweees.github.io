@@ -1,6 +1,6 @@
 import { browser } from '$app/environment';
 import { slug } from 'github-slugger';
-import { config, user } from '$lib/config.ts';
+import { config, user } from '$lib/config';
 
 // we require some server-side APIs to parse all metadata
 if (browser) {

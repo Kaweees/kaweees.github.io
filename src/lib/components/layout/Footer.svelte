@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { config } from '$lib/config';
 	import SocialIcon from '$lib/components/SocialIcon.svelte';
 	import Newsletter from '$lib/components/Newsletter.svelte';
@@ -6,9 +6,7 @@
 	let year = new Date().getFullYear();
 </script>
 
-<footer
-	class="text-center m-5 flex flex-row justify-center align-center"
->
+<footer class="text-center m-5 flex flex-row justify-center align-center">
 	<div class="copyright">
 		<span>
 			Made with

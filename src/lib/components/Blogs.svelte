@@ -1,11 +1,11 @@
-<script>
+<script lang="ts">
 	import { onMount } from 'svelte';
 	import Tag from '$lib/components/Tag.svelte';
 	import Title from '$lib/components/Title.svelte';
 	import Author from '$lib/components/Author.svelte';
 	import SearchBox from '$lib/components/SearchBox.svelte';
 	import { page } from '$app/stores';
-	import fuzzySearch from '$utils/search.js';
+	import fuzzySearch from '$utils/search';
 
 	export let title = '';
 	export let subtitle = '';
@@ -33,7 +33,7 @@
 	});
 </script>
 
-<div class="my-2 mx-8">
+<div>
 	<div class="py-6 border-b-2 border-dashed border-bg1-dark dark:border-bg1-light">
 		<div class="">
 			<div>
