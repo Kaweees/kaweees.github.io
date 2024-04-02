@@ -4,7 +4,7 @@
 	export let pauseOnHover = false;
 	export let reverse = false;
 	export let fade = false;
-	export let className;
+	export let className = '';
 </script>
 
 <div

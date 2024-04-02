@@ -27,9 +27,6 @@
 	onMount(() => {
 		// Get the route of the current page
 		currentURL = window.location.pathname;
-
-		// Log the route to the console (you can also use it in other parts of your code)
-		console.log('Route:', currentURL);
 	});
 </script>
 

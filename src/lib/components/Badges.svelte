@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Marquee from '$lib/components/marquee/Marquee.svelte';
+	import Marquee from '$lib/components/Marquee.svelte';
 </script>
 
 <Marquee gap="20px" className="py-4" fade={true} pauseOnHover={true}>
