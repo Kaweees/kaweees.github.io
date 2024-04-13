@@ -1,7 +1,9 @@
-const defaultTheme = require('tailwindcss/defaultTheme');
+import defaultTheme from 'tailwindcss/defaultTheme';
+
+// const defaultTheme = require('tailwindcss/defaultTheme');
 // const colors = require('tailwindcss/colors');
 
-module.exports = {
+const tailwindConfig = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	darkMode: 'class',
 	theme: {
@@ -318,3 +320,5 @@ module.exports = {
 	},
 	plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')]
 };
+
+export default tailwindConfig;

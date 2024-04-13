@@ -1,15 +1,19 @@
 {
-  "name": "Sveltekit Tailwind Blog Starter Kit",
-  "version": "1.0.0",
+  "name": "miguelvf.dev",
+  "version": "1.0.1",
   "private": true,
+  "author": {
+    "name": "Miguel Villa Floran",
+    "url": "https://github.com/kaweees"
+  },
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
-    "preview": "vite preview",
-    "check": "svelte-kit sync && svelte-check ./jsconfig.json",
-    "check:watch": "svelte-kit sync && svelte-check ./jsconfig.json --watch",
-    "lint": "prettier --plugin-search-dir . --check . && eslint .",
-    "format": "prettier --plugin-search-dir . --write ."
+    "preview": "vite preview --host",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch",
+    "lint": "prettier \".\" --check && eslint --report-unused-disable-directives --max-warnings 0",
+    "format": "prettier \".\" --write --ignore-path .gitignore"
   },
   "devDependencies": {
     "@poppanator/sveltekit-svg": "4.2.1",
