@@ -1,4 +1,4 @@
-import { config } from '$lib/config';
+import { siteConfig } from '$lib/config';
 import buttondown from './buttondown.js';
 import convertkit from './convertkit.js';
 import emailoctopus from './emailoctopus.js';
@@ -8,9 +8,9 @@ import revue from './revue.js';
 
 const registerEmail = (email) => {
 	// skip if there's not newsletter provider is selected
-	if (!config.newsletter) return;
+	if (!siteConfig.newsletter) return;
 
-	switch (config.newsletter) {
+	switch (siteConfig.newsletter) {
 		case 'mailchimp':
 			return mailchimp(email);
 		case 'emailoctopus':

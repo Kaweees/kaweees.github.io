@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { config } from '$lib/config';
+	import { siteConfig } from '$lib/config';
 	import Tag from '$lib/components/Tag.svelte';
 	import Author from '$lib/components/Author.svelte';
 
@@ -33,7 +33,7 @@
 							<dt class="sr-only">Published on</dt>
 							<dd class="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
 								<time dateTime={post.date}>
-									{new Date(post.date).toLocaleDateString(config.locale, {
+									{new Date(post.date).toLocaleDateString(siteConfig.locale, {
 										weekday: 'long',
 										year: 'numeric',
 										month: 'long',

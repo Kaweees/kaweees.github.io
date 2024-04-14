@@ -1,11 +1,11 @@
-import { config } from '$lib/config';
+import { siteConfig } from "$lib/config";
 
 const formatDate = (date) => {
-	return new Date(date).toLocaleDateString(config.locale, {
-		year: 'numeric',
-		month: 'long',
-		day: 'numeric'
-	});
+  return new Date(date).toLocaleDateString(siteConfig.locale, {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
 };
 
 export default formatDate;
