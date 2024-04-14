@@ -2,9 +2,10 @@
 	import { page } from '$app/stores';
 	import { config } from '$lib/config';
 	import Title from '$lib/components/Title.svelte';
+	import BorderedCard from '$lib/components/BorderedCard.svelte';
 </script>
 
-<div class="">
+<BorderedCard border={false}>
 	{#if $page.status === 404}
 		<Title title="404 Page not found {config.emoji}" />
 		<p class="text-xl my-8">{"This is not the page you're looking for <(-_-)>."}</p>
@@ -20,4 +21,4 @@
 			>Go Back Home</a
 		>
 	</div>
-</div>
+</BorderedCard>
