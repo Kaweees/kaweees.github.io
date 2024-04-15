@@ -47,7 +47,10 @@
         {/if}
       </div>
 
-      <div class="pl-4" class:border-l-2={search}>
+      <div
+        class="pl-4 border-bg1-dark dark:border-bg1-light"
+        class:border-l-2={search}
+      >
         {#if search}
           <SearchBox />
         {/if}

@@ -1,5 +1,5 @@
 ---
-name: Richard Hendricks
+name: Miguel Villa Floran
 # avatar: /img/richard.png
 occupation: CEO and Founder
 company: Pied Piper
