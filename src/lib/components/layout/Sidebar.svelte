@@ -12,6 +12,6 @@
   border={true}
 >
   <Location />
-  <!-- <Badges /> -->
+  <Badges />
   <TechStack />
 </BorderedElement>

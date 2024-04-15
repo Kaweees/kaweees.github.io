@@ -1,3 +1,49 @@
+<!-- SEO Variables -->
+<!-- {{ $title := cond (and .IsHome) (printf "%s — %s" .Site.Params.Subtitle .Site.Title) .Title }}
+{{ $description := .Description
+  | default ( .Summary | plainify)
+  | default .Site.Params.description
+}}
+{{ $image := .Params.image | default .Site.Params.AvatarURL }}
+{{ $siteKeywords := .Site.Params.MetaKeywords | default (slice) }}
+{{ $postKeywords := .Params.tags | default (slice) }}
+{{ $keywords := union $siteKeywords $postKeywords }} -->
+
+<!-- SEO titles & descriptions -->
+<!-- <title>{{ $title }}</title>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta property="og:site_name" content="{{ $title }}" />
+<meta name="description" content="{{ $description }}" />
+<meta name="keywords" content="{{ delimit $keywords ", " }}" />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+/>
+
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="{{ $title }}" />
+<meta property="og:description" content="{{ $description }}" />
+<link rel="canonical" href="{{ .Permalink }}" /> -->
+
+<!-- Internal Hugo templates -->
+<!-- See https://gohugo.io/templates/internal -->
+<!-- {{ template "_internal/twitter_cards.html" . }}
+{{ template "_internal/opengraph.html" . }}
+{{ template "_internal/schema.html" . }} -->
+x
+<!-- RSS feed -->
+<!-- See https://gohugo.io/templates/rss/#reference-your-rss-feed-in-head -->
+<!-- {{ range .AlternativeOutputFormats }}
+  <link
+    rel="{{ .Rel }}"
+    type="{{ .MediaType.Type }}"
+    href="{{ .RelPermalink }}"
+    title="{{ $.Site.Title }}"
+  />
+{{ end }} -->
+
 <script lang="ts">
   import { dev } from "$app/environment";
   import { page } from "$app/stores";

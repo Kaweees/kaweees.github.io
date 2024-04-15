@@ -3,12 +3,14 @@
   import Head from "$lib/components/layout/Head.svelte";
   import Blogs from "$lib/components/Blogs.svelte";
   import Link from "$lib/components/Link.svelte";
+  import Metadata from "$lib/components/Metadata.svelte";
 
   export let data;
   let posts = data.posts;
   let jobs = data.jobs;
 </script>
 
+<Metadata/>
 <Head />
 
 <BorderedElement
