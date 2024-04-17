@@ -34,7 +34,6 @@ const quoteArray = [
 
 export const siteConfig = {
   title: "Miguel Villa Floran",
-  author: "Ahmad Kiarostami",
   headerTitle: "Pied Piper",
   description:
     "Pied Piper (un)official blog, created with Sveltekit and Tailwind.css",

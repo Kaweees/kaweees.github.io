@@ -32,7 +32,7 @@
 <!-- {{ template "_internal/twitter_cards.html" . }}
 {{ template "_internal/opengraph.html" . }}
 {{ template "_internal/schema.html" . }} -->
-x
+
 <!-- RSS feed -->
 <!-- See https://gohugo.io/templates/rss/#reference-your-rss-feed-in-head -->
 <!-- {{ range .AlternativeOutputFormats }}

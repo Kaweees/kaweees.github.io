@@ -1,18 +1,22 @@
 <script lang="ts">
   import { siteConfig } from "$lib/config";
+  import { page } from "$app/stores";
 
-  export let title = "Official Website";
+  export let title = "Home";
+  $: title = $page.data?.title
+    ? `${$page.data.title} - ${siteConfig.name}`
+    : siteConfig.name;
   export let description = siteConfig.description;
   export let author = siteConfig.author;
   export let url = siteConfig.siteUrl;
   export let domain = siteConfig.domain;
   export let rtl = false;
-  let titleFromUrl = url.split("/").pop().replace("-", " ");
-  export let img = `${url}/og?message=${rtl ? titleFromUrl : title}`;
+  // let titleFromUrl = (url as string)?.split("/")?.pop()?.replace("-", " ");
+  // export let img = `${url}/og?message=${rtl ? titleFromUrl : title}`;
 </script>
 
 <svelte:head>
-  <title>{title} | {siteConfig.title}</title>
+  <title>{title} — {siteConfig.title}</title>
   <meta name="description" content={description} />
   <meta name="author" content={author} />
 
@@ -21,7 +25,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
-  <meta property="og:image" content={img} />
+  <!-- <meta property="og:image" content={img} /> -->
 
   <!-- Twitter Meta Tags -->
   <meta name="twitter:card" content="summary_large_image" />
@@ -29,7 +33,7 @@
   <meta property="twitter:url" content={url} />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
-  <meta name="twitter:image" content={img} />
+  <!-- <meta name="twitter:image" content={img} /> -->
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="/css/fonts.css" />
