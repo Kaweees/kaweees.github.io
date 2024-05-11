@@ -59,7 +59,12 @@ simple steps:
    ```
 2. Install the project dependencies
    ```sh
-   pnpm i
+   pnpm taze -w # Update dependencies
+   pnpm i # Install dependencies
+   ```
+3. Start the development server
+   ```sh
+   pnpm run dev
    ```
 
 <!-- USAGE EXAMPLES -->
