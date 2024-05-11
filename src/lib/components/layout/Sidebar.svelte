@@ -1,5 +1,4 @@
 <script lang="ts">
-  import Marquee from "$lib/components/Marquee.svelte";
   import BorderedElement from "$lib/components/BorderedCard.svelte";
   import Badges from "$lib/components/Badges.svelte";
   import TechStack from "$lib/components/TechStack.svelte";

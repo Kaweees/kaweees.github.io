@@ -1,55 +1,59 @@
 <script lang="ts">
-  import createGlobe from "cobe";
   import { MapPin } from "svelte-heros-v2";
-  import { onMount } from "svelte";
-  import { spring } from "svelte/motion";
-  import { isDarkMode } from "$utils/theme";
+  // import createGlobe from "cobe";
+  // import { onMount } from "svelte";
+  // import { spring } from "svelte/motion";
+  // import { isDarkMode } from "$utils/theme";
 
-  const darkBaseColor = [235 / 255, 219 / 255, 178 / 255];
-  const lightBaseColor = [235 / 255, 199 / 255, 135 / 255];
-  // 216 199 135
+  // const darkBaseColor = [235 / 255, 219 / 255, 178 / 255];
+  // const lightBaseColor = [235 / 255, 199 / 255, 135 / 255];
+  // // 216 199 135
 
-  let canvas: HTMLCanvasElement;
+  // let canvas: HTMLCanvasElement;
 
-  onMount(() => {
-    createGlobe(canvas, {
-      devicePixelRatio: 2,
-      width: canvas.getBoundingClientRect().width,
-      height: canvas.getBoundingClientRect().height,
-      phi: 0,
-      theta: 0,
-      dark: (isDarkMode() ? true : false) as unknown as number,
-      diffuse: 1.2,
-      mapSamples: 16000,
-      mapBrightness: 6,
-      baseColor: darkBaseColor as [number, number, number],
-      markerColor: [59 / 255, 130 / 255, 246 / 255],
-      glowColor: darkBaseColor as [number, number, number],
-      markers: [{ location: [35.28275, -120.65962], size: 0.05 }],
-      onRender: (state) => {
-        state.phi = $r;
-        state.theta = $th;
-        state.width = canvas.getBoundingClientRect().width * 2;
-        state.height = canvas.getBoundingClientRect().height * 2;
-      },
-    });
-  });
+  // onMount(() => {
+  //   createGlobe(canvas, {
+  //     devicePixelRatio: 2,
+  //     width: canvas.getBoundingClientRect().width,
+  //     height: canvas.getBoundingClientRect().height,
+  //     phi: 0,
+  //     theta: 0,
+  //     dark: (isDarkMode() ? true : false) as unknown as number,
+  //     diffuse: 1.2,
+  //     mapSamples: 16000,
+  //     mapBrightness: 6,
+  //     baseColor: darkBaseColor as [number, number, number],
+  //     markerColor: [59 / 255, 130 / 255, 246 / 255],
+  //     glowColor: darkBaseColor as [number, number, number],
+  //     markers: [{ location: [35.28275, -120.65962], size: 0.05 }],
+  //     onRender: (state) => {
+  //       state.phi = $r;
+  //       state.theta = $th;
+  //       state.width = canvas.getBoundingClientRect().width * 2;
+  //       state.height = canvas.getBoundingClientRect().height * 2;
+  //     },
+  //   });
+  // });
 
-  let pointerInteracting: { x: number; y: number } | null = null;
-  let pointerInteractingMovement: { x: number; y: number } | null = {
-    x: 0,
-    y: 0,
-  };
-  let r = spring(0);
-  let th = spring(0);
+  // let pointerInteracting: { x: number; y: number } | null = null;
+  // let pointerInteractingMovement: { x: number; y: number } | null = {
+  //   x: 0,
+  //   y: 0,
+  // };
+  // let r = spring(0);
+  // let th = spring(0);
 </script>
 
-<div class="self-center standard-container-col">
-  <div class="flex items-center rounded-lg w-fit">
-    <MapPin size="100%" class="w-10" />San Luis Obispo, California - United
-    States
+<div class="self-center standard-container-col mt-5">
+  <div class="flex items-center justify-center rounded-lg w-full">
+    <MapPin size="100%" class="w-7" />
+    <p
+      class="flex my-auto justify-center text-lg font-bold align-middle text-center"
+    >
+      San Luis Obispo, CA
+    </p>
   </div>
-  <canvas
+  <!-- <canvas
     bind:this={canvas}
     on:pointerdown={(e) => {
       if (!pointerInteractingMovement) {
@@ -93,5 +97,5 @@
     }}
     style="box-shad6ow: inset 0 0 15px 2px rgba(0, 0, 0, 0.5);"
     class="w-full md:w-[500px] h-[350px] md:h-[500px] active:cursor-grabbing cursor-grab"
-  />
+  /> -->
 </div>
