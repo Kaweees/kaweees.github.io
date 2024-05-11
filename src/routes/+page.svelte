@@ -10,7 +10,7 @@
   let jobs = data.jobs;
 </script>
 
-<Metadata/>
+<Metadata />
 <Head />
 
 <BorderedElement

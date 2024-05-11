@@ -16,7 +16,8 @@
 
 ### Patch Changes
 
-- 9c21525: safelist `"dark"` in tailwind config for out-of-the-box dark mode support
+- 9c21525: safelist `"dark"` in tailwind config for out-of-the-box dark mode
+  support
 
 ## 0.0.4
 
@@ -34,4 +35,5 @@
 
 ### Patch Changes
 
-- 82eaa35: Textarea: Replaced default `h-20` to `min-h-[80px]` to allow rows to adjust height.
+- 82eaa35: Textarea: Replaced default `h-20` to `min-h-[80px]` to allow rows to
+  adjust height.

@@ -1,97 +1,97 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 @layer base {
-	html {
-		cursor: url(/cursors/marshmallonyuug.gif), auto;
-		@apply font-body antialiased;
-	}
+  html {
+    cursor: url(/cursors/marshmallonyuug.gif), auto;
+    @apply font-body antialiased;
+  }
 
-	a {
-		cursor: url(/cursors/gracefuldice.gif), pointer;
-	}
+  a {
+    cursor: url(/cursors/gracefuldice.gif), pointer;
+  }
 
-	h1,
-	h2,
-	h3,
-	h4 {
-		@apply font-title font-normal;
-	}
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-title font-normal;
+  }
 
-	.task-list-item::before {
-		@apply hidden;
-	}
+  .task-list-item::before {
+    @apply hidden;
+  }
 
-	.task-list-item {
-		@apply list-none;
-	}
+  .task-list-item {
+    @apply list-none;
+  }
 
-	.footnotes {
-		@apply pt-8 mt-12 border-t border-gray-200 dark:border-gray-700;
-	}
+  .footnotes {
+    @apply pt-8 mt-12 border-t border-gray-200 dark:border-gray-700;
+  }
 
-	.csl-entry {
-		@apply my-5;
-	}
+  .csl-entry {
+    @apply my-5;
+  }
 
-	/* https://stackoverflow.com/questions/61083813/how-to-avoid-internal-autofill-selected-style-to-be-applied */
-	input:-webkit-autofill,
-	input:-webkit-autofill:focus {
-		transition:
-			background-color 600000s 0s,
-			color 600000s 0s;
-	}
+  /* https://stackoverflow.com/questions/61083813/how-to-avoid-internal-autofill-selected-style-to-be-applied */
+  input:-webkit-autofill,
+  input:-webkit-autofill:focus {
+    transition:
+      background-color 600000s 0s,
+      color 600000s 0s;
+  }
 
-	/* Custom styles */
-	h1,
-	.neon {
-		text-shadow: 2px 2px 7px !important;
-	}
-	h1:before,
-	h2:before,
-	h3:before,
-	h4:before,
-	h5:before,
-	h6:before {
-		content: '>> ';
-	}
+  /* Custom styles */
+  h1,
+  .neon {
+    text-shadow: 2px 2px 7px !important;
+  }
+  h1:before,
+  h2:before,
+  h3:before,
+  h4:before,
+  h5:before,
+  h6:before {
+    content: ">> ";
+  }
 
-	a.link:after {
-		content: '\2009↗';
-	}
+  a.link:after {
+    content: "\2009↗";
+  }
 
-	a.link {
-		border-radius: 5px;
-	}
+  a.link {
+    border-radius: 5px;
+  }
 
-	body:before {
-		animation: scanlines-anim 1s linear infinite;
-		background: linear-gradient(hsla(0, 0%, 8%, 0) 66%, rgba(0, 0, 0, 0.15) 0);
-		background-size: 100% 5px;
-		bottom: 0;
-		content: '';
-		left: 0;
-		pointer-events: none;
-		position: fixed;
-		right: 0;
-		top: 0;
-		z-index: 9999;
-	}
+  body:before {
+    animation: scanlines-anim 1s linear infinite;
+    background: linear-gradient(hsla(0, 0%, 8%, 0) 66%, rgba(0, 0, 0, 0.15) 0);
+    background-size: 100% 5px;
+    bottom: 0;
+    content: "";
+    left: 0;
+    pointer-events: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 9999;
+  }
 
-	@keyframes scanlines-anim {
-		0% {
-			background-position: 0 0;
-		}
+  @keyframes scanlines-anim {
+    0% {
+      background-position: 0 0;
+    }
 
-		to {
-			background-position: 0 15px;
-		}
-	}
+    to {
+      background-position: 0 15px;
+    }
+  }
 
-	@media only screen and (orientation: portrait) {
-		body:before {
-			background-size: 100% 4px;
-		}
-	}
+  @media only screen and (orientation: portrait) {
+    body:before {
+      background-size: 100% 4px;
+    }
+  }
 }

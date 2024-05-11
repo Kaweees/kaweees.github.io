@@ -1,19 +1,18 @@
 @font-face {
-	font-family: "Mono Lisa";
-	src: url('../fonts/MonoLisa-Regular.ttf'), format('ttf');
-	font-display: swap;
-	font-weight: normal;
-	font-style: normal;
+  font-family: "Mono Lisa";
+  src: url("../fonts/MonoLisa-Regular.ttf"), format("ttf");
+  font-display: swap;
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-	font-family: "Fira Code";
-	src: url('../fonts/FiraCode-Regular.ttf'), format('ttf');
-	font-display: swap;
-	font-weight: normal;
-	font-style: normal;
+  font-family: "Fira Code";
+  src: url("../fonts/FiraCode-Regular.ttf"), format("ttf");
+  font-display: swap;
+  font-weight: normal;
+  font-style: normal;
 }
-
 
 /* @font-face {
 	font-family: "Atkinson Hyperlegible";

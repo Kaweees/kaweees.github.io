@@ -1,6 +1,6 @@
-import autoprefixer from 'autoprefixer'
-import nesting from 'postcss-nesting'
-import customMedia from 'postcss-custom-media'
+import autoprefixer from "autoprefixer";
+import nesting from "postcss-nesting";
+import customMedia from "postcss-custom-media";
 
 export default [
   autoprefixer,
@@ -8,7 +8,7 @@ export default [
   customMedia({
     importFrom: [
       // this is relative to svelte.config.js
-      './src/styles/sizes.css'
-    ]
-  })
-]
+      "./src/styles/sizes.css",
+    ],
+  }),
+];
