@@ -19,16 +19,19 @@
 </a>
 
 <div align="left">
-  <h1><em>~ran-app</em></h1>
+  <h1><em><a href="https://miguelvf.dev">miguelvf.dev</a></em></h1>
 </div>
 
 <!-- ABOUT THE PROJECT -->
 
-Frontend for [Research Acceleration Nexus (RAN)](https://ran.anemo.ai).
+My personal website and blog. Peeking under the hood, it uses Hugo, a static
+site generator written in Go, and Continuous Integration/Continuous Deployment
+(CI/CD) via a GitHub Actions workflow I created for automatic builds and
+deployments upon commits.
 
 ### Built With
 
-[![Rust][Rust-shield]][rust-url] [![Svelte][Svelte-shield]][Svelte-url]
+[![Svelte][Svelte-shield]][Svelte-url]
 [![TypeScript][TypeScript-shield]][TypeScript-url]
 [![Tailwind][Tailwind-shield]][Tailwind-url]
 [![GitHub Actions][GitHub-Actions-shield]][GitHub-Actions-url]
@@ -44,8 +47,8 @@ simple steps:
 ### Prerequisites
 
 Before attempting to build this project, make sure you have
-[Rust](https://www.rust-lang.org/), [taze](https://github.com/antfu/taze), and
-[pNpM](https://pnpm.io/) installed on your machine.
+[Node.js](https://nodejs.org/en/download), [pNpM](https://pnpm.io/), and
+[taze](https://github.com/antfu/taze) installed on your machine.
 
 ### Installation
 
@@ -54,18 +57,23 @@ simple steps:
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/anre-ai/ran-app.git
-   cd ran-app
+   git clone https://github.com/Kaweees/kaweees.github.io.git --recurse-submodules
+   cd kaweees.github.io
    ```
 2. Install the project dependencies
    ```sh
-   pnpm taze -w # Update dependencies
-   pnpm i # Install dependencies
+   pnpm i
    ```
 3. Start the development server
    ```sh
    pnpm run dev
    ```
+
+To update the projects modules, run the following commands:
+
+```sh
+pnpm taze -w
+```
 
 <!-- USAGE EXAMPLES -->
 
@@ -76,16 +84,13 @@ simple steps:
 Here is a list of the commands provided in the `scripts` section of the
 `package.json` file:
 
-| Command          | Description                                                                                     |
-| ---------------- | ----------------------------------------------------------------------------------------------- |
-| pnpm i           | Installs all the dependencies listed in `pnpm-lock.yaml`.                                       |
-| pnpm tauri dev   | Runs the app in the development mode with hot reload.                                           |
-| pnpm tauri build | Builds the application into an executable file for different platforms using the Rust compiler. |
-| npm run preview  | Serves the production build from the `dist` folder.                                             |
-| npm run check    | Formats the codebase according to the defined code style guidelines.                            |
-| npm run format   | Formats the codebase according to the defined code style guidelines.                            |
-| npm run lint     | Execute the linter to analyze the code for potential errors, style violations, or other issues. |
-| npm run test     | Runs the test watcher in an interactive mode.                                                   |
+| Command         | Description                                                                                     |
+| --------------- | ----------------------------------------------------------------------------------------------- |
+| pnpm i          | Installs all the dependencies listed in `pnpm-lock.yaml`.                                       |
+| npm run preview | Serves the production build from the `dist` folder.                                             |
+| npm run format  | Formats the codebase according to the defined code style guidelines.                            |
+| npm run lint    | Execute the linter to analyze the code for potential errors, style violations, or other issues. |
+| npm run test    | Runs the test watcher in an interactive mode.                                                   |
 
 _For more examples, please refer to the
 [Go Command Documentation](https://go.dev/doc/cmd)_
@@ -123,29 +128,29 @@ src
 
 ## License
 
-The codebase for Research Acceleration Nexus (RAN) is currently privately
-sourced and not available for public use. Do not distribute or use this codebase
-without the explicit permission of the project maintainers.
+The source code for my website is distributed under the terms of the GNU General
+Public License v3.0, as I firmly believe that collaborating on free and
+open-source software fosters innovations that mutually and equitably beneficial
+to both collaborators and users alike. See [`LICENSE`](./LICENSE) for details
+and more information.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
 [contributors-shield]:
-  https://img.shields.io/github/contributors/Kaweees/kiwi-controls.svg?style=for-the-badge
-[contributors-url]: https://github.com/anre-ai/ran-app/graphs/contributors
+  https://img.shields.io/github/contributors/Kaweees/kaweees.github.io.svg?style=for-the-badge
+[contributors-url]:
+  https://github.com/Kaweees/kaweees.github.io/graphs/contributors
 [forks-shield]:
-  https://img.shields.io/github/forks/Kaweees/kiwi-controls.svg?style=for-the-badge
-[forks-url]: https://github.com/anre-ai/ran-app/network/members
+  https://img.shields.io/github/forks/Kaweees/kaweees.github.io.svg?style=for-the-badge
+[forks-url]: https://github.com/Kaweees/kaweees.github.io/network/members
 [stars-shield]:
-  https://img.shields.io/github/stars/Kaweees/kiwi-controls.svg?style=for-the-badge
-[stars-url]: https://github.com/anre-ai/ran-app/stargazers
+  https://img.shields.io/github/stars/Kaweees/kaweees.github.io.svg?style=for-the-badge
+[stars-url]: https://github.com/Kaweees/kaweees.github.io/stargazers
 
 <!-- MARKDOWN SHIELD BADGES & LINKS -->
 <!-- https://github.com/Ileriayo/markdown-badges -->
 
-[Rust-shield]:
-  https://img.shields.io/badge/Rust-20232A?style=for-the-badge&logo=Rust&logoColor=CE422B&labelColor=222222&color=CE422B
-[Rust-url]: https://rust-lang.org/
 [Svelte-shield]:
   https://img.shields.io/badge/svelte-%23008080.svg?style=for-the-badge&logo=svelte&logoColor=FF3E00&labelColor=222222&color=FF3E00
 [Svelte-url]: https://svelte.dev/
