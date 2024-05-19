@@ -13,13 +13,13 @@
 
 </div>
 
-<a href="https://github.com/anre-ai/ran-app">
+<a href="https://miguelvf.dev">
   <source media="(prefers-color-scheme: dark)" srcset="assets/img/svelte-logo-light-mode.svg">
   <img alt="Text changing depending on mode. Light: 'Svelte Logo Light Mode' Dark: 'Svelte Logo Dark Mode'" src="assets/img/svelte-logo-dark-mode.svg" align="right" width="150">
 </a>
 
 <div align="left">
-  <h1><em><a href="https://miguelvf.dev">miguelvf.dev</a></em></h1>
+  <h1><em><a href="https://miguelvf.dev">~miguelvf.dev</a></em></h1>
 </div>
 
 <!-- ABOUT THE PROJECT -->
