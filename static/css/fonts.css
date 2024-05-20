@@ -1,10 +1,10 @@
-@font-face {
+/* @font-face {
   font-family: "Mono Lisa";
   src: url("../fonts/MonoLisa-Regular.ttf"), format("ttf");
   font-display: swap;
   font-weight: normal;
   font-style: normal;
-}
+} */
 
 @font-face {
   font-family: "Fira Code";
@@ -43,6 +43,6 @@
 	src: url('/fonts/FiraCode-Regular.woff2'), format('woff2');
 	font-display: swap;
 	font-style: normal;
-	font-weight: normal; 
+	font-weight: normal;
 }
 */

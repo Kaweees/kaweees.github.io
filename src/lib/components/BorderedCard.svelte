@@ -9,7 +9,7 @@
 <div
   class="{border
     ? 'border-solid border-2 rounded-lg border-fg-light dark:border-fg-dark p-6'
-    : ''} h-fit lg:mx-4 my-8 {className}"
+    : ''} h-fit lg:mx-4 mt-8 {className}"
 >
   {#if title}
     <h1

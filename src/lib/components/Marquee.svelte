@@ -8,7 +8,7 @@
 </script>
 
 <div
-  class="group flex overflow-hidden {direction === 'left'
+  class="w-full group flex overflow-hidden {direction === 'left'
     ? 'flex-row'
     : 'flex-col'} {className}"
   style="mask-image: {fade

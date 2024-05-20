@@ -19,7 +19,7 @@ const tailwindConfig = {
       },
       fontFamily: {
         title: [
-          "Lucida Console",
+          "Fira Code",
           "Monaco",
           "monospace",
           "ui-sans-serif",
@@ -30,7 +30,7 @@ const tailwindConfig = {
           "Segoe UI Symbol",
           "Noto Color Emoji",
         ],
-        body: ["Mono  Lisa", ...defaultTheme.fontFamily.sans],
+        body: ["Fira Code", ...defaultTheme.fontFamily.sans],
       },
       colors: {
         primary: {

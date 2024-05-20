@@ -2,7 +2,6 @@
   export const prerender = true;
 
   import Transition from "$lib/components/layout/Transition.svelte";
-  import Sidebar from "$lib/components/layout/Sidebar.svelte";
   import Header from "$lib/components/layout/Header.svelte";
   import Footer from "$lib/components/layout/Footer.svelte";
   import Analytics from "$lib/components/analytics/index.svelte";
@@ -17,11 +16,10 @@
 <div class="m-0 p-0">
   <div class="flex flex-col justify-between flex-nowrap h-screen">
     <Header />
-    <main class="mb-auto px-5 py-4 sm:px-8 flex flex-col lg:flex-row">
+    <main class="mb-auto px-5 py-4 sm:px-8">
       <Transition pathname={data?.pathname}>
         <slot />
       </Transition>
-      <Sidebar></Sidebar>
     </main>
     <Footer />
   </div>

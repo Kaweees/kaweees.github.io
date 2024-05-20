@@ -11,7 +11,7 @@
   <a
     class="typewriter neon font-bold font-title"
     href="/"
-    style="font-size: 1.5rem !important; font-family: 'Fira Code', 'Lucida Console', Monaco, monospace !important;"
+    style="font-size: 1.5rem !important;"
   >
     <Typewriter
       interval={200}
@@ -35,7 +35,6 @@
         <a
           href={link.href}
           class=" px-3 py-2 my-3 text-xl rounded-md hover:bg-bg-dark dark:hover:bg-bg-light hover:text-bg-light hover:dark:text-bg-dark"
-          style="!important; font-family: 'Fira Code', 'Lucida Console', Monaco, monospace !important;"
           >{link.title}</a
         >
       {/each}
