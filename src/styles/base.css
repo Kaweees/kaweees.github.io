@@ -17,7 +17,9 @@
     --title-primary-color: #3c3836;
     --title-secondary-color: #857a52;
     --link-color-primary: 66, 123, 88;
-    --link-color-secondary: #857a52;
+    --link-color-secondary: 142, 192, 124;
+    --blog-color-primary: 75, 85, 99;
+    --blog-color-secondary: 107, 114, 128;
   }
   html[data-theme="dark"] {
     --color-fill: 40, 40, 40;
@@ -32,7 +34,15 @@
     --title-primary-color: #fff;
     --title-secondary-color: #D8C787;
     --link-color-primary: 142, 192, 124;
-    --link-color-secondary: #857a52;
+    --link-color-secondary: 66 123 88;
+    --blog-color-primary: 209, 213, 219;
+    --blog-color-secondary: 156, 163, 175;
+  }
+  html {
+    cursor: url(/cursors/marshmallonyuug.gif), auto;
+  }
+  a {
+    cursor: url(/cursors/gracefuldice.gif), pointer;
   }
   .neon {
     text-shadow: 2px 2px 7px !important;
@@ -44,6 +54,7 @@
   h5:before,
   h6:before {
     content: ">> ";
+    color: rgb(var(--color-text-base));
   }
   a.link {
     color: rgb(var(--link-color-primary));
