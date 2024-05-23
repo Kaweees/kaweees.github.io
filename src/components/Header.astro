@@ -12,7 +12,7 @@ export interface Props {
 
 const { activeNav } = Astro.props;
 ---
-<header class="flex items-center justify-between py-4 px-7 bg-bg1-light dark:bg-bg1-dark">
+<header class="flex items-center justify-between py-4 px-7" style="background-color: rgb(var(--navigation-fill-primary));">
   <a href="/" class="py-1 text-xl font-semibold sm:static sm:text-2xl;">
     {
       LOGO_IMAGE.enable ? (
@@ -27,7 +27,7 @@ const { activeNav } = Astro.props;
       )
     }
   </a>
-  <div class="flex items-center text-base leading-5">
+  <nav class="flex items-center text-base leading-5">
     <div class="hidden sm:block">
       {
         NAV_LINKS.length > 0 && (
@@ -44,33 +44,10 @@ const { activeNav } = Astro.props;
     </div>
     <ThemeSwitch/>
     <MobileMenu/>
-  </div>
+  </nav>
 </header>
 
 <script>
-  function toggleNav() {
-    // Toggle menu
-    const menuBtn = document.querySelector(".hamburger-menu");
-    const menuIcon = document.querySelector(".menu-icon");
-    const menuItems = document.querySelector("#menu-items");
-
-    menuBtn?.addEventListener("click", () => {
-      const menuExpanded = menuBtn.getAttribute("aria-expanded") === "true";
-      menuIcon?.classList.toggle("is-active");
-      menuBtn.setAttribute("aria-expanded", menuExpanded ? "false" : "true");
-      menuBtn.setAttribute(
-        "aria-label",
-        menuExpanded ? "Open Menu" : "Close Menu"
-      );
-      menuItems?.classList.toggle("display-none");
-    });
-  }
-
-  toggleNav();
-
-  // Runs on view transitions navigation
-  document.addEventListener("astro:after-swap", toggleNav);
-
   // @ts-ignore
   import Typewriter from 'typewriter-effect/dist/core';
 
@@ -85,3 +62,9 @@ const { activeNav } = Astro.props;
     .typeString('> Miguel </span><span style="color: var(--title-secondary-color);">VF</span>')
     .start();
 </script>
+
+<style>
+   nav a.active {
+    @apply underline decoration-wavy decoration-2 underline-offset-4;
+  }
+</style>
