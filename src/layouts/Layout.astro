@@ -2,6 +2,7 @@
 import { LOCALE, SITE } from "@config";
 import "@styles/base.css";
 import { ViewTransitions } from "astro:transitions";
+import Header from "@components/Header.astro";
 
 const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
 
@@ -31,6 +32,13 @@ const socialImageURL = new URL(
   ogImage ?? SITE.ogImage ?? "og.png",
   Astro.url.origin
 ).href;
+
+export function getBaseRoute(pathname: string) {
+  const pathSegments = pathname.split('/').filter((segment: string) => segment !== '');
+  return pathSegments.length > 0 ? pathSegments[0] : '';
+}
+
+const baseRoute = getBaseRoute(Astro.url.pathname);
 ---
 
 <!doctype html>
@@ -109,7 +117,9 @@ const socialImageURL = new URL(
 
     <script is:inline src="/toggle-theme.js"></script>
   </head>
+
   <body>
-    <slot />
+    <Header activeNav={baseRoute} />
+    <div class="mb-auto px-5 py-4 sm:px-8"><slot /></div>
   </body>
 </html>

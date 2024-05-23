@@ -7,7 +7,6 @@ import MobileMenu  from "./MobileMenu.astro";
 import { NAV_LINKS } from "@config";
 
 export interface Props {
-  activeNav?: "posts" | "tags" | "about" | "search";
 }
 
 const { activeNav } = Astro.props;
@@ -23,7 +22,7 @@ const { activeNav } = Astro.props;
           height={LOGO_IMAGE.height}
         />
       ) : (
-        <span class="neon" style="color: var(--title-primary-color); font-size: 1.5rem !important;" id="typewriter"></span>
+        <span class="neon" style="color: var(--title-primary-color); font-size: 1.5rem !important;" id="typewriter">> Miguel <span class="neon" style="color: var(--title-secondary-color); font-size: 1.5rem !important;" id="typewriter">VF</span></span>
       )
     }
   </a>

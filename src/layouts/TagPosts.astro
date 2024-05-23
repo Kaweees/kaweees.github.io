@@ -20,7 +20,6 @@ const { currentPage, totalPages, paginatedPosts, tag, tagName } = Astro.props;
 ---
 
 <Layout title={`Tag: ${tagName} | ${SITE.title}`}>
-  <Header activeNav="tags" />
   <Main
     pageTitle={[`Tag:`, `${tagName}`]}
     titleTransition={tag}
