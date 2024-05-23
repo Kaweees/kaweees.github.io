@@ -31,12 +31,12 @@ export const LOGO_IMAGE = {
 };
 
 export const JOBS: JobsType = [
-  { company: "Cal Poly", role: "Research, Artificial Intelligence", time: "Nov 2023 - Present", link: "https://csc.calpoly.edu", image: "/logos/calpoly-logo.png" },
-  { company: "DeepWater Exploration", role: "Firmware & Applications", time: "May 2023 - Oct 2023", link: "https://www.dwe.ai", image: "/logos/dwe-logo.png" },
   { company: "Cisco Meraki", role: "Firmware", time: "Sept. 2024 - Dec. 2024", link: "https://meraki.cisco.com", image: "/logos/meraki.png" },
   { company: "NVIDIA", role: "GPU Software", time: "Jun 2024 - Sep 2024", link: "https://www.apple.com", image: "/logos/nvidia-logo.png" },
-  { company: "omegaUp", role: "Software Engineering", time: "Jun 2020 - Aug 2020", link: "https://omegaup.com", image: "/logos/omegaup-logo.png" },
   { company: "Cal Poly Racing", role: "Firmware & Board Design", time: "Jan 2024 - Present", link: "https://www.calpolyracing.org", image: "/logos/calpoly-racing-logo.png" },
+  { company: "Cal Poly", role: "Research, Artificial Intelligence", time: "Nov 2023 - Present", link: "https://csc.calpoly.edu", image: "/logos/calpoly-logo.png" },
+  { company: "DeepWater Exploration", role: "Firmware & Applications", time: "May 2023 - Oct 2023", link: "https://www.dwe.ai", image: "/logos/dwe-logo.png" },
+  { company: "omegaUp", role: "Software Engineering", time: "Jun 2020 - Aug 2020", link: "https://omegaup.com", image: "/logos/omegaup-logo.png" },
 ];
 
 export const SOCIALS: SocialObjects = [

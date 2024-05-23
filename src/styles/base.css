@@ -113,10 +113,6 @@
     @apply flex min-h-[100svh] flex-col bg-skin-fill font-mono text-skin-base
     selection:bg-skin-accent selection:bg-opacity-70 selection:text-skin-inverted;
   }
-  section,
-  footer {
-    @apply mx-auto max-w-3xl px-4;
-  }
   a {
     @apply outline-2 outline-offset-1 outline-skin-fill
     focus-visible:no-underline focus-visible:outline-dashed;

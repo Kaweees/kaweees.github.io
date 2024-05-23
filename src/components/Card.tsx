@@ -33,7 +33,7 @@ export default function Card({ href, frontmatter, secHeading = true }: Props) {
       </a>
       <Datetime pubDatetime={pubDatetime} modDatetime={modDatetime} />
       <p style={{ color: "rgb(var(--blog-color-secondary))"}}>{description}</p>
-      <div class="flex flex-wrap">
+      <div className="flex flex-wrap">
         {tags?.map((tag) => (
             <a href={`/tags/${tag.toLowerCase()}/`}
             style={{ color: "rgb(var(--link-color-secondary))" }} class="mr-3 font-medium uppercase text-primary_alt-light dark:text-primary_alt-dark hover:text-primary-light hover:dark:text-primary-dark text-sm">#{tag}</a>
