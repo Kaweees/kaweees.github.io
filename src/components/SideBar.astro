@@ -2,10 +2,19 @@
   import BorderedElement from "@components/BorderedCard.astro";
   import Badges from "@components/Badges.astro";
   import Link from "@components/Link.astro";
+
+  export interface Props {
+  className?: string;
+}
+
+const {
+  className,
+}: Props = Astro.props;
+
 ---
 
 <BorderedElement
-  className="overflow-hidden basis-2/3 flex flex-col items-center"
+  className={`overflow-hidden flex flex-col items-center w-1/1 ${className}`}
   border={true}
 >
   <img
