@@ -14,8 +14,7 @@
 </div>
 
 <a href="https://miguelvf.dev">
-  <source media="(prefers-color-scheme: dark)" srcset="assets/img/svelte-logo-light-mode.svg">
-  <img alt="Text changing depending on mode. Light: 'Svelte Logo Light Mode' Dark: 'Svelte Logo Dark Mode'" src="assets/img/svelte-logo-dark-mode.svg" align="right" width="150">
+  <img alt="Astro Logo'" src="assets/img/astro-logo.png" align="right" width="150">
 </a>
 
 <div align="left">
@@ -31,7 +30,7 @@ deployments upon commits.
 
 ### Built With
 
-[![Svelte][Svelte-shield]][Svelte-url]
+[![Astro][Astro-shield]][Astro-url]
 [![TypeScript][TypeScript-shield]][TypeScript-url]
 [![Tailwind][Tailwind-shield]][Tailwind-url]
 [![GitHub Actions][GitHub-Actions-shield]][GitHub-Actions-url]
@@ -151,9 +150,9 @@ and more information.
 <!-- MARKDOWN SHIELD BADGES & LINKS -->
 <!-- https://github.com/Ileriayo/markdown-badges -->
 
-[Svelte-shield]:
-  https://img.shields.io/badge/svelte-%23008080.svg?style=for-the-badge&logo=svelte&logoColor=FF3E00&labelColor=222222&color=FF3E00
-[Svelte-url]: https://svelte.dev/
+[Astro-shield]:
+  https://img.shields.io/badge/astro-%23008080.svg?style=for-the-badge&logo=astro&logoColor=FF5D01&labelColor=222222&color=FF5D01
+[Astro-url]: https://astro.build/
 [TypeScript-shield]:
   https://img.shields.io/badge/typescript-%23008080.svg?style=for-the-badge&logo=typescript&logoColor=3178C6&labelColor=222222&color=3178C6
 [TypeScript-url]: https://www.typescriptlang.org/
