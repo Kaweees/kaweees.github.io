@@ -11,6 +11,15 @@ export type Site = {
   scheduledPostMargin: number;
 };
 
+export type JobsType = {
+  company: string;
+  role: string;
+  time: string;
+  link: string;
+  image: string;
+}[];
+
+
 export type SocialObjects = {
   name: keyof typeof socialIcons;
   href: string;

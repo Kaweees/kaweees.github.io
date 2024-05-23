@@ -1,0 +1,23 @@
+---
+
+export interface Props {
+  href: string;
+  className?: string;
+  target: string;
+  text: string;
+}
+
+const {
+  href,
+  className,
+  target = "_blank",
+  text,
+}: Props = Astro.props;
+---
+
+<a
+  {href}
+  class="link {className}"
+  {target}
+  >{text}
+</a>
