@@ -45,9 +45,7 @@ simple steps:
 
 ### Prerequisites
 
-Before attempting to build this project, make sure you have
-[Node.js](https://nodejs.org/en/download), [pNpM](https://pnpm.io/), and
-[taze](https://github.com/antfu/taze) installed on your machine.
+Before attempting to build this project, make sure you have [Docker](https://docs.docker.com/engine/install/), [Node.js](https://nodejs.org/en/download), [pNpM](https://pnpm.io/), and [taze](https://github.com/antfu/taze) installed on your machine.
 
 ### Installation
 
@@ -78,6 +76,21 @@ pnpm taze -w
 
 ## Usage
 
+### Docker
+
+To build the project in a Docker container, run the following command:
+
+```sh
+docker-compose up -d # start the container in detached mode
+docker-compose down # stop the container
+```
+
+Additionally, you can build the project in a Docker container using the
+
+```sh
+
+```
+
 ### Available Commands
 
 Here is a list of the commands provided in the `scripts` section of the
@@ -86,10 +99,10 @@ Here is a list of the commands provided in the `scripts` section of the
 | Command         | Description                                                                                     |
 | --------------- | ----------------------------------------------------------------------------------------------- |
 | pnpm i          | Installs all the dependencies listed in `pnpm-lock.yaml`.                                       |
-| npm run preview | Serves the production build from the `dist` folder.                                             |
-| npm run format  | Formats the codebase according to the defined code style guidelines.                            |
-| npm run lint    | Execute the linter to analyze the code for potential errors, style violations, or other issues. |
-| npm run test    | Runs the test watcher in an interactive mode.                                                   |
+| pnpm run preview | Serves the production build from the `dist` folder.                                             |
+| pnpm run format  | Formats the codebase according to the defined code style guidelines.                            |
+| pnpm run lint    | Execute the linter to analyze the code for potential errors, style violations, or other issues. |
+| pnpm run test    | Runs the test watcher in an interactive mode.                                                   |
 
 _For more examples, please refer to the
 [Go Command Documentation](https://go.dev/doc/cmd)_
