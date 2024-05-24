@@ -3,8 +3,6 @@ import { getCollection } from "astro:content";
 import { SITE } from "@config";
 import Layout from "@layouts/Layout.astro";
 import Main from "@layouts/Main.astro";
-import Header from "@components/Header.astro";
-import Footer from "@components/Footer.astro";
 import SearchBar from "@components/Search";
 import getSortedPosts from "@utils/getSortedPosts";
 
@@ -22,8 +20,7 @@ const searchList = sortedPosts.map(({ data, slug }) => ({
 ---
 
 <Layout title={`Search | ${SITE.title}`}>
-  <Main pageTitle="Search" pageDesc="Search any article ...">
+  <Main pageTitle={["Search"]} pageDesc="Search any article ...">
     <SearchBar client:load searchList={searchList} />
   </Main>
-  <Footer />
 </Layout>

@@ -1,7 +1,6 @@
 ---
 import { getCollection } from "astro:content";
 import Layout from "@layouts/Layout.astro";
-import Footer from "@components/Footer.astro";
 import getSortedPosts from "@utils/getSortedPosts";
 import { SOCIALS } from "@config";
 
@@ -32,7 +31,6 @@ const resumeName = `Resume - Miguel Villa Floran - Software Engineer - ${result}
       />
     </div>
   </main>
-  <Footer />
 </Layout>
 
 <style>

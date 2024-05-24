@@ -1,7 +1,6 @@
 ---
 import { getCollection } from "astro:content";
 import Layout from "@layouts/Layout.astro";
-import Footer from "@components/Footer.astro";
 import LinkButton from "@components/LinkButton.astro";
 import Hr from "@components/Hr.astro";
 import Card from "@components/Card";
@@ -166,8 +165,6 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       </LinkButton>
     </div>
   </main>
-
-  <Footer />
 </Layout>
 
 <style>
