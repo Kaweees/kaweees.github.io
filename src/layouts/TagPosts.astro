@@ -7,6 +7,7 @@ import Footer from "@components/Footer.astro";
 import Card from "@components/Card";
 import Pagination from "@components/Pagination.astro";
 import { SITE } from "@config";
+import Title from "@components/Title.astro";
 
 export interface Props {
   currentPage: number;
@@ -21,9 +22,9 @@ const { currentPage, totalPages, paginatedPosts, tag, tagName } = Astro.props;
 
 <Layout title={`Tag: ${tagName} | ${SITE.title}`}>
   <Main
-    pageTitle={[`Tag:`, `${tagName}`]}
+    pageTitle={[`Tag: `, `${tagName}`]}
     titleTransition={tag}
-    pageDesc={`All the articles with the tag "${tagName}".`}
+    pageDesc={SITE.blogQuote}
   >
     <h1 slot="title" transition:name={tag}>{`Tag:${tag}`}</h1>
     <ul>

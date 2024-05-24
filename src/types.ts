@@ -9,6 +9,9 @@ export type Site = {
   lightAndDarkMode: boolean;
   postPerPage: number;
   scheduledPostMargin: number;
+  blogQuote: string;
+  emoji: string;
+  quote: string;
 };
 
 export type JobsType = {
