@@ -10,16 +10,13 @@ import LinkButton from "@components/LinkButton.astro";
     <div class="h-fit lg:mx-4 mt-8">
       <h1 class="neon text-5xl my-4 tracking-tight leading-14 capitalize" aria-label={`404 Page Not Found`}>404 Page Not Found ${SITE.emoji}</h1>
       <p class="text-xl my-8">This is not the page you're looking for &lt;(-_-)&gt;.</p>
-      <div>
-        <p class="text-xl my-8">{SITE.quote}</p>
-        <a href="/" class="text-xl font-semibold border-2 py-2 px-6 rounded-lg link">Go Back Home</a>
-        <LinkButton
-        href="/"
-        className="my-6 text-lg underline decoration-dashed underline-offset-8"
+      <p class="text-xl">{SITE.quote}</p>
+      <LinkButton
+      href="/"
+      className="my-6 text-lg underline decoration-dashed underline-offset-8 link"
       >
         Go back home
       </LinkButton>
-      </div>
     </div>
   </main>
 

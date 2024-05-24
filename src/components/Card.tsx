@@ -1,5 +1,5 @@
 import { slugifyStr } from "@utils/slugify"
-import Tag from "@components/Tag.astro";;
+import Tag from "@components/Tag.astro";
 import Datetime from "./Datetime";
 import type { CollectionEntry } from "astro:content";
 
