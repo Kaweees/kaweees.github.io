@@ -1,5 +1,4 @@
-import { slugifyStr } from "@utils/slugify"
-import Tag from "@components/Tag.astro";
+import { slugifyStr } from "@utils/slugify";
 import Datetime from "./Datetime";
 import type { CollectionEntry } from "astro:content";
 
@@ -10,7 +9,7 @@ export interface Props {
   tags?: string[];
 }
 
-export default function Card({ href, frontmatter, secHeading = true }: Props) {
+export default function Card({ href = '', frontmatter, secHeading = true }: Props) {
   const { title, pubDatetime, modDatetime, description, tags } = frontmatter;
 
   const headerProps = {
@@ -35,8 +34,8 @@ export default function Card({ href, frontmatter, secHeading = true }: Props) {
       <p style={{ color: "rgb(var(--blog-color-secondary))"}}>{description}</p>
       <div className="flex flex-wrap">
         {tags?.map((tag) => (
-            <a href={`/tags/${tag.toLowerCase()}/`}
-            style={{ color: "rgb(var(--link-color-secondary))" }} class="mr-3 font-medium uppercase text-primary_alt-light dark:text-primary_alt-dark hover:text-primary-light hover:dark:text-primary-dark text-sm">#{tag}</a>
+            <a href={`/tags/${tag.toLowerCase()}/`} key={tag}
+            style={{ color: "rgb(var(--link-color-secondary))" }} className="mr-3 font-medium uppercase text-primary_alt-light dark:text-primary_alt-dark hover:text-primary-light hover:dark:text-primary-dark text-sm">#{tag}</a>
           ))}
       </div>
     </li>
