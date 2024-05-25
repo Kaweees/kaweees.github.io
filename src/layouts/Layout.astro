@@ -18,8 +18,8 @@ export interface Props {
   scrollSmooth?: boolean;
 }
 
-const {
-  title = SITE.title,
+let {
+  title = "",
   author = SITE.author,
   description = SITE.desc,
   ogImage = SITE.ogImage,
@@ -40,6 +40,8 @@ export function getBaseRoute(pathname: string) {
 }
 
 const baseRoute = getBaseRoute(Astro.url.pathname);
+
+title = `${title ? title : "Home"} — ${SITE.title}`;
 ---
 
 <!doctype html>
@@ -47,6 +49,7 @@ const baseRoute = getBaseRoute(Astro.url.pathname);
   lang=`${LOCALE.lang ?? "en"}`
   class={`${scrollSmooth && "scroll-smooth"}`}
 >
+  <!-- SEO titles & descriptions -->
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />

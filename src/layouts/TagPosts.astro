@@ -18,7 +18,7 @@ export interface Props {
 const { currentPage, totalPages, paginatedPosts, tag, tagName } = Astro.props;
 ---
 
-<Layout title={`Tag: ${tagName} | ${SITE.title}`}>
+<Layout title={`Tag: ${tagName}`}>
   <Main
     pageTitle={[`Tag: `, `${tagName}`]}
     titleTransition={tag}
