@@ -35,10 +35,10 @@ const quoteArray = [
 ];
 
 export const SITE: Site = {
-  website: "https://astro-paper.pages.dev/", // replace this with your deployed domain
-  author: "Sat Naing",
-  desc: "A minimal, responsive and SEO-friendly Astro blog theme.",
   title: "Miguel Villa Floran",
+  website: "https://miguelvf.dev/",
+  author: "Miguel Villa Floran",
+  desc: "Curious, Creative, and Clever. Incoming SWE Intern @NVIDIA & Firmware Co-op @meraki. Currently studying Computer Engineering @calpoly, with a focus on embedded systems and robotics.",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
   postPerPage: 3,
@@ -46,6 +46,11 @@ export const SITE: Site = {
   blogQuote: blogQuoteArray[Math.floor(Math.random() * blogQuoteArray.length)],
   emoji: emojiArray[Math.floor(Math.random() * emojiArray.length)],
   quote: quoteArray[Math.floor(Math.random() * quoteArray.length)],
+  email: "miguel.villafloran@gmail.com",
+  github: "https://github.com/kaweees/",
+  twitter: "https://twitter.com/kaweees",
+  linkedin: "https://www.linkedin.com/in/miguel-vf/",
+  primaryColor: "#D8C787",
 };
 
 export const NAV_LINKS = [
