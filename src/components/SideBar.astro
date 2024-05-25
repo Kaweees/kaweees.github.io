@@ -4,6 +4,7 @@
   import Link from "@components/Link.astro";
   import { SOCIALS, JOBS } from "@config";
   import Socials from "@components/Socials.astro";
+  import Location from "@components/Location.astro";
 
   export interface Props {
     className?: string;
@@ -43,6 +44,7 @@
     embedded systems, robotics, and control systems. I'm an incoming Software
     Engineer @NVIDIA, and pursuing a B.S. in Computer Engineering at Cal Poly
   </p>
+  <Location/>
   {
     // only display if at least one social link is enabled
     socialCount > 0 && (
