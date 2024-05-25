@@ -46,10 +46,6 @@ export const SITE: Site = {
   blogQuote: blogQuoteArray[Math.floor(Math.random() * blogQuoteArray.length)],
   emoji: emojiArray[Math.floor(Math.random() * emojiArray.length)],
   quote: quoteArray[Math.floor(Math.random() * quoteArray.length)],
-  email: "miguel.villafloran@gmail.com",
-  github: "https://github.com/kaweees/",
-  twitter: "https://twitter.com/kaweees",
-  linkedin: "https://www.linkedin.com/in/miguel-vf/",
   primaryColor: "#D8C787",
 };
 

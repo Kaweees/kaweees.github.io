@@ -1,10 +1,10 @@
 import type socialIcons from "@assets/socialIcons";
 
 export type Site = {
+  title: string;
   website: string;
   author: string;
   desc: string;
-  title: string;
   ogImage?: string;
   lightAndDarkMode: boolean;
   postPerPage: number;
@@ -12,6 +12,7 @@ export type Site = {
   blogQuote: string;
   emoji: string;
   quote: string;
+  primaryColor: string
 };
 
 export type JobsType = {
