@@ -2,6 +2,7 @@
 import { LOCALE, SITE } from "@config";
 import "@styles/base.css";
 import { ViewTransitions } from "astro:transitions";
+import Banner from "@components/Banner.astro";
 import Header from "@components/Header.astro";
 import TailwindIndicator from "@components/TailwindIndicator.astro";
 import Footer from "@components/Footer.astro";
@@ -124,6 +125,7 @@ title = `${title ? title : "Home"} — ${SITE.title}`;
   </head>
 
   <body>
+    <Banner/>
     <Header activeNav={baseRoute} />
     <div class="mb-auto px-5 py-4 sm:px-8">
       <slot />
