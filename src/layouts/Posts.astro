@@ -16,11 +16,12 @@ const { currentPage, totalPages, paginatedPosts } = Astro.props;
 ---
 
 <Layout title="Blog">
-  <Main pageTitle={["Posts"]} pageDesc={SITE.blogQuote}>
+  <Main pageTitle={["¡Hola mundo!"]} pageDesc={SITE.blogQuote}>
+    <p class="pt-5">This is an archive of my journey to explore and conquer the inner workings of computers, from the subatomic particles in transistors to the cool stuff we do with processors, operating systems, and web browsers. Occasionaly, I’ll also give my two cents on philosophy. All opinions are my own.</p>
     <ul>
       {
         paginatedPosts.map(({ data, slug }) => (
-          <Card href={`/posts/${slug}/`} frontmatter={data} tags={data.tags} />
+          <Card href={`/blog/${slug}/`} frontmatter={data} tags={data.tags} />
         ))
       }
     </ul>
@@ -29,7 +30,7 @@ const { currentPage, totalPages, paginatedPosts } = Astro.props;
   <Pagination
     {currentPage}
     {totalPages}
-    prevUrl={`/posts${currentPage - 1 !== 1 ? "/" + (currentPage - 1) : ""}/`}
-    nextUrl={`/posts/${currentPage + 1}/`}
+    prevUrl={`/blog${currentPage - 1 !== 1 ? "/" + (currentPage - 1) : ""}/`}
+    nextUrl={`/blog/${currentPage + 1}/`}
   />
 </Layout>
