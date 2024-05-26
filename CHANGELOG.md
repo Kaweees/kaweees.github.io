@@ -1,39 +1,41 @@
-# www
+# Changelog
 
-## 0.1.0
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### Minor Changes
+## 2.0.0 (2024-05-26)
 
-- d733f29: Update `Slider` component to latest Bits UI API
+### ⚠ BREAKING CHANGES
 
-## 0.0.6
+* Migrated website from [Hugo](https://gohugo.io/) to [Astro](https://astro.build/)
+* Migrated styling from [Sass](https://sass-lang.com/) to [TailwindCSS](https://tailwindcss.com/)
+* Migrated hosting service from [GitHub Pages](https://pages.github.com/) to [Netlify](https://www.netlify.com/)
 
-### Patch Changes
+> See the reasoning for these changes in [this blog post](https://miguelvf.dev/blog/hello-astro/)
 
-- 1ba3100: fix: add mode-watcher to Sonner registry dependencies
+### Features
 
-## 0.0.5
+* OG images for better SEO
+* Dark mode toggle
+* Improved mobile experience
+* Improved search functionality
+* Theme-compliant scrollbars
 
-### Patch Changes
+<!--
+Version Release Template
+## [2.0.0](https://github.com/kaweees/kaweees.github.io/compare/v2.0.1...v2.0.0) (2024-05-26)
 
-- 9c21525: safelist `"dark"` in tailwind config for out-of-the-box dark mode
-  support
+### ⚠ BREAKING CHANGES
 
-## 0.0.4
+* Breaking changes description
+* **deps:** bump __ and its packages to v2 ([5f279b3]()
+([Commit id](https://github.com/owner/repo/commit/commit-id))
 
-### Patch Changes
+### Features
 
-- 9c10deb: fix: typo in svelte4 warnings
+* feature created ([Commit id](https://github.com/owner/repo/commit/commit-id))
 
-## 0.0.3
+### Bug Fixes
 
-### Patch Changes
+* bug fixed ([Commit id](https://github.com/owner/repo/commit/commit-id)), closes [#16](https://github.com/owner/repo/issues/issue-number)
 
-- 78962e9: add warnings for svelte v4 support
-
-## 0.0.2
-
-### Patch Changes
-
-- 82eaa35: Textarea: Replaced default `h-20` to `min-h-[80px]` to allow rows to
-  adjust height.
+-->

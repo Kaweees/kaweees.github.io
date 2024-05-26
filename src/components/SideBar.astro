@@ -1,0 +1,57 @@
+---
+  import BorderedElement from "@components/BorderedCard.astro";
+  import Badges from "@components/Badges.astro";
+  import Link from "@components/Link.astro";
+  import { SOCIALS, JOBS } from "@config";
+  import Socials from "@components/Socials.astro";
+  import Location from "@components/Location.astro";
+
+  export interface Props {
+    className?: string;
+  }
+  const socialCount = SOCIALS.filter(social => social.active).length;
+
+  const {
+    className,
+  }: Props = Astro.props;
+
+---
+
+<BorderedElement
+  className={`overflow-hidden flex flex-col items-center w-1/1 ${className}`}
+  border={true}
+>
+  <img
+    src="miguel-vf.png"
+    alt="Miguel Villa Floran"
+    class="mx-auto object-cover object-center border-2 rounded-full"
+    width="250"
+    height="250"
+  />
+  <p class="mx-auto text-center mt-5 font-bold text-xl">Miguel Villa Floran</p>
+  <p class="text-center mt-5 text-md w-full justify-center">
+    Computer Enginner in Training.
+  </p>
+  <Link
+    href="mailto:miguel.villafloran@gmail.com"
+    text="miguel.villafloran@gmail.com"
+    className="text-center text-md mt-5 justify-center"
+  />
+  <p
+    class="text-center text-sm mt-5 w-full justify-center text-gray-500 dark:text-gray-400"
+  >
+    Curious, Creative, and Clever. Aspiring Programming Wizard with interests in
+    embedded systems, robotics, and control systems. I'm an incoming Software
+    Engineer @NVIDIA, and pursuing a B.S. in Computer Engineering at Cal Poly
+  </p>
+  <Location/>
+  {
+    // only display if at least one social link is enabled
+    socialCount > 0 && (
+      <div class="social-wrapper">
+        <Socials />
+      </div>
+    )
+  }
+  <Badges />
+</BorderedElement>

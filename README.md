@@ -14,8 +14,7 @@
 </div>
 
 <a href="https://miguelvf.dev">
-  <source media="(prefers-color-scheme: dark)" srcset="assets/img/svelte-logo-light-mode.svg">
-  <img alt="Text changing depending on mode. Light: 'Svelte Logo Light Mode' Dark: 'Svelte Logo Dark Mode'" src="assets/img/svelte-logo-dark-mode.svg" align="right" width="150">
+  <img alt="Astro Logo'" src="assets/img/astro-logo.png" align="right" width="150">
 </a>
 
 <div align="left">
@@ -31,7 +30,7 @@ deployments upon commits.
 
 ### Built With
 
-[![Svelte][Svelte-shield]][Svelte-url]
+[![Astro][Astro-shield]][Astro-url]
 [![TypeScript][TypeScript-shield]][TypeScript-url]
 [![Tailwind][Tailwind-shield]][Tailwind-url]
 [![GitHub Actions][GitHub-Actions-shield]][GitHub-Actions-url]
@@ -46,9 +45,7 @@ simple steps:
 
 ### Prerequisites
 
-Before attempting to build this project, make sure you have
-[Node.js](https://nodejs.org/en/download), [pNpM](https://pnpm.io/), and
-[taze](https://github.com/antfu/taze) installed on your machine.
+Before attempting to build this project, make sure you have [Docker](https://docs.docker.com/engine/install/), [Node.js](https://nodejs.org/en/download), [pNpM](https://pnpm.io/), and [taze](https://github.com/antfu/taze) installed on your machine.
 
 ### Installation
 
@@ -79,6 +76,21 @@ pnpm taze -w
 
 ## Usage
 
+### Docker
+
+To build the project in a Docker container, run the following command:
+
+```sh
+docker-compose up -d # start the container in detached mode
+docker-compose down # stop the container
+```
+
+Additionally, you can build the project in a Docker container using the
+
+```sh
+
+```
+
 ### Available Commands
 
 Here is a list of the commands provided in the `scripts` section of the
@@ -87,10 +99,10 @@ Here is a list of the commands provided in the `scripts` section of the
 | Command         | Description                                                                                     |
 | --------------- | ----------------------------------------------------------------------------------------------- |
 | pnpm i          | Installs all the dependencies listed in `pnpm-lock.yaml`.                                       |
-| npm run preview | Serves the production build from the `dist` folder.                                             |
-| npm run format  | Formats the codebase according to the defined code style guidelines.                            |
-| npm run lint    | Execute the linter to analyze the code for potential errors, style violations, or other issues. |
-| npm run test    | Runs the test watcher in an interactive mode.                                                   |
+| pnpm run preview | Serves the production build from the `dist` folder.                                             |
+| pnpm run format  | Formats the codebase according to the defined code style guidelines.                            |
+| pnpm run lint    | Execute the linter to analyze the code for potential errors, style violations, or other issues. |
+| pnpm run test    | Runs the test watcher in an interactive mode.                                                   |
 
 _For more examples, please refer to the
 [Go Command Documentation](https://go.dev/doc/cmd)_
@@ -151,9 +163,9 @@ and more information.
 <!-- MARKDOWN SHIELD BADGES & LINKS -->
 <!-- https://github.com/Ileriayo/markdown-badges -->
 
-[Svelte-shield]:
-  https://img.shields.io/badge/svelte-%23008080.svg?style=for-the-badge&logo=svelte&logoColor=FF3E00&labelColor=222222&color=FF3E00
-[Svelte-url]: https://svelte.dev/
+[Astro-shield]:
+  https://img.shields.io/badge/astro-%23008080.svg?style=for-the-badge&logo=astro&logoColor=FF5D01&labelColor=222222&color=FF5D01
+[Astro-url]: https://astro.build/
 [TypeScript-shield]:
   https://img.shields.io/badge/typescript-%23008080.svg?style=for-the-badge&logo=typescript&logoColor=3178C6&labelColor=222222&color=3178C6
 [TypeScript-url]: https://www.typescriptlang.org/

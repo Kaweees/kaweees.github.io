@@ -1,0 +1,71 @@
+---
+import { LOGO_IMAGE, SITE } from "@config";
+import Hr from "./Hr.astro";
+import LinkButton from "./LinkButton.astro";
+import SearchButton from "./SearchButton.astro";
+import ThemeSwitch from "./ThemeSwitch.astro";
+import MobileMenu  from "./MobileMenu.astro";
+import { NAV_LINKS } from "@config";
+
+export interface Props {
+}
+
+const { activeNav } = Astro.props;
+---
+<header class="flex items-center justify-between py-4 px-6" style="background-color: rgb(var(--navigation-fill-primary));">
+  <a href="/" class="py-1 text-xl font-semibold sm:static sm:text-2xl;">
+    {
+      LOGO_IMAGE.enable ? (
+        <img
+          src={`/assets/${LOGO_IMAGE.svg ? "logo.svg" : "logo.png"}`}
+          alt={SITE.title}
+          width={LOGO_IMAGE.width}
+          height={LOGO_IMAGE.height}
+        />
+      ) : (
+        <span class="neon" style="color: var(--title-primary-color); font-size: 1.5rem !important;" id="typewriter">> Miguel <span class="neon" style="color: var(--title-secondary-color); font-size: 1.5rem !important;" id="typewriter">VF</span></span>
+      )
+    }
+  </a>
+  <nav class="flex items-center text-base leading-5">
+    <div class="hidden sm:block">
+      {
+        NAV_LINKS.length > 0 && (
+          <>
+          {NAV_LINKS.map(({ href, title }) => (
+              <a
+                href={`/${href}`}
+                class={`px-3 py-2 my-3 text-xl rounded-md${activeNav === href ? " active" : ""}`}
+              >{title}</a>
+            ))}
+          </>
+        )
+      }
+    </div>
+    <SearchButton activeNav={activeNav}/>
+    <ThemeSwitch/>
+    <MobileMenu/>
+  </nav>
+</header>
+
+<script>
+  // @ts-ignore
+  import Typewriter from 'typewriter-effect/dist/core';
+
+  let typewriter = new Typewriter('#typewriter', {
+    cursor: '_',
+    loop: false,
+    delay: 75,
+    deleteSpeed: 50,
+  });
+
+  typewriter
+    .typeString('> Miguel </span><span style="color: var(--title-secondary-color);">VF</span>')
+    .start();
+</script>
+
+<style>
+   nav a.active {
+    @apply underline decoration-wavy decoration-2 underline-offset-4;
+  }
+</style>

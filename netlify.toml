@@ -1,6 +1,6 @@
 [build]
   command = "pnpm run build"
-  publish = "build"
+  publish = "dist"
 
 [functions]
   directory = "functions"

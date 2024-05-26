@@ -1,0 +1,36 @@
+---
+import { SITE } from "@config";
+import Layout from "@layouts/Layout.astro";
+import LinkButton from "@components/LinkButton.astro";
+---
+
+<Layout title="404 Page Not Found">
+  <main id="main-content">
+    <div class="h-fit lg:mx-4 mt-8">
+      <h1 class="neon text-5xl my-4 tracking-tight leading-14 capitalize" aria-label={`404 Page Not Found`}>404 Page Not Found ${SITE.emoji}</h1>
+      <p class="text-xl my-8">This is not the page you're looking for &lt;(-_-)&gt;.</p>
+      <p class="text-xl">{SITE.quote}</p>
+      <LinkButton
+      href="/"
+      className="my-6 text-lg underline decoration-dashed underline-offset-8 link"
+      >
+        Go back home
+      </LinkButton>
+    </div>
+  </main>
+</Layout>
+<!--
+<style>
+  #main-content {
+    @apply mx-auto flex max-w-3xl flex-1 items-center justify-center;
+  }
+  .not-found-wrapper {
+    @apply mb-14 flex flex-col items-center justify-center;
+  }
+  .not-found-wrapper h1 {
+    @apply text-9xl font-bold text-skin-accent;
+  }
+  .not-found-wrapper p {
+    @apply mt-4 text-2xl sm:text-3xl;
+  }
+</style> -->

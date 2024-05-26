@@ -1,0 +1,31 @@
+---
+import Breadcrumbs from "@components/Breadcrumbs.astro";
+import Title from "@components/Title.astro";
+
+interface StringTitleProp {
+  pageTitle: string;
+  pageDesc?: string;
+}
+
+interface ArrayTitleProp {
+  pageTitle: [string, string];
+  titleTransition: string;
+  pageDesc?: string;
+}
+
+export type Props = StringTitleProp | ArrayTitleProp;
+
+const { props } = Astro;
+---
+
+<Breadcrumbs />
+<main id="main-content">
+  <Title
+  title={props.pageTitle}
+  subtitle={props.pageDesc}
+  h2=true
+  titleTransition={props.titleTransition}
+  />
+  <slot />
+</main>
+
