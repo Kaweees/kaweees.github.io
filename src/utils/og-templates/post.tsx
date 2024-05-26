@@ -3,9 +3,10 @@ import type { CollectionEntry } from "astro:content";
 
 export default (post: CollectionEntry<"blog">) => {
   return (
+    // Configure via: https://og-playground.vercel.app/
     <div
       style={{
-        background: "#fefbfb",
+        background: SITE.secondaryColor,
         width: "100%",
         height: "100%",
         display: "flex",
@@ -19,7 +20,7 @@ export default (post: CollectionEntry<"blog">) => {
           top: "-1px",
           right: "-1px",
           border: "4px solid #000",
-          background: "#ecebeb",
+          background: SITE.tertiaryColor,
           opacity: "0.9",
           borderRadius: "4px",
           display: "flex",
@@ -33,7 +34,7 @@ export default (post: CollectionEntry<"blog">) => {
       <div
         style={{
           border: "4px solid #000",
-          background: "#fefbfb",
+          background: SITE.primaryColor,
           borderRadius: "4px",
           display: "flex",
           justifyContent: "center",
@@ -86,7 +87,7 @@ export default (post: CollectionEntry<"blog">) => {
             </span>
 
             <span style={{ overflow: "hidden", fontWeight: "bold" }}>
-              {SITE.title}
+              {SITE.blogURL}
             </span>
           </div>
         </div>

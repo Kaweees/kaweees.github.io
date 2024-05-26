@@ -37,6 +37,7 @@ const quoteArray = [
 export const SITE: Site = {
   title: "Miguel Villa Floran",
   website: "https://miguelvf.dev/",
+  blogURL: "https://miguelvf.dev/blog",
   author: "Miguel Villa Floran",
   desc: "Curious, Creative, and Clever. Incoming SWE Intern @NVIDIA & Firmware Co-op @meraki. Currently studying Computer Engineering @calpoly, with a focus on embedded systems and robotics.",
   // ogImage: "astropaper-og.jpg",
@@ -46,7 +47,9 @@ export const SITE: Site = {
   blogQuote: blogQuoteArray[Math.floor(Math.random() * blogQuoteArray.length)],
   emoji: emojiArray[Math.floor(Math.random() * emojiArray.length)],
   quote: quoteArray[Math.floor(Math.random() * quoteArray.length)],
-  primaryColor: "#D8C787",
+  primaryColor: "#FBF1C7",
+  secondaryColor: "#EBDBB2",
+  tertiaryColor: "#D8C787",
 };
 
 export const NAV_LINKS = [

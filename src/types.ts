@@ -2,6 +2,7 @@ import type socialIcons from "@assets/socialIcons";
 
 export type Site = {
   title: string;
+  blogURL: string;
   website: string;
   author: string;
   desc: string;
@@ -12,7 +13,9 @@ export type Site = {
   blogQuote: string;
   emoji: string;
   quote: string;
-  primaryColor: string
+  primaryColor: string;
+  secondaryColor: string;
+  tertiaryColor: string;
 };
 
 export type JobsType = {
