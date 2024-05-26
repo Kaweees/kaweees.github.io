@@ -71,7 +71,8 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   </BorderedElement>
   <BorderedElement className="overflow-hidden" title="Places I've Worked" border={true} >
     <div
-      class="my-3 border-b border-dashed border-fg-light dark:border-fg-dark"
+      class="my-3 border-b border-dashed"
+      style="border-color: rgb(var(--fg-light));"
     >
       {
         JOBS.length > 0 && (

@@ -1,10 +1,10 @@
 ---
-author: Simon Smale
+author: Miguel Villa Floran
 # author:
 #   name: "Miguel Villa Floran"
 #   website: "https://miguelvf.dev"
-pubDatetime: 2024-01-03T20:40:08Z
-modDatetime: 2024-01-08T18:59:05Z
+pubDatetime: 2024-03-24T20:40:08Z
+modDatetime: 2024-03-24T18:59:05Z
 title: Using Secure Shell (ssh) and Key-Based Authentication
 slug: ssh
 featured: false

@@ -11,7 +11,7 @@
     --color-accent: 60, 56, 54;
     --color-card: 235, 219, 178;
     --color-card-muted: 60, 56, 54;
-    --color-border: 236, 233, 233;
+    --color-border: 40, 39, 40;
     --navigation-fill-primary: 235, 219, 178;
     --navigation-fill-secondary: 60, 56, 54;
     --title-primary-color: #3c3836;
@@ -133,8 +133,10 @@
     prose-blockquote:border-opacity-50 prose-blockquote:opacity-80
     prose-figcaption:!text-skin-base prose-figcaption:opacity-70
     prose-strong:!text-skin-base
-
-
+    prose-kbd:rounded prose-kbd:bg-skin-card
+    prose-kbd:bg-opacity-75 prose-kbd:p-1
+    prose-kbd:before:!content-none prose-kbd:after:!content-none
+    prose-kbd:!text-skin-base
     prose-code:rounded prose-code:bg-skin-card
     prose-code:bg-opacity-75 prose-code:p-1
     prose-code:before:!content-none prose-code:after:!content-none
@@ -193,11 +195,11 @@
   }
 
   code,
-  blockquote {
+  blockquote, kbd {
     word-wrap: break-word;
   }
 
-  pre > code {
+  pre > code, pre > kbd {
     white-space: pre;
   }
 }
