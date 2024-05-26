@@ -10,7 +10,7 @@ import { SITE } from "./src/config";
 export default defineConfig({
   site: SITE.website,
   server: {
-    port: 8000,
+    port: 8080,
   },
   integrations: [
     tailwind({

@@ -3,7 +3,7 @@ version: '3.8'
 services:
   app:
     build: . # Build from Dockerfile
-    ports: # Map container port 8000 to host port 8000
-      - 8000:8000
+    ports: # Map container port 8080 to host port 8080
+      - 8080:8080
     volumes:
       - ./:/dist
