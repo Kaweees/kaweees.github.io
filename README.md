@@ -23,10 +23,7 @@
 
 <!-- ABOUT THE PROJECT -->
 
-My personal website and blog. Peeking under the hood, it uses Hugo, a static
-site generator written in Go, and Continuous Integration/Continuous Deployment
-(CI/CD) via a GitHub Actions workflow I created for automatic builds and
-deployments upon commits.
+My personal website and blog. Peeking under the hood, it uses [Astro](https://astro.build/), a framework-agnostic static site generator, and [Tailwind CSS](https://tailwindcss.com/), a utility-first CSS framework, to create a fast, modern, and responsive website, and is deployed on Netlify via Docker.
 
 ### Built With
 
