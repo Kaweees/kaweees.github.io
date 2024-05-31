@@ -93,9 +93,9 @@ Additionally, you can build the project in a Docker container using the
 Here is a list of the commands provided in the `scripts` section of the
 `package.json` file:
 
-| Command         | Description                                                                                     |
-| --------------- | ----------------------------------------------------------------------------------------------- |
-| pnpm i          | Installs all the dependencies listed in `pnpm-lock.yaml`.                                       |
+| Command          | Description                                                                                     |
+| ---------------- | ----------------------------------------------------------------------------------------------- |
+| pnpm i           | Installs all the dependencies listed in `pnpm-lock.yaml`.                                       |
 | pnpm run preview | Serves the production build from the `dist` folder.                                             |
 | pnpm run format  | Formats the codebase according to the defined code style guidelines.                            |
 | pnpm run lint    | Execute the linter to analyze the code for potential errors, style violations, or other issues. |
@@ -146,32 +146,23 @@ and more information.
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]:
-  https://img.shields.io/github/contributors/Kaweees/kaweees.github.io.svg?style=for-the-badge
-[contributors-url]:
-  https://github.com/Kaweees/kaweees.github.io/graphs/contributors
-[forks-shield]:
-  https://img.shields.io/github/forks/Kaweees/kaweees.github.io.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/Kaweees/kaweees.github.io.svg?style=for-the-badge
+[contributors-url]: https://github.com/Kaweees/kaweees.github.io/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/Kaweees/kaweees.github.io.svg?style=for-the-badge
 [forks-url]: https://github.com/Kaweees/kaweees.github.io/network/members
-[stars-shield]:
-  https://img.shields.io/github/stars/Kaweees/kaweees.github.io.svg?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/Kaweees/kaweees.github.io.svg?style=for-the-badge
 [stars-url]: https://github.com/Kaweees/kaweees.github.io/stargazers
 
 <!-- MARKDOWN SHIELD BADGES & LINKS -->
 <!-- https://github.com/Ileriayo/markdown-badges -->
 
-[Astro-shield]:
-  https://img.shields.io/badge/astro-%23008080.svg?style=for-the-badge&logo=astro&logoColor=FF5D01&labelColor=222222&color=FF5D01
+[Astro-shield]: https://img.shields.io/badge/astro-%23008080.svg?style=for-the-badge&logo=astro&logoColor=FF5D01&labelColor=222222&color=FF5D01
 [Astro-url]: https://astro.build/
-[TypeScript-shield]:
-  https://img.shields.io/badge/typescript-%23008080.svg?style=for-the-badge&logo=typescript&logoColor=3178C6&labelColor=222222&color=3178C6
+[TypeScript-shield]: https://img.shields.io/badge/typescript-%23008080.svg?style=for-the-badge&logo=typescript&logoColor=3178C6&labelColor=222222&color=3178C6
 [TypeScript-url]: https://www.typescriptlang.org/
-[Tailwind-shield]:
-  https://img.shields.io/badge/tailwindcss-%23008080.svg?style=for-the-badge&logo=tailwind-css&logoColor=0EA5E9&labelColor=222222&color=0EA5E9
+[Tailwind-shield]: https://img.shields.io/badge/tailwindcss-%23008080.svg?style=for-the-badge&logo=tailwind-css&logoColor=0EA5E9&labelColor=222222&color=0EA5E9
 [Tailwind-url]: https://tailwindcss.com/
-[GitHub-Actions-shield]:
-  https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=2671E5&labelColor=222222&color=2671E5
+[GitHub-Actions-shield]: https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=2671E5&labelColor=222222&color=2671E5
 [GitHub-Actions-url]: https://github.com/features/actions
-[Docker-shield]:
-  https://img.shields.io/badge/docker-%232671E5.svg?style=for-the-badge&logo=docker&logoColor=1D63ED&labelColor=222222&color=1D63ED
+[Docker-shield]: https://img.shields.io/badge/docker-%232671E5.svg?style=for-the-badge&logo=docker&logoColor=1D63ED&labelColor=222222&color=1D63ED
 [Docker-url]: https://www.docker.com/

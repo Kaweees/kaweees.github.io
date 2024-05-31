@@ -6,19 +6,19 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### ⚠ BREAKING CHANGES
 
-* Migrated website from [Hugo](https://gohugo.io/) to [Astro](https://astro.build/)
-* Migrated styling from [Sass](https://sass-lang.com/) to [TailwindCSS](https://tailwindcss.com/)
-* Migrated hosting service from [GitHub Pages](https://pages.github.com/) to [Netlify](https://www.netlify.com/)
+- Migrated website from [Hugo](https://gohugo.io/) to [Astro](https://astro.build/)
+- Migrated styling from [Sass](https://sass-lang.com/) to [TailwindCSS](https://tailwindcss.com/)
+- Migrated hosting service from [GitHub Pages](https://pages.github.com/) to [Netlify](https://www.netlify.com/)
 
 > See the reasoning for these changes in [this blog post](https://miguelvf.dev/blog/hello-astro/)
 
 ### Features
 
-* OG images for better SEO
-* Dark mode toggle
-* Improved mobile experience
-* Improved search functionality
-* Theme-compliant scrollbars
+- OG images for better SEO
+- Dark mode toggle
+- Improved mobile experience
+- Improved search functionality
+- Theme-compliant scrollbars
 
 <!--
 Version Release Template

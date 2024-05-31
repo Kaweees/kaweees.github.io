@@ -41,6 +41,7 @@ export function getBaseRoute(pathname: string) {
 }
 
 const baseRoute = getBaseRoute(Astro.url.pathname);
+const isProd = import.meta.env.PROD;
 
 title = `${title ? title : "Home"} — ${SITE.title}`;
 ---
@@ -139,7 +140,7 @@ title = `${title ? title : "Home"} — ${SITE.title}`;
     <div class="mb-auto px-5 py-4 sm:px-8">
       <slot />
     </div>
-    <TailwindIndicator />
+    {!isProd && <TailwindIndicator />}
   </body>
   <Footer/>
 </html>

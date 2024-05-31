@@ -1,10 +1,4 @@
 {
-  "recommendations": [
-    "csstools.postcss",
-    "davidanson.vscode-markdownlint",
-    "dbaeumer.vscode-eslint",
-    "editorconfig.editorconfig",
-    "esbenp.prettier-vscode",
-    "stylelint.vscode-stylelint"
-  ]
+	"recommendations": ["astro-build.astro-vscode"],
+	"unwantedRecommendations": []
 }

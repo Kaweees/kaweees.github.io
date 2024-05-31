@@ -23,7 +23,7 @@ In this post I will explain how to use the pre-commit Git hook to automate the i
 
 ## Installation
 
-An ssh client is required to connect to remote servers. Fortunately, ssh is already installed on most Linux distributions and macOS. As of Windows 10,  OpenSSH is included in Windows. To check whether you have
+An ssh client is required to connect to remote servers. Fortunately, ssh is already installed on most Linux distributions and macOS. As of Windows 10, OpenSSH is included in Windows. To check whether you have
 it installed, run the following command:
 
 ```sh
