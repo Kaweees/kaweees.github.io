@@ -73,15 +73,6 @@ const { activeNav } = Astro.props;
 </div>
 
 <script>
-  let isOpen = false;
-  function toggleDarkMode() {
-    console.log("toggleDarkMode");
-    if (isOpen) {
-      isOpen = false;
-    } else {
-      isOpen = true;
-    }
-  }
   function toggleNav() {
     const navToggle = document.getElementById("nav-toggle");
     const navMenu = document.getElementById("nav-menu");

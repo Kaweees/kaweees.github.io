@@ -1,16 +1,5 @@
 ---
-import { getCollection } from "astro:content";
 import Layout from "@layouts/Layout.astro";
-import getSortedPosts from "@utils/getSortedPosts";
-import { SOCIALS } from "@config";
-
-const posts = await getCollection("blog");
-
-const sortedPosts = getSortedPosts(posts);
-const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
-const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
-
-const socialCount = SOCIALS.filter(social => social.active).length;
 
 const currentDate = new Date();
 const currentYear = currentDate.getFullYear();
@@ -27,7 +16,6 @@ const resumeName = `Resume - Miguel Villa Floran - Software Engineer - ${result}
         width="100%"
         height="100%"
         title={resumeName}
-        download={resumeName}
       />
     </div>
   </main>

@@ -7,7 +7,7 @@ import BorderedElement from "@components/BorderedCard.astro";
 import Link from "@components/Link.astro";
 import SideBar from "@components/SideBar.astro";
 import getSortedPosts from "@utils/getSortedPosts";
-import { SOCIALS, JOBS } from "@config";
+import { JOBS } from "@config";
 
 const posts = await getCollection("blog");
 
@@ -15,7 +15,7 @@ const sortedPosts = getSortedPosts(posts);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 
-const socialCount = SOCIALS.filter(social => social.active).length;
+// const socialCount = SOCIALS.filter(social => social.active).length;
 ---
 
 <Layout>
@@ -150,7 +150,6 @@ const socialCount = SOCIALS.filter(social => social.active).length;
                 )
             )}
           </ul>
-        </section>
       )
     }
 

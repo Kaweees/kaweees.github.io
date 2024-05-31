@@ -1,9 +1,9 @@
 ---
 export interface PageProps {
-  title: [string, string];
+  title: [string, string] | [string] | string;
   subtitle?: string;
-  h2: boolean;
-  titleTransition: string;
+  h2: string | boolean;
+  titleTransition?: string;
 }
 
 export type Props = PageProps;

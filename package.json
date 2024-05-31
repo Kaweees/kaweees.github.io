@@ -26,6 +26,7 @@
 		"@resvg/resvg-js": "^2.6.2",
 		"astro": "^4.9.1",
 		"clsx": "^2.1.1",
+		"framer-motion": "^11.2.10",
 		"fuse.js": "^7.0.0",
 		"github-slugger": "^2.0.0",
 		"i": "^0.3.7",
