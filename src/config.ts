@@ -85,13 +85,13 @@ export const JOBS: JobsType = [
 		link: 'https://www.nvidia.com/',
 		image: '/logos/nvidia-logo.png',
 	},
-	{
-		company: 'Cal Poly Racing',
-		role: 'Firmware & Board Design',
-		time: 'Jan 2024 - Present',
-		link: 'https://www.calpolyracing.org',
-		image: '/logos/calpoly-racing-logo.png',
-	},
+	// {
+	// 	company: 'Cal Poly Racing',
+	// 	role: 'Firmware & Board Design',
+	// 	time: 'Jan 2024 - Present',
+	// 	link: 'https://www.calpolyracing.org',
+	// 	image: '/logos/calpoly-racing-logo.png',
+	// },
 	{
 		company: 'Cal Poly',
 		role: 'Research, Artificial Intelligence',
