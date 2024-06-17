@@ -1,4 +1,4 @@
-import type { JobsType, Site, SocialObjects } from './types';
+import type { JobsType, ProjectsType, Site, SocialObjects } from './types';
 
 const blogQuoteArray = [
 	'🌠 Reaching for eternity',
@@ -40,7 +40,7 @@ export const SITE: Site = {
 	blogURL: 'https://miguelvf.dev/blog',
 	author: 'Miguel Villa Floran',
 	desc: 'Curious, Creative, and Clever. Incoming SWE Intern @NVIDIA & Firmware Co-op @meraki. Currently studying Computer Engineering @calpoly, with a focus on embedded systems and robotics.',
-	// ogImage: "astropaper-og.jpg",
+	// ogImage: "website-og.jpg",
 	lightAndDarkMode: true,
 	postPerPage: 3,
 	scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
@@ -113,6 +113,39 @@ export const JOBS: JobsType = [
 		link: 'https://omegaup.com',
 		image: '/logos/omegaup-logo.png',
 	},
+];
+
+export const PROJECTS: ProjectsType = [
+	{
+		title: 'life',
+		desc: "A GPU-Accelerated simulation of Conway's Game of Life written in C++, and CUDA, OpenGL.",
+		github: 'https://github.com/Kaweees/life',
+		image: '/projects/life.png',
+	},
+	{
+		title: 'kiwitar',
+		desc: 'A UNIX utility to create, list, and extract POSIX-specified USTAR tape archives written in C99.',
+		github: 'https://github.com/Kaweees/kiwitar',
+		image: '/projects/kiwitar.png',
+	},
+	{
+		title: 'ansible',
+		desc: 'My ansible playbook collection that has been written for setting up a Debian 12 (bookworm) Linux machine.',
+		github: 'https://github.com/Kaweees/ansible',
+		image: '/projects/ansible.png',
+	},
+	// {
+	// 	title: 'kiwi-mcu',
+	// 	desc: 'A 50 megahertz 32-bit RISC-V CPU Core (RV32IM) with 5-Stage pipelining and caching designed in SystemVerilog and deployed to an Artix-7 Baysis 3 FPGA.',
+	// 	github: 'https://github.com/Kaweees/kiwi-mcu',
+	// 	image: '/projects/kiwi-mcu.png',
+	// },
+	// {
+	// 	title: 'xxd-rust',
+	// 	desc: 'A binary/hexadecimal analyzer and dump creator written in Rust.',
+	// 	github: 'https://github.com/Kaweees/xxd-rust',
+	// 	image: '/projects/kiwi-mcu.png',
+	// },
 ];
 
 export const SOCIALS: SocialObjects = [

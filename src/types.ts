@@ -26,6 +26,14 @@ export type JobsType = {
 	image: string;
 }[];
 
+export type ProjectsType = {
+	title: string;
+	desc: string;
+	github?: string;
+	link?: string;
+	image: string;
+}[];
+
 export type SocialObjects = {
 	name: keyof typeof socialIcons;
 	href: string;
