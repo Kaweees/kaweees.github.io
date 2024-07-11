@@ -20,7 +20,7 @@ export default function Card({ href = '', frontmatter, secHeading = true }: Prop
 
 	return (
 		<li
-			className="my-3 py-3 border-b-2 border-dashed"
+			className="mt-2 py-3 border-b-2 border-dashed"
 			style={{ borderColor: 'rgb(var(--color-text-base))' }}
 		>
 			<a
