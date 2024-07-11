@@ -71,20 +71,20 @@ export const LOGO_IMAGE = {
 };
 
 export const JOBS: JobsType = [
-	// {
-	// 	company: 'Cisco Meraki',
-	// 	role: 'Network Infrastructure Firmware',
-	// 	time: 'Sept. 2024 - Dec. 2024',
-	// 	link: 'https://meraki.cisco.com',
-	// 	image: '/logos/meraki.png',
-	// },
-	// {
-	// 	company: 'NVIDIA',
-	// 	role: 'GPU Software Optimization',
-	// 	time: 'Jun 2024 - Sep 2024',
-	// 	link: 'https://www.nvidia.com/',
-	// 	image: '/logos/nvidia-logo.png',
-	// },
+	{
+		company: 'Cisco Meraki',
+		role: 'Network Infrastructure Firmware',
+		time: 'Sept. 2024 - Dec. 2024',
+		link: 'https://meraki.cisco.com',
+		image: '/logos/meraki.png',
+	},
+	{
+		company: 'NVIDIA',
+		role: 'GPU Software Optimization',
+		time: 'Jun 2024 - Sep 2024',
+		link: 'https://www.nvidia.com/',
+		image: '/logos/nvidia-logo.png',
+	},
 	// {
 	// 	company: 'Cal Poly Racing',
 	// 	role: 'Firmware & Board Design',
