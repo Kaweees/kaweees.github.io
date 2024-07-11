@@ -10,7 +10,7 @@ slug: tmux
 featured: false
 draft: false
 tags:
-  - developer tools
+  - developer-tools
   - dotfiles
   - tmux
 canonicalURL: https://miguelvf.dev/posts/tmux/

@@ -10,9 +10,7 @@ export type Site = {
 	lightAndDarkMode: boolean;
 	postPerPage: number;
 	scheduledPostMargin: number;
-	blogQuote: string;
 	emoji: string;
-	quote: string;
 	primaryColor: string;
 	secondaryColor: string;
 	tertiaryColor: string;

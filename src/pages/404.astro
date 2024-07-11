@@ -1,5 +1,5 @@
 ---
-import { SITE } from "@config";
+import { SITE } from '@config';
 import Layout from "@layouts/Layout.astro";
 import LinkButton from "@components/LinkButton.astro";
 ---
@@ -9,7 +9,7 @@ import LinkButton from "@components/LinkButton.astro";
     <div class="h-fit lg:mx-4 mt-8">
       <h1 class="neon text-5xl my-4 tracking-tight leading-14 capitalize" aria-label={`404 Page Not Found`}>404 Page Not Found ${SITE.emoji}</h1>
       <p class="text-xl my-8">This is not the page you're looking for &lt;(-_-)&gt;.</p>
-      <p class="text-xl">{SITE.quote}</p>
+      <p class="text-xl" id="quote404"></p>
       <LinkButton
       href="/"
       className="my-6 text-lg underline decoration-dashed underline-offset-8 link"
@@ -19,18 +19,16 @@ import LinkButton from "@components/LinkButton.astro";
     </div>
   </main>
 </Layout>
-<!--
-<style>
-  #main-content {
-    @apply mx-auto flex max-w-3xl flex-1 items-center justify-center;
+
+<script>
+  import { quoteArray } from "@config";
+  const quoteText = document.getElementById('quote404');
+
+  if (quoteText === null) {
+    throw new Error('quote404 element not found');
   }
-  .not-found-wrapper {
-    @apply mb-14 flex flex-col items-center justify-center;
+  if (!localStorage.getItem('quote404')) {
+    localStorage.setItem('quote404', quoteArray[Math.floor(Math.random() * quoteArray.length)]);
   }
-  .not-found-wrapper h1 {
-    @apply text-9xl font-bold text-skin-accent;
-  }
-  .not-found-wrapper p {
-    @apply mt-4 text-2xl sm:text-3xl;
-  }
-</style> -->
+  quoteText.textContent = localStorage.getItem('quote404');
+</script>

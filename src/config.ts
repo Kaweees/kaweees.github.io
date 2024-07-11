@@ -1,6 +1,6 @@
 import type { JobsType, ProjectsType, Site, SocialObjects } from './types';
 
-const blogQuoteArray = [
+export const blogQuoteArray = [
 	'🌠 Reaching for eternity',
 	'💾 Life is short and ROM is full',
 	'🐛 Learning one bug at a time',
@@ -21,7 +21,7 @@ const emojiArray = [
 	'\\(^Д^)/',
 ];
 
-const quoteArray = [
+export const quoteArray = [
 	'“What I cannot create, I do not understand.” ― Richard Feynman',
 	'“However much you deny the truth, the truth goes on existing” ― George Orwell',
 	'“Man is still the most extraordinary computer of all.” ― JFK',
@@ -44,9 +44,7 @@ export const SITE: Site = {
 	lightAndDarkMode: true,
 	postPerPage: 3,
 	scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
-	blogQuote: blogQuoteArray[Math.floor(Math.random() * blogQuoteArray.length)],
 	emoji: emojiArray[Math.floor(Math.random() * emojiArray.length)],
-	quote: quoteArray[Math.floor(Math.random() * quoteArray.length)],
 	primaryColor: '#FBF1C7',
 	secondaryColor: '#EBDBB2',
 	tertiaryColor: '#D8C787',

@@ -10,7 +10,7 @@ slug: ssh
 featured: false
 draft: false
 tags:
-  - developer tools
+  - developer-tools
   - dotfiles
   - ssh
 canonicalURL: https://miguelvf.dev/posts/ssh/
