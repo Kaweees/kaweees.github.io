@@ -80,7 +80,7 @@ export const JOBS: JobsType = [
 	},
 	{
 		company: 'NVIDIA',
-		role: 'GPU Software Optimization',
+		role: 'Hardware Performance & Verification Infrastructure',
 		time: 'Jun 2024 - Sep 2024',
 		link: 'https://www.nvidia.com/',
 		image: '/logos/nvidia-logo.png',
