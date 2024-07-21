@@ -34,7 +34,7 @@ const { activeNav } = Astro.props;
           {NAV_LINKS.map(({ href, title }) => (
               <a
                 href={`/${href}`}
-                class={`px-3 py-2 my-3 text-xl rounded-md${activeNav === href ? " active" : ""}`}
+                class={`px-3 py-2 my-3 text-xl rounded-md ${activeNav === href ? " active" : ""}`}
               >{title}</a>
             ))}
           </>
@@ -43,7 +43,7 @@ const { activeNav } = Astro.props;
     </div>
     <SearchButton activeNav={activeNav}/>
     <ThemeSwitch/>
-    <MobileMenu/>
+    <MobileMenu activeNav={activeNav}/>
   </nav>
 </header>
 
@@ -64,7 +64,14 @@ const { activeNav } = Astro.props;
 </script>
 
 <style>
-   nav a.active {
-    @apply underline decoration-wavy decoration-2 underline-offset-4;
+   nav a {
+    color: rgb(var(--color-text-base));
+   }
+   nav a:hover {
+    color: rgb(var(--color-fill));
+    background-color: rgb(var(--color-text-base));
+   }
+  nav a.active {
+    @apply underline decoration-wavy decoration-2 underline-offset-[0.3em];
   }
 </style>

@@ -2,7 +2,7 @@
 import { NAV_LINKS } from "@config";
 
 export interface Props {
-  activeNav?: "posts" | "tags" | "about" | "search";
+  activeNav: string;
 }
 
 const { activeNav } = Astro.props;
@@ -92,3 +92,17 @@ const { activeNav } = Astro.props;
   // Runs on view transitions navigation
   document.addEventListener("astro:after-swap", toggleNav);
 </script>
+
+<style>
+  nav a {
+    color: rgb(var(--color-fill));
+    background-color: rgb(var(--color-text-base));
+  }
+  nav a:hover {
+   color: rgb(var(--color-text-base));
+    background-color: rgb(var(--color-fill));
+  }
+ nav a.active {
+   @apply underline decoration-wavy decoration-2 underline-offset-[0.3em];
+ }
+</style>
