@@ -52,6 +52,7 @@ export const SITE: Site = {
 
 export const NAV_LINKS = [
 	{ href: 'projects', title: 'Projects' },
+	{ href: 'guestbook', title: 'Guestbook' },
 	{ href: 'blog', title: 'Blog' },
 	{ href: 'resume', title: 'Resume' },
 ];
@@ -147,6 +148,12 @@ export const PROJECTS: ProjectsType = [
 ];
 
 export const SOCIALS: SocialObjects = [
+	{
+		name: 'Twitter',
+		href: 'https://x.com/kaweees1/',
+		linkTitle: ` ${SITE.title} on Twitter`,
+		active: true,
+	},
 	{
 		name: 'Github',
 		href: 'https://github.com/kaweees/',

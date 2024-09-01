@@ -70,13 +70,13 @@ const layoutProps = {
       size="lg"
       className="my-2"
     />
+
+    <ul>
+      {tags.map(tag => <Tag tag={slugifyStr(tag)} />)}
+    </ul>
     <article id="article" role="article" class="prose mx-auto mt-8 max-w-3xl">
       <Content />
     </article>
-
-    <ul class="my-8">
-      {tags.map(tag => <Tag tag={slugifyStr(tag)} />)}
-    </ul>
 
     <div
       class="flex flex-col-reverse items-center justify-between gap-6 sm:flex-row-reverse sm:items-end sm:gap-4"

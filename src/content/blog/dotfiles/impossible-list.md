@@ -49,11 +49,10 @@ something or have something to add, with the later being most likely.
 ## 😃 Life Goals
 
 - Read 100 books
-- Improve a Person's Life
+- Improve a person's life
 - Give a TEDx Talk
 - Give a lecture at a scientific/professional conference
 - Give a lecture at a university
-- Work out 5 days a week regularly
 - Complete my Reading List
 - Complete my TV/Movies Watch List
 
@@ -61,11 +60,12 @@ something or have something to add, with the later being most likely.
 
 - Do 100 push-ups in a single set
 - Do 20 pull-ups in a single set
+- Work out 5 days a week regularly
 
 ## 💼 Professional Goals
 
 - Work Remotely
-- Work at [MANGA](https://en.wikipedia.org/wiki/Big_Tech)
+- ~~Work at the Magnificent Seven (aka Big Tech) [(June 24, 2024 - NVIDIA)](https://www.nvidia.com/)~~
 - ~~Work at a startup
   [(June 19, 2023 - DeepWater Exploration)](https://dwe.ai/)~~
 - Found a startup
