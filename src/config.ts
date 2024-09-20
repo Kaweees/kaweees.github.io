@@ -5,6 +5,7 @@ export const blogQuoteArray = [
 	'💾 Life is short and ROM is full',
 	'🐛 Learning one bug at a time',
 	'👞 If it fits the shoe, it be what it do',
+	'🚢 If it isn\'t shipped, then it doesn\'t exist',
 ];
 
 const emojiArray = [
