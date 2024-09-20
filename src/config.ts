@@ -5,7 +5,7 @@ export const blogQuoteArray = [
 	'💾 Life is short and ROM is full',
 	'🐛 Learning one bug at a time',
 	'👞 If it fits the shoe, it be what it do',
-	'🚢 If it isn\'t shipped, then it doesn\'t exist',
+	"🚢 If it isn't shipped, then it doesn't exist",
 ];
 
 const emojiArray = [
@@ -73,14 +73,14 @@ export const LOGO_IMAGE = {
 export const JOBS: JobsType = [
 	{
 		company: 'Cisco Meraki',
-		role: 'Network Infrastructure Firmware',
+		role: 'Meraki Vision Platform Firmware',
 		time: 'Sept. 2024 - Dec. 2024',
 		link: 'https://meraki.cisco.com',
 		image: '/logos/meraki.png',
 	},
 	{
 		company: 'NVIDIA',
-		role: 'Hardware Performance & Verification Infrastructure',
+		role: 'Distributed Hardware Testing Infrastructure',
 		time: 'Jun 2024 - Sep 2024',
 		link: 'https://www.nvidia.com/',
 		image: '/logos/nvidia-logo.png',
@@ -95,7 +95,7 @@ export const JOBS: JobsType = [
 	{
 		company: 'Cal Poly',
 		role: 'Research, Artificial Intelligence',
-		time: 'Nov 2023 - Present',
+		time: 'Nov 2023 - Apr. 2024',
 		link: 'https://csc.calpoly.edu',
 		image: '/logos/calpoly-logo.png',
 	},
@@ -109,7 +109,7 @@ export const JOBS: JobsType = [
 	{
 		company: 'omegaUp',
 		role: 'Software Engineering',
-		time: 'Jun 2020 - Aug 2020',
+		time: 'Jun. 2020 - Aug 2020',
 		link: 'https://omegaup.com',
 		image: '/logos/omegaup-logo.png',
 	},
