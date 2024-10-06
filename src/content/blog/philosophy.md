@@ -15,7 +15,7 @@ description: A list of philosophy books to read.
 
 One of my coworkers at NVIDIA, [Uzair Gheewala](https://uzairgheewala.com/), is quite the interesting fellow. In an overstimulated world surrounded by dopanime-infested sites riddled with ai-generated content, he finds his sancturary in books that are old yet hold wisdom that is relevant even now.
 
-After one conversation, he gave me a "syllabus" containing philosophy books to read. I'm sharing it here for anyone also interested in diving into philosophy. I've read some of these authors before, but I'm looking forward to reading the rest. When I read these, I might reflections on these books and might append to this list when I find something interesting.
+After one conversation, he gave me a "syllabus" containing philosophy books to read. I'm sharing it here for anyone also interested in diving into philosophy. Once I'm done reading them, I might reflections on these books and might append to this list when I find something interesting.
 
 - Sophie's World, Jostein Gaarder
 - Plato
