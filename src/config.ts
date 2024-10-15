@@ -33,6 +33,8 @@ export const quoteArray = [
 	'“Science is not only a disciple of reason but, also, one of romance and passion.” ― Stephen Hawking',
 	'“Man cannot remake himself without suffering, for he is both the marble and the sculptor.” ― Alexis Carrel',
 	"“It don't take much strength to pull a trigger but try getting up every morning day after day and work for a living.” ― Lorenzo, A Bronx Tale",
+	'“They flaunt in the face of rigor, and they say things that are simply not true.” ― Kalev Martinson',
+	'“What you find impossible, I find boring.” ― Miguel Villa Floran',
 ];
 
 export const SITE: Site = {
