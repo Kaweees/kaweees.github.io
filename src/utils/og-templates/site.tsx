@@ -60,7 +60,9 @@ export default () => {
 							alignItems: 'center',
 							height: '90%',
 							maxHeight: '90%',
-							overflow: 'hidden',
+							width: '100%',
+							maxWidth: '100%',
+							overflow: 'visible',
 							textAlign: 'center',
 						}}
 					>

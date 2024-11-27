@@ -53,16 +53,20 @@ export default (post: CollectionEntry<'blog'>) => {
 						height: '90%',
 					}}
 				>
-					<p
+					<div
 						style={{
-							fontSize: 72,
-							fontWeight: 'bold',
-							maxHeight: '84%',
+							display: 'flex',
+							flexDirection: 'column',
+							height: '90%',
+							maxHeight: '90%',
+							width: '100%',
+							maxWidth: '100%',
 							overflow: 'hidden',
 						}}
 					>
-						{post.data.title}
-					</p>
+						<p style={{ fontSize: 72, fontWeight: 'bold' }}>{post.data.title}</p>
+						<p style={{ fontSize: 32 }}>{post.data.description}</p>
+					</div>
 					<div
 						style={{
 							display: 'flex',
