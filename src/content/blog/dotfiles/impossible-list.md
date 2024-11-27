@@ -68,6 +68,8 @@ something or have something to add, with the later being most likely.
 - ~~Work at the Magnificent Seven (aka Big Tech) [(June 24, 2024 - NVIDIA)](https://www.nvidia.com/)~~
 - ~~Work at a startup
   [(June 19, 2023 - DeepWater Exploration)](https://dwe.ai/)~~
+- ~~Win a hackaton
+  [(November 24, 2024 - USS Hornet Defense Tech Hackathon (No Bananas))](https://lu.ma/uss-hornet-hackathon?tk=Z5zIgM/)~~
 - Found a startup
 - Start a newsletter/YouTube channel
   - Gain 100 subscribers
