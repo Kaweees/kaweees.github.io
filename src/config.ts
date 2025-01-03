@@ -75,7 +75,7 @@ export const LOGO_IMAGE = {
 export const JOBS: JobsType = [
 	{
 		company: 'Cisco Meraki',
-		role: 'Meraki Vision Platform Firmware',
+		role: 'Hardware Bring-Up & Testbeds',
 		time: 'Sept. 2024 - Dec. 2024',
 		link: 'https://meraki.cisco.com',
 		image: '/logos/meraki.png',
