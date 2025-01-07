@@ -1,0 +1,41 @@
+
+<div class="background">
+  <slot/>
+</div>
+
+<style>
+  /* .background {
+    background-color: var(--bg);
+    color: var(--text);
+    transition: background-color 0.25s, color 0.25s;
+  } */
+  .background:before {
+		animation: scanlines-anim 1s linear infinite;
+		background: linear-gradient(hsla(0, 0%, 8%, 0) 66%, rgba(0, 0, 0, 0.15) 0);
+		background-size: 100% 5px;
+		bottom: 0;
+		content: '';
+		left: 0;
+		pointer-events: none;
+		position: fixed;
+		right: 0;
+		top: 0;
+		z-index: 9999;
+	}
+
+	@keyframes scanlines-anim {
+		0% {
+			background-position: 0 0;
+		}
+
+		to {
+			background-position: 0 15px;
+		}
+	}
+
+	@media only screen and (orientation: portrait) {
+		.background:before {
+			background-size: 100% 4px;
+		}
+	}
+</style>

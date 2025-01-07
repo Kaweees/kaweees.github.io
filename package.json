@@ -18,7 +18,7 @@
 		"format": "prettier \".\" --write --ignore-path .gitignore",
 		"taze": "npx taze major -I",
 		"taze:minor": "npx taze minor -w",
-		"test": "pnpm commitlint --edit && pnpm lint && pnpm format",
+		"test": "pnpm commitlint --edit && pnpm format && pnpm lint",
 		"prepare": "husky install"
 	},
 	"dependencies": {
