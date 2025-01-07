@@ -18,13 +18,14 @@
 		"format": "prettier \".\" --write --ignore-path .gitignore",
 		"taze": "npx taze major -I",
 		"taze:minor": "npx taze minor -w",
+		"test": "pnpm commitlint --edit && pnpm lint && pnpm format",
 		"prepare": "husky install"
 	},
 	"dependencies": {
 		"@astrojs/check": "^0.9.4",
-		"@astrojs/rss": "^4.0.9",
+		"@astrojs/rss": "^4.0.11",
 		"@resvg/resvg-js": "^2.6.2",
-		"astro": "^4.16.16",
+		"astro": "^5.1.2",
 		"clsx": "^2.1.1",
 		"framer-motion": "^11.2.10",
 		"fuse.js": "^7.0.0",
@@ -41,9 +42,11 @@
 		"typewriter-effect": "^2.21.0"
 	},
 	"devDependencies": {
-		"@astrojs/react": "^3.6.3",
+		"@astrojs/react": "^4.1.2",
 		"@astrojs/sitemap": "^3.2.1",
-		"@astrojs/tailwind": "^5.1.2",
+		"@astrojs/tailwind": "^5.1.4",
+		"@commitlint/cli": "^19.6.1",
+		"@commitlint/config-conventional": "^19.6.0",
 		"@divriots/jampack": "^0.23.4",
 		"@tailwindcss/typography": "^0.5.13",
 		"@trivago/prettier-plugin-sort-imports": "^4.3.0",
@@ -52,6 +55,7 @@
 		"@typescript-eslint/parser": "^6.21.0",
 		"astro-eslint-parser": "^0.16.3",
 		"commitizen": "^4.3.0",
+		"commitlint": "^19.6.1",
 		"cz-conventional-changelog": "^3.3.0",
 		"eslint": "^8.57.0",
 		"eslint-plugin-astro": "^0.31.4",
