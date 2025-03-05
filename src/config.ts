@@ -42,8 +42,8 @@ export const SITE: Site = {
 	website: 'https://miguelvf.dev/',
 	blogURL: 'https://miguelvf.dev/blog',
 	author: 'Miguel Villa Floran',
-	desc: 'Curious, Creative, and Clever. Incoming SWE Intern @NVIDIA & Firmware Co-op @meraki. Currently studying Computer Engineering @calpoly, with a focus on embedded systems and robotics.',
-	// ogImage: "website-og.jpg",
+	desc: 'Curious, Creative, and Clever. Incoming SWE Intern @NVIDIA. Currently studying Computer Engineering @calpoly, with a focus on embedded systems and robotics.',
+	ogImage: 'website-og.jpg',
 	lightAndDarkMode: true,
 	postPerPage: 3,
 	scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
@@ -57,7 +57,7 @@ export const NAV_LINKS = [
 	{ href: 'projects', title: 'Projects' },
 	{ href: 'guestbook', title: 'Guestbook' },
 	{ href: 'blog', title: 'Blog' },
-	{ href: 'resume', title: 'Resume' },
+	// { href: 'resume', title: 'Resume' },
 ];
 
 export const LOCALE = {
