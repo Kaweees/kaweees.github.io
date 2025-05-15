@@ -74,6 +74,20 @@ export const LOGO_IMAGE = {
 
 export const JOBS: JobsType = [
 	{
+		company: 'NVIDIA',
+		role: 'Distributed Hardware Testing Infrastructure',
+		time: 'Jun 2025 - Sep 2025',
+		link: 'https://www.nvidia.com/',
+		image: '/logos/nvidia-logo.png',
+	},
+	{
+		company: 'Cal Poly CARP',
+		role: 'Hardware Bring-Up',
+		time: 'Feb. 2025 - Present',
+		link: 'https://cal-poly-ramp.github.io',
+		image: '/logos/ramp-logo.png',
+	},
+	{
 		company: 'Cisco Meraki',
 		role: 'Hardware Bring-Up & Testbeds',
 		time: 'Sept. 2024 - Dec. 2024',
