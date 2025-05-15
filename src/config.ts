@@ -1,7 +1,7 @@
 import type { JobsType, ProjectsType, Site, SocialObjects } from './types';
 
 export const blogQuoteArray = [
-	'🌠 Reaching for eternity',
+	'🌠 Accelerating to eternity',
 	'💾 Life is short and ROM is full',
 	'🐛 Learning one bug at a time',
 	'👞 If it fits the shoe, it be what it do',
@@ -35,6 +35,8 @@ export const quoteArray = [
 	"“It don't take much strength to pull a trigger but try getting up every morning day after day and work for a living.” ― Lorenzo, A Bronx Tale",
 	'“They flaunt in the face of rigor, and they say things that are simply not true.” ― Kalev Martinson',
 	'“What you find impossible, I find boring.” ― Miguel Villa Floran',
+	'“The only way to do great work is to love what you do.” ― Steve Jobs',
+	'"Potuit, decuit, ergo fecit (God could do it, it was appropriate, therefore He did it)" - Anselm of Canterbury',
 ];
 
 export const SITE: Site = {
@@ -74,6 +76,20 @@ export const LOGO_IMAGE = {
 
 export const JOBS: JobsType = [
 	{
+		company: 'NVIDIA',
+		role: 'Distributed Hardware Testing Infrastructure',
+		time: 'Jun 2025 - Sep 2025',
+		link: 'https://www.nvidia.com/',
+		image: '/logos/nvidia-logo.png',
+	},
+	{
+		company: 'Cal Poly CARP',
+		role: 'Hardware Bring-Up',
+		time: 'Feb. 2025 - Present',
+		link: 'https://cal-poly-ramp.github.io',
+		image: '/logos/ramp-logo.png',
+	},
+	{
 		company: 'Cisco Meraki',
 		role: 'Hardware Bring-Up & Testbeds',
 		time: 'Sept. 2024 - Dec. 2024',
@@ -110,7 +126,7 @@ export const JOBS: JobsType = [
 	},
 	{
 		company: 'omegaUp',
-		role: 'Software Engineering',
+		role: 'Software Engineering (MOOCs)',
 		time: 'Jun. 2020 - Aug 2020',
 		link: 'https://omegaup.com',
 		image: '/logos/omegaup-logo.png',

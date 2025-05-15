@@ -60,7 +60,7 @@ simple steps:
    ```
 3. Start the development server
    ```sh
-   pnpm run dev
+   pnpm run start:dev
    ```
 
 To update the projects modules, run the following commands:
