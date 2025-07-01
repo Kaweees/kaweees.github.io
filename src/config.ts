@@ -45,7 +45,7 @@ export const SITE: Site = {
 	blogURL: 'https://miguelvf.dev/blog',
 	author: 'Miguel Villa Floran',
 	desc: 'Curious, Creative, and Clever. Incoming SWE Intern @NVIDIA. Currently studying Computer Engineering @calpoly, with a focus on embedded systems and robotics.',
-	ogImage: 'website-og.jpg',
+	ogImage: 'og.png',
 	lightAndDarkMode: true,
 	postPerPage: 3,
 	scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
