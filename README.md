@@ -23,15 +23,15 @@
 
 <!-- ABOUT THE PROJECT -->
 
-My personal website and blog. Peeking under the hood, it uses [Astro](https://astro.build/), a framework-agnostic static site generator, and [Tailwind CSS](https://tailwindcss.com/), a utility-first CSS framework, to create a fast, modern, and responsive website, and is deployed on Netlify via Docker.
+My personal website and blog. Peeking under the hood, it uses [Astro](https://astro.build/), a framework-agnostic static site generator, and [Tailwind CSS](https://tailwindcss.com/), a utility-first CSS framework, to create a fast, modern, and responsive website, and is deployed on Netlify.
 
 ### Built With
 
 [![Astro][Astro-shield]][Astro-url]
 [![TypeScript][TypeScript-shield]][TypeScript-url]
 [![Tailwind][Tailwind-shield]][Tailwind-url]
+[![NixOS][NixOS-shield]][NixOS-url]
 [![GitHub Actions][GitHub-Actions-shield]][GitHub-Actions-url]
-[![Docker][Docker-shield]][Docker-url]
 
 <!-- GETTING STARTED -->
 
@@ -42,7 +42,7 @@ simple steps:
 
 ### Prerequisites
 
-Before attempting to build this project, make sure you have [Docker](https://docs.docker.com/engine/install/), [Node.js](https://nodejs.org/en/download), [pNpM](https://pnpm.io/), and [taze](https://github.com/antfu/taze) installed on your machine.
+Before attempting to build this project, make sure you have [Nix](https://nixos.org/download.html) with [Flake](https://nixos.wiki/wiki/Flakes) support installed on your machine.
 
 ### Installation
 
@@ -50,43 +50,35 @@ To get a local copy of the project up and running on your machine, follow these
 simple steps:
 
 1. Clone the repo
+
    ```sh
    git clone https://github.com/Kaweees/kaweees.github.io.git --recurse-submodules
    cd kaweees.github.io
    ```
+
 2. Install the project dependencies
+
    ```sh
+   nix-shell --max-jobs $(nproc) # Linux / Windows (WSL)
+   nix-shell --max-jobs $(sysctl -n hw.ncpu) # macOS
    pnpm i
    ```
+
 3. Start the development server
+
    ```sh
    pnpm run start:dev
    ```
 
-To update the projects modules, run the following commands:
+4. To update the projects modules, run the following command:
 
-```sh
-pnpm taze -w
-```
+   ```sh
+   pnpm taze -w -r -i -u
+   ```
 
 <!-- USAGE EXAMPLES -->
 
 ## Usage
-
-### Docker
-
-To build the project in a Docker container, run the following command:
-
-```sh
-docker-compose up -d # start the container in detached mode
-docker-compose down # stop the container
-```
-
-Additionally, you can build the project in a Docker container using the
-
-```sh
-
-```
 
 ### Available Commands
 
@@ -162,7 +154,7 @@ and more information.
 [TypeScript-url]: https://www.typescriptlang.org/
 [Tailwind-shield]: https://img.shields.io/badge/tailwindcss-%23008080.svg?style=for-the-badge&logo=tailwind-css&logoColor=0EA5E9&labelColor=222222&color=0EA5E9
 [Tailwind-url]: https://tailwindcss.com/
+[NixOS-shield]: https://img.shields.io/badge/NIX-%23008080.svg?style=for-the-badge&logo=NixOS&logoColor=5277C3&labelColor=222222&color=5277C3
+[NixOS-url]: https://nixos.org/
 [GitHub-Actions-shield]: https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=2671E5&labelColor=222222&color=2671E5
 [GitHub-Actions-url]: https://github.com/features/actions
-[Docker-shield]: https://img.shields.io/badge/docker-%232671E5.svg?style=for-the-badge&logo=docker&logoColor=1D63ED&labelColor=222222&color=1D63ED
-[Docker-url]: https://www.docker.com/
