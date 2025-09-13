@@ -77,7 +77,7 @@ export const LOGO_IMAGE = {
 export const JOBS: JobsType = [
 	{
 		company: 'NVIDIA',
-		role: 'Distributed Hardware Testing Infrastructure',
+		role: 'Hardware Agents & Humanoids Research',
 		time: 'Jun 2025 - Sep 2025',
 		link: 'https://www.nvidia.com/',
 		image: '/logos/nvidia-logo.png',
@@ -98,7 +98,7 @@ export const JOBS: JobsType = [
 	},
 	{
 		company: 'NVIDIA',
-		role: 'Distributed Hardware Testing Infrastructure',
+		role: 'Hardware Infrastructure',
 		time: 'Jun 2024 - Sep 2024',
 		link: 'https://www.nvidia.com/',
 		image: '/logos/nvidia-logo.png',
