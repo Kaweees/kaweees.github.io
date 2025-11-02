@@ -76,8 +76,15 @@ export const LOGO_IMAGE = {
 
 export const JOBS: JobsType = [
 	{
+		company: 'NVIDIA GEAR',
+		role: 'Humanoids Research',
+		time: 'Jun 2025 - Sep 2025',
+		link: 'https://research.nvidia.com/labs/gear/',
+		image: '/logos/nvidia-logo.png',
+	},
+	{
 		company: 'NVIDIA',
-		role: 'Hardware Agents & Humanoids Research',
+		role: 'Hardware Agents',
 		time: 'Jun 2025 - Sep 2025',
 		link: 'https://www.nvidia.com/',
 		image: '/logos/nvidia-logo.png',
