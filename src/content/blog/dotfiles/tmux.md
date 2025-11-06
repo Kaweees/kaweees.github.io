@@ -2,7 +2,7 @@
 author: Miguel Villa Floran
 # author:
 #   name: "Miguel Villa Floran"
-#   website: "https://miguelvf.dev"
+#   website: "https://miguelvf.com"
 pubDatetime: 2024-03-30T20:40:08Z
 modDatetime: 2024-03-30T18:59:05Z
 title: An Easy Guide to Using Tmux
@@ -13,7 +13,7 @@ tags:
   - developer-tools
   - dotfiles
   - tmux
-canonicalURL: https://miguelvf.dev/posts/tmux/
+canonicalURL: https://miguelvf.com/posts/tmux/
 description: A brief guide to setting up, configuring, and using Tmux for terminal multiplexing.
 ---
 

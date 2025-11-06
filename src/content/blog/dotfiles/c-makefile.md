@@ -2,7 +2,7 @@
 author: Miguel Villa Floran
 # author:
 #   name: "Miguel Villa Floran"
-#   website: "https://miguelvf.dev"
+#   website: "https://miguelvf.com"
 pubDatetime: 2024-03-29T20:40:08Z
 modDatetime: 2024-03-29T18:59:05Z
 title: Crafting a Robust and Maintainable C Makefile
@@ -13,7 +13,7 @@ tags:
   - c
   - makefile
   - build-system
-canonicalURL: https://miguelvf.dev/posts/c-makefile/
+canonicalURL: https://miguelvf.com/posts/c-makefile/
 description: A brief guide to creating from scratch the Makefile template that is used in my C projects.
 ---
 

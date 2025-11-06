@@ -13,12 +13,12 @@
 
 </div>
 
-<a href="https://miguelvf.dev">
+<a href="https://miguelvf.com">
   <img alt="Astro Logo'" src="assets/img/astro-logo.png" align="right" width="150">
 </a>
 
 <div align="left">
-  <h1><em><a href="https://miguelvf.dev">~miguelvf.dev</a></em></h1>
+  <h1><em><a href="https://miguelvf.com">~miguelvf.com</a></em></h1>
 </div>
 
 <!-- ABOUT THE PROJECT -->

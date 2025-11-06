@@ -2,7 +2,7 @@
 author: Miguel Villa Floran
 # author:
 #   name: "Miguel Villa Floran"
-#   website: "https://miguelvf.dev"
+#   website: "https://miguelvf.com"
 pubDatetime: 2022-04-23T20:40:08Z
 modDatetime: 2022-04-23T18:59:05Z
 title: Off-By-One Errors and How to Avoid Them
@@ -13,7 +13,7 @@ tags:
   - programming
   - computer-science
   - algorithms
-canonicalURL: https://miguelvf.dev/posts/off-by-one/
+canonicalURL: https://miguelvf.com/posts/off-by-one/
 description: How to never overshoot or undershoot for loops again.
 ---
 

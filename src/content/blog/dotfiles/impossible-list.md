@@ -2,7 +2,7 @@
 author: Miguel Villa Floran
 # author:
 #   name: "Miguel Villa Floran"
-#   website: "https://miguelvf.dev"
+#   website: "https://miguelvf.com"
 pubDatetime: 2022-09-15T20:40:08Z
 modDatetime: 2024-03-29T18:59:05Z
 title: My Impossible List
@@ -13,7 +13,7 @@ tags:
   - dreams
   - goals
   - ambitions
-canonicalURL: https://miguelvf.dev/posts/impossible-list/
+canonicalURL: https://miguelvf.com/posts/impossible-list/
 description: My attempt to live forever or die trying, by doing what I want to do with my life. Do the things I want to do, see the places I want to see, meet the people I want to meet, and live the life I want to live.
 ---
 

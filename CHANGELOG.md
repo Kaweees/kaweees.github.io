@@ -10,7 +10,7 @@ All notable changes to this project will be documented in this file. See [standa
 - Migrated styling from [Sass](https://sass-lang.com/) to [TailwindCSS](https://tailwindcss.com/)
 - Migrated hosting service from [GitHub Pages](https://pages.github.com/) to [Netlify](https://www.netlify.com/)
 
-> See the reasoning for these changes in [this blog post](https://miguelvf.dev/blog/hello-astro/)
+> See the reasoning for these changes in [this blog post](https://miguelvf.com/blog/hello-astro/)
 
 ### Features
 

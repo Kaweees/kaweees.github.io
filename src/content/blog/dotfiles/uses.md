@@ -2,7 +2,7 @@
 author: Miguel Villa Floran
 # author:
 #   name: "Miguel Villa Floran"
-#   website: "https://miguelvf.dev"
+#   website: "https://miguelvf.com"
 pubDatetime: 2023-08-27T20:40:08Z
 modDatetime: 2023-08-27T18:59:05Z
 title: The Things I Use
@@ -15,7 +15,7 @@ tags:
   - software
   - hardware
   - dotfiles
-canonicalURL: https://miguelvf.dev/posts/uses/
+canonicalURL: https://miguelvf.com/posts/uses/
 description: The wonderful world of things I use to make my life easier.
 ---
 

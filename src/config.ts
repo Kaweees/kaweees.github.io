@@ -41,8 +41,8 @@ export const quoteArray = [
 
 export const SITE: Site = {
 	title: 'Miguel Villa Floran',
-	website: 'https://miguelvf.dev/',
-	blogURL: 'https://miguelvf.dev/blog',
+	website: 'https://miguelvf.com/',
+	blogURL: 'https://miguelvf.com/blog',
 	author: 'Miguel Villa Floran',
 	desc: 'Curious, Creative, and Clever. Incoming SWE Intern @NVIDIA. Currently studying Computer Engineering @calpoly, with a focus on embedded systems and robotics.',
 	ogImage: 'og.png',
@@ -194,7 +194,7 @@ export const SOCIALS: SocialObjects = [
 	},
 	{
 		name: 'RSS',
-		href: 'https://miguelvf.dev/rss.xml',
+		href: 'https://miguelvf.com/rss.xml',
 		linkTitle: `${SITE.title} on RSS`,
 		active: true,
 	},

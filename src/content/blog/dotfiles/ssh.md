@@ -2,7 +2,7 @@
 author: Miguel Villa Floran
 # author:
 #   name: "Miguel Villa Floran"
-#   website: "https://miguelvf.dev"
+#   website: "https://miguelvf.com"
 pubDatetime: 2024-03-24T20:40:08Z
 modDatetime: 2024-03-24T18:59:05Z
 title: Using Secure Shell (ssh) and Key-Based Authentication
@@ -13,7 +13,7 @@ tags:
   - developer-tools
   - dotfiles
   - ssh
-canonicalURL: https://miguelvf.dev/posts/ssh/
+canonicalURL: https://miguelvf.com/posts/ssh/
 description: A brief guide to setting up, configuring, and using ssh for secure remote access to servers.
 ---
 

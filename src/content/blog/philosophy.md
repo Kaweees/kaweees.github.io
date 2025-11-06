@@ -9,7 +9,7 @@ draft: false
 tags:
   - books
   - philosophy
-canonicalURL: https://miguelvf.dev/posts/philosophy/
+canonicalURL: https://miguelvf.com/posts/philosophy/
 description: A list of philosophy books to read.
 ---
 

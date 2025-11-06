@@ -8,7 +8,7 @@ featured: false
 draft: false
 tags:
   - books
-canonicalURL: https://miguelvf.dev/posts/books/
+canonicalURL: https://miguelvf.com/posts/books/
 description: An aggregated catalog of books I aspire to read.
 ---
 
