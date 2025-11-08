@@ -188,3 +188,25 @@
 		@apply outline-2 outline-offset-1 outline-skin-fill focus-visible:no-underline focus-visible:outline-dashed;
 	}
 }
+
+.link-button.Twitter:hover {
+	color: #0077b5;
+}
+html[data-theme='dark'] .link-button.Github:hover {
+	color: #ffffff;
+}
+html[data-theme='light'] .link-button.Github:hover {
+	color: #24292e;
+}
+.link-button.LinkedIn:hover {
+	color: #0077b5;
+}
+.link-button.RSS:hover {
+	color: #ffa500;
+}
+.link-button.Instagram:hover {
+	color: #c13584;
+}
+.link-button.Mail:hover {
+	color: #666666;
+}

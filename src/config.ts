@@ -118,13 +118,6 @@ export const JOBS: JobsType = [
 	// 	image: '/logos/calpoly-racing-logo.png',
 	// },
 	{
-		company: 'Cal Poly',
-		role: 'Research, Artificial Intelligence',
-		time: 'Nov 2023 - Apr. 2024',
-		link: 'https://csc.calpoly.edu',
-		image: '/logos/calpoly-logo.png',
-	},
-	{
 		company: 'DeepWater Exploration',
 		role: 'Firmware & Applications',
 		time: 'May 2023 - Oct 2023',

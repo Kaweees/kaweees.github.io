@@ -15,7 +15,7 @@ const { centered = false } = Astro.props;
     SOCIALS.filter(social => social.active).map(social => (
       <LinkButton
         href={social.href}
-        className="link-button"
+        className={`link-button ${social.name}`}
         title={social.linkTitle}
       >
         <Fragment set:html={socialIcons[social.name]} />
