@@ -1,17 +1,16 @@
 ---
 export interface Props {
-  href: string;
-  className?: string;
-  target?: string;
-  text: string;
+	href: string;
+	className?: string;
+	target?: string;
+	text: string;
 }
 
-const {
-  href,
-  className,
-  target = "_blank",
-  text,
-}: Props = Astro.props;
+const { href, className, target = '_blank', text }: Props = Astro.props;
 ---
 
-<a {href} class={`link underline decoration-dashed underline-offset-4 hover:text-skin-accent ${className}`} {target} >{text}</a>
+<a
+	{href}
+	class={`link underline decoration-dashed underline-offset-4 hover:text-skin-accent ${className}`}
+	{target}>{text}</a
+>

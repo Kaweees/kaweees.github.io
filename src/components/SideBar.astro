@@ -1,58 +1,51 @@
 ---
-  import BorderedElement from "@components/BorderedCard.astro";
-  import Badges from "@components/Badges.astro";
-  import Link from "@components/Link.astro";
-  import { SOCIALS } from "@config";
-  import Socials from "@components/Socials.astro";
-  import Location from "@components/Location.astro";
+import BorderedElement from '@components/BorderedCard.astro';
+import Badges from '@components/Badges.astro';
+import Link from '@components/Link.astro';
+import { SOCIALS } from '@config';
+import Socials from '@components/Socials.astro';
+import Location from '@components/Location.astro';
 
-  export interface Props {
-    className?: string;
-  }
-  const socialCount = SOCIALS.filter(social => social.active).length;
+export interface Props {
+	className?: string;
+}
+const socialCount = SOCIALS.filter((social) => social.active).length;
 
-  const {
-    className,
-  }: Props = Astro.props;
-
+const { className }: Props = Astro.props;
 ---
 
 <BorderedElement
-  className={`overflow-hidden flex flex-col items-center w-1/1 ${className}`}
-  border={true}
+	className={`w-1/1 flex flex-col items-center overflow-hidden ${className}`}
+	border={true}
 >
-  <img
-    src="/miguel-vf-ghibli.png"
-    alt="Miguel Villa Floran"
-    class="mx-auto object-cover object-center border-4 border-solid rounded-full"
-    width="250"
-    height="250"
-    style="border-color: rgb(var(--fg-light));"
-  />
-  <p class="mx-auto text-center mt-5 font-bold text-xl">Miguel Villa Floran</p>
-  <p class="text-center mt-5 text-md w-full justify-center">
-    Computer Engineer in Training.
-  </p>
-  <Link
-    href="mailto:miguel.villafloran@gmail.com"
-    text="miguel.villafloran@gmail.com"
-    className="text-center text-md mt-5 justify-center"
-  />
-  <p
-    class="text-center text-sm mt-5 w-full justify-center text-gray-500 dark:text-gray-400"
-  >
-    Curious, Creative, and Clever. Aspiring Programming Wizard with interests in
-    embedded systems, robotics, and control systems. I'm a Software
-    Engineering Intern @NVIDIA, and pursuing a B.S. in Computer Engineering at Cal Poly
-  </p>
-  <Location/>
-  {
-    // only display if at least one social link is enabled
-    socialCount > 0 && (
-      <div class="social-wrapper">
-        <Socials />
-      </div>
-    )
-  }
-  <Badges />
+	<img
+		src="/miguel-vf-ghibli.png"
+		alt="Miguel Villa Floran"
+		class="mx-auto rounded-full border-4 border-solid object-cover object-center"
+		width="250"
+		height="250"
+		style="border-color: rgb(var(--fg-light));"
+	/>
+	<p class="mx-auto mt-5 text-center text-xl font-bold">Miguel Villa Floran</p>
+	<p class="text-md mt-5 w-full justify-center text-center">Computer Engineer in Training.</p>
+	<Link
+		href="mailto:miguel.villafloran@gmail.com"
+		text="miguel.villafloran@gmail.com"
+		className="text-md mt-5 justify-center text-center"
+	/>
+	<p class="mt-5 w-full justify-center text-center text-sm text-gray-500 dark:text-gray-400">
+		Curious, Creative, and Clever. Aspiring Programming Wizard with interests in embedded systems,
+		robotics, and control systems. I'm a Software Engineering Intern @NVIDIA, and pursuing a B.S. in
+		Computer Engineering at Cal Poly
+	</p>
+	<Location />
+	{
+		// only display if at least one social link is enabled
+		socialCount > 0 && (
+			<div class="social-wrapper">
+				<Socials />
+			</div>
+		)
+	}
+	<Badges />
 </BorderedElement>

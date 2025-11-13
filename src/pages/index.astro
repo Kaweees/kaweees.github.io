@@ -1,15 +1,15 @@
 ---
-import { getCollection } from "astro:content";
-import Layout from "@layouts/Layout.astro";
-import LinkButton from "@components/LinkButton.astro";
-import Card from "@components/Card";
-import BorderedElement from "@components/BorderedCard.astro";
-import Link from "@components/Link.astro";
-import SideBar from "@components/SideBar.astro";
-import getSortedPosts from "@utils/getSortedPosts";
-import { JOBS } from "@config";
+import { getCollection } from 'astro:content';
+import Layout from '@layouts/Layout.astro';
+import LinkButton from '@components/LinkButton.astro';
+import Card from '@components/Card';
+import BorderedElement from '@components/BorderedCard.astro';
+import Link from '@components/Link.astro';
+import SideBar from '@components/SideBar.astro';
+import getSortedPosts from '@utils/getSortedPosts';
+import { JOBS } from '@config';
 
-const posts = await getCollection("blog");
+const posts = await getCollection('blog');
 
 const sortedPosts = getSortedPosts(posts);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
@@ -19,175 +19,154 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 ---
 
 <Layout>
-  <div class="flex flex-col lg:flex-row w-full m-0 p-0">
-    <div class="flex flex-col m-0 p-0">
-      <BorderedElement
-    className="overflow-hidden"
-    title="Greetings, I’m Miguel 👋"
-    border={true}
-  >
-    <p class="text-sm md:text-lg prose-xl my-3">
-      I’m an engineer & researcher focusing on applied robotics & embedded
-      systems. I also <Link href="/blog/" text="write" /> occasionally about philosophy and computers.
-    </p>
-    <p class="text-sm md:text-lg prose-xl my-3">
-      I’m a junior at <Link
-        href="https://csc.calpoly.edu/"
-        text="Cal Poly"
-      />
-      studying Computer Engineering. Here are some of the
-      <Link href="/calpoly/" text="projects" /> I’ve worked on at Cal Poly.
-    </p>
-    <p class="text-sm md:text-lg prose-xl my-3">
-      This past summer, I worked at <Link
-        href="https://dwe.ai/"
-        text="DeepWater Exploration"
-      /> to ship some <Link
-        href="https://dwe.ai/products/discovery/"
-        text="streaming software"
-      /> which outperformed OBS, and drivers and firmware for their products which
-      are used in various applications spanning across academia, enterprise, and
-      defense.
-    </p>
-    <p class="text-sm md:text-lg prose-xl my-3">
-      This upcoming summer I will be working at <Link
-        href="https://www.nvidia.com/"
-        text="NVIDIA"
-      />, working on their internal platform used for end-to-end testing of
-      their products, from the modular down to the transistor level. This fall I will be doing a co-op at <Link
-        href="https://meraki.cisco.com/"
-        text="Cisco Meraki"
-      />, working on drivers and firmware for their cameras.
-    </p>
-    <p class="text-sm md:text-lg prose-xl my-3">
-      See more on my <Link href="/resume/" text="resume" /> or contact me at <Link
-        href="mailto:miguel.villafloran@gmail.com"
-        text="miguel.villafloran@gmail.com"
-      />.
-    </p>
-  </BorderedElement>
-  <BorderedElement className="overflow-hidden" title="Places I've Worked" border={true} >
-    <div
-      class="my-3 border-b border-dashed"
-      style="border-color: rgb(var(--fg-light));"
-    >
-      {
-        JOBS.length > 0 && (
-          <>
-            {JOBS.map(job => (
-              <div
-                class="flex flex-col sm:flex-row items-center justify-between py-3 border-t border-dashed flex-wrap"
-                style="border-color: var(--color-fg-light);"
-              >
-                <a id="no-style" href={job.link} target="_blank"
-                  >
-                    <div class="flex flex-col sm:flex-row items-center space-x-2">
-                      <div class="flex flex-row items-center justify-center space-x-3 flex-wrap">
-                        <img
-                          src={job.image}
-                          alt={`${job.company} logo`}
-                          class="w-10 h-10"
-                        />
-                        <div
-                          class="flex flex-row items-center space-x-1.5 text-md font-bold"
-                        >
-                          <span>{job.company}</span>
-                        </div>
-                      </div>
-                    <div class="text-sm text-center">{job.role}</div>
-                  </div>
-                </a>
-                <div class="flex flex-row items-center space-x-2">
-                  <div class="text-sm text-center">{job.time}</div>
-                </div>
-              </div>
-            ))}
-          </>
-        )
-      }
-    </div>
-  </BorderedElement>
-    </div>
-    <SideBar/>
-  </div>
-  <main id="main-content">
-    {
-      featuredPosts.length > 0 && (
-        <>
-          <section id="featured" class="pt-2">
-            <h2 class="text-2xl font-semibold tracking-wide pt-6">Featured Posts</h2>
-            <ul>
-              {featuredPosts.map(({ data, slug }) => (
-                <Card
-                  href={`/blog/${slug}/`}
-                  frontmatter={data}
-                  secHeading={false}
-                  tags={data.tags}
-                />
-              ))}
-            </ul>
-          </section>
-        </>
-      )
-    }
+	<div class="m-0 flex w-full flex-col p-0 lg:flex-row">
+		<div class="m-0 flex flex-col p-0">
+			<BorderedElement className="overflow-hidden" title="Greetings, I’m Miguel 👋" border={true}>
+				<p class="prose-xl my-3 text-sm md:text-lg">
+					I’m an engineer & researcher focusing on applied robotics & embedded systems. I also <Link
+						href="/blog/"
+						text="write"
+					/> occasionally about philosophy and computers.
+				</p>
+				<p class="prose-xl my-3 text-sm md:text-lg">
+					I’m a junior at <Link href="https://csc.calpoly.edu/" text="Cal Poly" />
+					studying Computer Engineering. Here are some of the
+					<Link href="/calpoly/" text="projects" /> I’ve worked on at Cal Poly.
+				</p>
+				<p class="prose-xl my-3 text-sm md:text-lg">
+					This past summer, I worked at <Link href="https://dwe.ai/" text="DeepWater Exploration" />
+					to ship some <Link href="https://dwe.ai/products/discovery/" text="streaming software" /> which
+					outperformed OBS, and drivers and firmware for their products which are used in various applications
+					spanning across academia, enterprise, and defense.
+				</p>
+				<p class="prose-xl my-3 text-sm md:text-lg">
+					This upcoming summer I will be working at <Link
+						href="https://www.nvidia.com/"
+						text="NVIDIA"
+					/>, working on their internal platform used for end-to-end testing of their products, from
+					the modular down to the transistor level. This fall I will be doing a co-op at <Link
+						href="https://meraki.cisco.com/"
+						text="Cisco Meraki"
+					/>, working on drivers and firmware for their cameras.
+				</p>
+				<p class="prose-xl my-3 text-sm md:text-lg">
+					See more on my <Link href="/resume/" text="resume" /> or contact me at <Link
+						href="mailto:miguel.villafloran@gmail.com"
+						text="miguel.villafloran@gmail.com"
+					/>.
+				</p>
+			</BorderedElement>
+			<BorderedElement className="overflow-hidden" title="Places I've Worked" border={true}>
+				<div class="my-3 border-b border-dashed" style="border-color: rgb(var(--fg-light));">
+					{
+						JOBS.length > 0 && (
+							<>
+								{JOBS.map((job) => (
+									<div
+										class="flex flex-col flex-wrap items-center justify-between border-t border-dashed py-3 sm:flex-row"
+										style="border-color: var(--color-fg-light);"
+									>
+										<a id="no-style" href={job.link} target="_blank">
+											<div class="flex flex-col items-center space-x-2 sm:flex-row">
+												<div class="flex flex-row flex-wrap items-center justify-center space-x-3">
+													<img src={job.image} alt={`${job.company} logo`} class="h-10 w-10" />
+													<div class="text-md flex flex-row items-center space-x-1.5 font-bold">
+														<span>{job.company}</span>
+													</div>
+												</div>
+												<div class="text-center text-sm">{job.role}</div>
+											</div>
+										</a>
+										<div class="flex flex-row items-center space-x-2">
+											<div class="text-center text-sm">{job.time}</div>
+										</div>
+									</div>
+								))}
+							</>
+						)
+					}
+				</div>
+			</BorderedElement>
+		</div>
+		<SideBar />
+	</div>
+	<main id="main-content">
+		{
+			featuredPosts.length > 0 && (
+				<>
+					<section id="featured" class="pt-2">
+						<h2 class="pt-6 text-2xl font-semibold tracking-wide">Featured Posts</h2>
+						<ul>
+							{featuredPosts.map(({ data, slug }) => (
+								<Card
+									href={`/blog/${slug}/`}
+									frontmatter={data}
+									secHeading={false}
+									tags={data.tags}
+								/>
+							))}
+						</ul>
+					</section>
+				</>
+			)
+		}
 
-    {
-      recentPosts.length > 0 && (
-      <>
-          <section id="recent" class="pt-2">
-            <h2 class="text-2xl font-semibold tracking-wide pt-6">Recent Posts</h2>
-            <ul>
-               {recentPosts.map(
-               ({ data, slug }, index) =>
-                 index < 4 && (
-                   <Card
-                     href={`/blog/${slug}/`}
-                     frontmatter={data}
-                     secHeading={false}
-                     tags={data.tags}
-                   />
-                 )
-             )}
-           </ul>
-          </section>
-        </>
-      )
-    }
-    <div class="my-4 text-center">
-      <LinkButton href="/blog/">
-        All Posts
-        <svg xmlns="http://www.w3.org/2000/svg"
-          ><path
-            d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
-          ></path>
-        </svg>
-      </LinkButton>
-    </div>
-  </main>
+		{
+			recentPosts.length > 0 && (
+				<>
+					<section id="recent" class="pt-2">
+						<h2 class="pt-6 text-2xl font-semibold tracking-wide">Recent Posts</h2>
+						<ul>
+							{recentPosts.map(
+								({ data, slug }, index) =>
+									index < 4 && (
+										<Card
+											href={`/blog/${slug}/`}
+											frontmatter={data}
+											secHeading={false}
+											tags={data.tags}
+										/>
+									),
+							)}
+						</ul>
+					</section>
+				</>
+			)
+		}
+		<div class="my-4 text-center">
+			<LinkButton href="/blog/">
+				All Posts
+				<svg xmlns="http://www.w3.org/2000/svg"
+					><path
+						d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
+					></path>
+				</svg>
+			</LinkButton>
+		</div>
+	</main>
 </Layout>
 
 <style>
-  /* ===== Hero Section ===== */
-  #hero {
-    @apply pb-6 pt-8;
-  }
-  #hero h1 {
-    @apply my-4 inline-block text-3xl font-bold sm:my-8 sm:text-5xl;
-  }
-  #hero .rss-link {
-    @apply mb-6;
-  }
-  #hero .rss-icon {
-    @apply mb-2 h-6 w-6 scale-110 fill-skin-accent sm:mb-3 sm:scale-125;
-  }
-  #hero p {
-    @apply my-2;
-  }
-  .social-wrapper {
-    @apply mt-4 flex flex-col sm:flex-row sm:items-center;
-  }
-  .social-links {
-    @apply mb-1 mr-2 whitespace-nowrap sm:mb-0;
-  }
-
+	/* ===== Hero Section ===== */
+	#hero {
+		@apply pb-6 pt-8;
+	}
+	#hero h1 {
+		@apply my-4 inline-block text-3xl font-bold sm:my-8 sm:text-5xl;
+	}
+	#hero .rss-link {
+		@apply mb-6;
+	}
+	#hero .rss-icon {
+		@apply mb-2 h-6 w-6 scale-110 fill-skin-accent sm:mb-3 sm:scale-125;
+	}
+	#hero p {
+		@apply my-2;
+	}
+	.social-wrapper {
+		@apply mt-4 flex flex-col sm:flex-row sm:items-center;
+	}
+	.social-links {
+		@apply mb-1 mr-2 whitespace-nowrap sm:mb-0;
+	}
 </style>

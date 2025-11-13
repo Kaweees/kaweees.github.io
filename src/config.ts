@@ -59,7 +59,7 @@ export const NAV_LINKS = [
 	{ href: 'projects', title: 'Projects' },
 	{ href: 'guestbook', title: 'Guestbook' },
 	{ href: 'blog', title: 'Blog' },
-	// { href: 'resume', title: 'Resume' },
+	{ href: 'resume', title: 'Resume' },
 ];
 
 export const LOCALE = {

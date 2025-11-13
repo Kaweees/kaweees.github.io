@@ -1,34 +1,39 @@
 ---
 import { SITE } from '@config';
-import Layout from "@layouts/Layout.astro";
-import LinkButton from "@components/LinkButton.astro";
+import Layout from '@layouts/Layout.astro';
+import LinkButton from '@components/LinkButton.astro';
 ---
 
 <Layout title="404 Page Not Found">
-  <main id="main-content">
-    <div class="h-fit lg:mx-4 mt-8">
-      <h1 class="neon text-5xl my-4 tracking-tight leading-14 capitalize" aria-label={`404 Page Not Found`}>404 Page Not Found ${SITE.emoji}</h1>
-      <p class="text-xl my-8">This is not the page you're looking for &lt;(-_-)&gt;.</p>
-      <p class="text-xl" id="quote404"></p>
-      <LinkButton
-      href="/"
-      className="my-6 text-lg underline decoration-dashed underline-offset-8 link"
-      >
-        Go back home
-      </LinkButton>
-    </div>
-  </main>
+	<main id="main-content">
+		<div class="mt-8 h-fit lg:mx-4">
+			<h1
+				class="neon leading-14 my-4 text-5xl capitalize tracking-tight"
+				aria-label={`404 Page Not Found`}
+			>
+				404 Page Not Found ${SITE.emoji}
+			</h1>
+			<p class="my-8 text-xl">This is not the page you're looking for &lt;(-_-)&gt;.</p>
+			<p class="text-xl" id="quote404"></p>
+			<LinkButton
+				href="/"
+				className="link my-6 text-lg underline decoration-dashed underline-offset-8"
+			>
+				Go back home
+			</LinkButton>
+		</div>
+	</main>
 </Layout>
 
 <script>
-  import { quoteArray } from "@config";
-  const quoteText = document.getElementById('quote404');
+	import { quoteArray } from '@config';
+	const quoteText = document.getElementById('quote404');
 
-  if (quoteText === null) {
-    throw new Error('quote404 element not found');
-  }
-  if (!localStorage.getItem('quote404')) {
-    localStorage.setItem('quote404', quoteArray[Math.floor(Math.random() * quoteArray.length)]);
-  }
-  quoteText.textContent = localStorage.getItem('quote404');
+	if (quoteText === null) {
+		throw new Error('quote404 element not found');
+	}
+	if (!localStorage.getItem('quote404')) {
+		localStorage.setItem('quote404', quoteArray[Math.floor(Math.random() * quoteArray.length)]);
+	}
+	quoteText.textContent = localStorage.getItem('quote404');
 </script>

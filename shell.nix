@@ -1,12 +1,18 @@
-{ pkgs ? import <nixpkgs> { } }:
+{
+  pkgs ? import <nixpkgs> { },
+}:
 
 pkgs.mkShell {
   buildInputs = with pkgs; [
-    nodejs_20 # Node.js
+    nodejs # Node.js
     pnpm # pnPm
+    pre-commit # Pre-commit
     nixfmt # Nix formatter
+    just # Just
   ];
 
   # Shell hook to set up environment
-  shellHook = "";
+  shellHook = ''
+    just install
+  '';
 }

@@ -20,7 +20,7 @@ export default function Card({ href = '', frontmatter, secHeading = true }: Prop
 
 	return (
 		<li
-			className="mt-2 py-3 border-b-2 border-dashed"
+			className="mt-2 border-b-2 border-dashed py-3"
 			style={{ borderColor: 'rgb(var(--color-text-base))' }}
 		>
 			<a
@@ -38,7 +38,7 @@ export default function Card({ href = '', frontmatter, secHeading = true }: Prop
 						href={`/tags/${tag.toLowerCase()}/`}
 						key={tag}
 						style={{ color: 'rgb(var(--link-color-secondary))' }}
-						className="mr-3 font-medium uppercase text-primary_alt-light dark:text-primary_alt-dark hover:text-primary-light hover:dark:text-primary-dark text-sm"
+						className="text-primary_alt-light dark:text-primary_alt-dark hover:text-primary-light hover:dark:text-primary-dark mr-3 text-sm font-medium uppercase"
 					>
 						#{tag}
 					</a>
