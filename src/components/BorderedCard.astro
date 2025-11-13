@@ -1,8 +1,8 @@
 ---
 export interface Props {
-	title?: string;
-	className?: string;
-	border: boolean;
+  title?: string;
+  className?: string;
+  border: boolean;
 }
 
 const { title, className, border = true }: Props = Astro.props;
@@ -10,18 +10,18 @@ const { title, className, border = true }: Props = Astro.props;
 
 <!-- relative flex h-60 flex-col gap-6 overflow-hidden rounded-xl p-4 shadow-feature-card dark:shadow-feature-card-dark lg:p-6 -->
 <div
-	class={`${border ? 'border-solid border-2 rounded-lg p-6' : ''} h-fit lg:mx-4 mt-8 ${className}`}
-	style="border-color: rgb(var(--fg-light));"
+  class={`${border ? 'border-solid border-2 rounded-lg p-6' : ''} h-fit lg:mx-4 mt-8 ${className}`}
+  style="border-color: rgb(var(--fg-light));"
 >
-	{
-		title ? (
-			<h1
-				class="neon dark:shadow-fg1-light shadow-fg1-dark text-xl drop-shadow-lg md:py-4 md:text-3xl"
-				style="color: rgb(var(--color-text-alt));"
-			>
-				{title}
-			</h1>
-		) : null
-	}
-	<slot />
+  {
+    title ? (
+      <h1
+        class="neon dark:shadow-fg1-light shadow-fg1-dark text-xl drop-shadow-lg md:py-4 md:text-3xl"
+        style="color: rgb(var(--color-text-alt));"
+      >
+        {title}
+      </h1>
+    ) : null
+  }
+  <slot />
 </div>

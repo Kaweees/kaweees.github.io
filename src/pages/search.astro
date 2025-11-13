@@ -11,15 +11,15 @@ const sortedPosts = getSortedPosts(posts);
 
 // List of items to search in
 const searchList = sortedPosts.map(({ data, slug }) => ({
-	title: data.title,
-	description: data.description,
-	data,
-	slug,
+  title: data.title,
+  description: data.description,
+  data,
+  slug,
 }));
 ---
 
 <Layout title="Search">
-	<Main pageTitle={['Search']} pageDesc="Search any article ...">
-		<SearchBar client:load searchList={searchList} />
-	</Main>
+  <Main pageTitle={['Search']} pageDesc="Search any article ...">
+    <SearchBar client:load searchList={searchList} />
+  </Main>
 </Layout>

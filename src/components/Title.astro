@@ -1,9 +1,9 @@
 ---
 export interface PageProps {
-	title: [string, string] | [string] | string;
-	subtitle?: string;
-	h2: string | boolean;
-	titleTransition?: string;
+  title: [string, string] | [string] | string;
+  subtitle?: string;
+  h2: string | boolean;
+  titleTransition?: string;
 }
 
 export type Props = PageProps;
@@ -12,33 +12,33 @@ const { props } = Astro;
 ---
 
 {
-	props.h2 ? (
-		<h2 class="leading-14 my-4 text-4xl font-bold capitalize tracking-tight">
-			{'titleTransition' in props ? (
-				<>
-					{props.title[0]}
-					<span transition:name={props.titleTransition}>{props.title[1]}</span>
-				</>
-			) : (
-				<>{props.title}</>
-			)}
-		</h2>
-	) : (
-		<h1 class="leading-14 my-4 text-5xl font-bold capitalize tracking-tight">
-			{'titleTransition' in props ? (
-				<>
-					{props.title[0]}
-					<span transition:name={props.titleTransition}>{props.title[1]}</span>
-				</>
-			) : (
-				<>{props.title}</>
-			)}
-		</h1>
-	)
+  props.h2 ? (
+    <h2 class="leading-14 my-4 text-4xl font-bold capitalize tracking-tight">
+      {'titleTransition' in props ? (
+        <>
+          {props.title[0]}
+          <span transition:name={props.titleTransition}>{props.title[1]}</span>
+        </>
+      ) : (
+        <>{props.title}</>
+      )}
+    </h2>
+  ) : (
+    <h1 class="leading-14 my-4 text-5xl font-bold capitalize tracking-tight">
+      {'titleTransition' in props ? (
+        <>
+          {props.title[0]}
+          <span transition:name={props.titleTransition}>{props.title[1]}</span>
+        </>
+      ) : (
+        <>{props.title}</>
+      )}
+    </h1>
+  )
 }
 
 {
-	props.subtitle && (
-		<p class="my-2 text-xl leading-7 text-gray-700 dark:text-gray-400">{props.subtitle}</p>
-	)
+  props.subtitle && (
+    <p class="my-2 text-xl leading-7 text-gray-700 dark:text-gray-400">{props.subtitle}</p>
+  )
 }

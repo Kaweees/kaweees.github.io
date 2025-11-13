@@ -6,91 +6,91 @@ import MobileMenu from './MobileMenu.astro';
 import { NAV_LINKS } from '@config';
 
 export interface Props {
-	activeNav: string;
+  activeNav: string;
 }
 
 const { activeNav } = Astro.props;
 ---
 
 <header
-	class="flex items-center justify-between px-6 py-4"
-	style="background-color: rgb(var(--navigation-fill-primary));"
+  class="flex items-center justify-between px-6 py-4"
+  style="background-color: rgb(var(--navigation-fill-primary));"
 >
-	<a href="/" class="sm:text-2xl; py-1 text-xl font-semibold sm:static">
-		{
-			LOGO_IMAGE.enable ? (
-				<img
-					src={`/assets/${LOGO_IMAGE.svg ? 'logo.svg' : 'logo.png'}`}
-					alt={SITE.title}
-					width={LOGO_IMAGE.width}
-					height={LOGO_IMAGE.height}
-				/>
-			) : (
-				<span
-					class="neon"
-					style="color: var(--title-primary-color); font-size: 1.5rem !important;"
-					id="typewriter"
-				>
-					> Miguel{' '}
-					<span
-						class="neon"
-						style="color: var(--title-secondary-color); font-size: 1.5rem !important;"
-						id="typewriter"
-					>
-						VF
-					</span>
-				</span>
-			)
-		}
-	</a>
-	<nav class="flex items-center text-base leading-5">
-		<div class="hidden sm:block">
-			{
-				NAV_LINKS.length > 0 && (
-					<>
-						{NAV_LINKS.map(({ href, title }) => (
-							<a
-								href={`/${href}`}
-								class={`my-3 rounded-md px-3 py-2 text-xl ${activeNav === href ? 'active' : ''}`}
-							>
-								{title}
-							</a>
-						))}
-					</>
-				)
-			}
-		</div>
-		<SearchButton activeNav={activeNav} />
-		<ThemeSwitch />
-		<MobileMenu activeNav={activeNav} />
-	</nav>
+  <a href="/" class="sm:text-2xl; py-1 text-xl font-semibold sm:static">
+    {
+      LOGO_IMAGE.enable ? (
+        <img
+          src={`/assets/${LOGO_IMAGE.svg ? 'logo.svg' : 'logo.png'}`}
+          alt={SITE.title}
+          width={LOGO_IMAGE.width}
+          height={LOGO_IMAGE.height}
+        />
+      ) : (
+        <span
+          class="neon"
+          style="color: var(--title-primary-color); font-size: 1.5rem !important;"
+          id="typewriter"
+        >
+          > Miguel{' '}
+          <span
+            class="neon"
+            style="color: var(--title-secondary-color); font-size: 1.5rem !important;"
+            id="typewriter"
+          >
+            VF
+          </span>
+        </span>
+      )
+    }
+  </a>
+  <nav class="flex items-center text-base leading-5">
+    <div class="hidden sm:block">
+      {
+        NAV_LINKS.length > 0 && (
+          <>
+            {NAV_LINKS.map(({ href, title }) => (
+              <a
+                href={`/${href}`}
+                class={`my-3 rounded-md px-3 py-2 text-xl ${activeNav === href ? 'active' : ''}`}
+              >
+                {title}
+              </a>
+            ))}
+          </>
+        )
+      }
+    </div>
+    <SearchButton activeNav={activeNav} />
+    <ThemeSwitch />
+    <MobileMenu activeNav={activeNav} />
+  </nav>
 </header>
 
 <script>
-	// @ts-ignore
-	import Typewriter from 'typewriter-effect/dist/core';
+  // @ts-ignore
+  import Typewriter from 'typewriter-effect/dist/core';
 
-	let typewriter = new Typewriter('#typewriter', {
-		cursor: '_',
-		loop: false,
-		delay: 75,
-		deleteSpeed: 50,
-	});
+  let typewriter = new Typewriter('#typewriter', {
+    cursor: '_',
+    loop: false,
+    delay: 75,
+    deleteSpeed: 50,
+  });
 
-	typewriter
-		.typeString('> Miguel </span><span style="color: var(--title-secondary-color);">VF</span>')
-		.start();
+  typewriter
+    .typeString('> Miguel </span><span style="color: var(--title-secondary-color);">VF</span>')
+    .start();
 </script>
 
 <style>
-	nav a {
-		color: rgb(var(--color-text-base));
-	}
-	nav a:hover {
-		color: rgb(var(--color-fill));
-		background-color: rgb(var(--color-text-base));
-	}
-	nav a.active {
-		@apply underline decoration-wavy decoration-2 underline-offset-[0.3em];
-	}
+  nav a {
+    color: rgb(var(--color-text-base));
+  }
+  nav a:hover {
+    color: rgb(var(--color-fill));
+    background-color: rgb(var(--color-text-base));
+  }
+  nav a.active {
+    @apply underline decoration-wavy decoration-2 underline-offset-[0.3em];
+  }
 </style>

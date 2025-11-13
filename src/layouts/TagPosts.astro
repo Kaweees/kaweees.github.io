@@ -7,32 +7,32 @@ import Pagination from '@components/Pagination.astro';
 import { blogQuoteArray } from '@config';
 
 export interface Props {
-	currentPage: number;
-	totalPages: number;
-	paginatedPosts: CollectionEntry<'blog'>[];
-	tag: string;
-	tagName: string;
+  currentPage: number;
+  totalPages: number;
+  paginatedPosts: CollectionEntry<'blog'>[];
+  tag: string;
+  tagName: string;
 }
 
 const { currentPage, totalPages, paginatedPosts, tag, tagName } = Astro.props;
 ---
 
 <Layout title={`Tag: ${tagName}`}>
-	<Main
-		pageTitle={[`Tag: `, `${tagName}`]}
-		titleTransition={tag}
-		pageDesc={blogQuoteArray[Math.floor(Math.random() * blogQuoteArray.length)]}
-	>
-		<h1 slot="title" transition:name={tag}>{`Tag:${tag}`}</h1>
-		<ul>
-			{paginatedPosts.map(({ data, slug }) => <Card href={`/blog/${slug}/`} frontmatter={data} />)}
-		</ul>
-	</Main>
+  <Main
+    pageTitle={[`Tag: `, `${tagName}`]}
+    titleTransition={tag}
+    pageDesc={blogQuoteArray[Math.floor(Math.random() * blogQuoteArray.length)]}
+  >
+    <h1 slot="title" transition:name={tag}>{`Tag:${tag}`}</h1>
+    <ul>
+      {paginatedPosts.map(({ data, slug }) => <Card href={`/blog/${slug}/`} frontmatter={data} />)}
+    </ul>
+  </Main>
 
-	<Pagination
-		{currentPage}
-		{totalPages}
-		prevUrl={`/tags/${tag}${currentPage - 1 !== 1 ? '/' + (currentPage - 1) : ''}/`}
-		nextUrl={`/tags/${tag}/${currentPage + 1}/`}
-	/>
+  <Pagination
+    {currentPage}
+    {totalPages}
+    prevUrl={`/tags/${tag}${currentPage - 1 !== 1 ? '/' + (currentPage - 1) : ''}/`}
+    nextUrl={`/tags/${tag}/${currentPage + 1}/`}
+  />
 </Layout>
