@@ -1,0 +1,41 @@
+repos:
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: v3.1.0 # Latest available v3 tag in mirrors-prettier
+    hooks:
+      - id: prettier
+        args: ['--config', '.prettierrc.cjs']
+        additional_dependencies:
+          - 'prettier@3.6.2'
+          - 'prettier-plugin-astro@0.14.1'
+          - 'prettier-plugin-tailwindcss@0.7.1'
+          - '@trivago/prettier-plugin-sort-imports@6.0.0'
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: 'v6.0.0'
+    hooks:
+      # Basic safety checks
+      - id: check-added-large-files
+      - id: check-merge-conflict
+      - id: check-case-conflict
+      - id: check-symlinks
+      - id: destroyed-symlinks
+      - id: check-executables-have-shebangs
+      - id: check-shebang-scripts-are-executable
+      - id: check-toml
+      - id: check-yaml
+
+      # Simple auto-fixers
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+
+      # Quick correctness checks
+      - id: debug-statements
+
+      # Security checks (can also be placed last)
+      - id: detect-private-key
+
+  - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
+    rev: '3.4.1'
+    hooks:
+      - id: editorconfig-checker
+        alias: ec
