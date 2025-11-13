@@ -5,6 +5,8 @@
 alias i := install
 alias u := update
 alias p := pre_commit
+alias b := build
+alias r := run
 alias c := clean
 alias f := format
 
@@ -16,6 +18,7 @@ default:
 install:
   @echo "Installing..."
   @pnpm install
+  @pre-commit install --install-hooks
 
 update:
   @echo "Updating..."
@@ -26,6 +29,16 @@ update:
 pre_commit:
   @echo "Running pre-commit..."
   @pre-commit run -a
+
+# Build the project
+build:
+  @echo "Building..."
+  @pnpm build
+
+# Run a package
+run:
+  @echo "Running..."
+  @pnpm run start:dev
 
 # Remove build artifacts and non-essential files
 clean:

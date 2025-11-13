@@ -113,9 +113,6 @@ importers:
       eslint-plugin-astro:
         specifier: ^1.3.1
         version: 1.3.1(eslint@9.30.0(jiti@2.4.2))
-      husky:
-        specifier: ^9.1.7
-        version: 9.1.7
       lint-staged:
         specifier: ^16.1.2
         version: 16.1.2
@@ -4256,14 +4253,6 @@ packages:
       {
         integrity: sha512-dTxcvPXqPvXBQpq5dUr6mEMJX4oIEFv6bwom3FDwKRDsuIjjJGANqhBuoAn9c1RQJIdAKav33ED65E2ys+87QQ==,
       }
-
-  husky@9.1.7:
-    resolution:
-      {
-        integrity: sha512-5gs5ytaNjBrh5Ow3zrvdUUY+0VxIuWVL4i9irt6friV+BqdCfmV11CQTWMiBYWHbXhco+J1kHfTOUkePhCDvMA==,
-      }
-    engines: { node: '>=18' }
-    hasBin: true
 
   i@0.3.7:
     resolution:
@@ -10279,8 +10268,6 @@ snapshots:
       entities: 4.5.0
 
   http-cache-semantics@4.2.0: {}
-
-  husky@9.1.7: {}
 
   i@0.3.7: {}
 
