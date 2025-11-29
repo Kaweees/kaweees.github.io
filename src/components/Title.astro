@@ -13,7 +13,7 @@ const { props } = Astro;
 
 {
   props.h2 ? (
-    <h2 class="leading-14 my-4 text-4xl font-bold capitalize tracking-tight">
+    <h2 class="my-4 text-4xl leading-14 font-bold tracking-tight capitalize">
       {'titleTransition' in props ? (
         <>
           {props.title[0]}
@@ -24,7 +24,7 @@ const { props } = Astro;
       )}
     </h2>
   ) : (
-    <h1 class="leading-14 my-4 text-5xl font-bold capitalize tracking-tight">
+    <h1 class="my-4 text-5xl leading-14 font-bold tracking-tight capitalize">
       {'titleTransition' in props ? (
         <>
           {props.title[0]}
