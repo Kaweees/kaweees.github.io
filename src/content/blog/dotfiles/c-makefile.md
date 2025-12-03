@@ -30,7 +30,7 @@ First, create a new file called `Makefile` in the root directory of your
 project. Let's start by defining the name of the program that we will be
 building.
 
-```makefile
+```make
 # The name of the program to build.
 TARGET := example
 ```
@@ -41,7 +41,7 @@ The first thing we need to do is define the compiler and shell that we will be
 using. In this example, we will be using `gcc` and `/bin/bash`, respectively. We
 will also define the compiler flags that we will be using.
 
-```makefile
+```make Makefile
 # The compiler executable.
 CC := gcc
 # The compiler flags.
@@ -61,7 +61,7 @@ our project. We will define the name of the test executable, the name of the
 debug executable, and provide some flags that will be used by the memory checker
 and debugger.
 
-```makefile
+```make
 # The memory checker executable.
 MEMCHECK := valgrind
 # The memory checker flags.
@@ -89,7 +89,7 @@ that refer to directories related to the root directory of the project. We are
 going to work under the assumption that the project has the following directory
 structure:
 
-```Makefile
+```Make
 .project/ # root directory of the project
 ├── include/ # header files
 ├── lib/ # external libraries
@@ -102,7 +102,7 @@ structure:
 
 To achieve this, we can define the following variables:
 
-```makefile
+```make
 # top directory of project
 TOP_DIR := $(shell pwd)
 # directory to locate source files
@@ -123,7 +123,7 @@ Now that we have defined all the necessary variables, we can start defining the
 targets that will be used to build our project. The first target that we will
 define is the `all` target, which will build the program.
 
-```makefile
+```make
 # The default target.
 .PHONY: all
 all: $(BUILD_DIR)/$(TARGET)

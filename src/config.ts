@@ -1,4 +1,5 @@
 import type { JobsType, ProjectsType, Site, SocialObjects } from './types';
+import { WorkStatus } from './types';
 
 export const blogQuoteArray = [
   '🌠 Accelerating to eternity',
@@ -53,6 +54,7 @@ export const SITE: Site = {
   primaryColor: '#FBF1C7',
   secondaryColor: '#EBDBB2',
   tertiaryColor: '#D8C787',
+  workStatus: WorkStatus.Open,
 };
 
 export const NAV_LINKS = [

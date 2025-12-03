@@ -1,5 +1,11 @@
 import type socialIcons from '@assets/socialIcons';
 
+export enum WorkStatus {
+  Open = 'Open to Work',
+  Exploring = 'Exploring Opportunities',
+  NotLooking = 'Not Looking for Work',
+}
+
 export type Site = {
   title: string;
   blogURL: string;
@@ -14,6 +20,7 @@ export type Site = {
   primaryColor: string;
   secondaryColor: string;
   tertiaryColor: string;
+  workStatus: WorkStatus;
 };
 
 export type JobsType = {
