@@ -7,7 +7,7 @@ import {
   transformerNotationWordHighlight,
 } from '@shikijs/transformers';
 // import tailwindcss from '@tailwindcss/vite';
-import { defineConfig, envField } from 'astro/config';
+import { defineConfig } from 'astro/config';
 import remarkCollapse from 'remark-collapse';
 import remarkToc from 'remark-toc';
 
