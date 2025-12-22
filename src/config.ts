@@ -171,7 +171,7 @@ export const PROJECTS: ProjectsType = [
 export const SOCIALS: SocialObjects = [
   {
     name: 'Twitter',
-    href: 'https://x.com/kaweees1/',
+    href: 'https://x.com/kaweees/',
     linkTitle: ` ${SITE.title} on Twitter`,
     active: true,
   },

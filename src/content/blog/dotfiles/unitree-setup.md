@@ -81,3 +81,16 @@ tailscale status
  ![Unitree Tailscale](./assets/unitree-tailscale.png) -->
 
 ![Unitree Tailscale](@/assets/images/unitree-tailscale.png)
+
+Switch to default Ubuntu APT repositories
+
+```sh
+sudo tee /etc/apt/sources.list >/dev/null <<'EOF'
+```
+
+```sh
+deb http://archive.ubuntu.com/ubuntu focal main restricted universe multiverse
+deb http://archive.ubuntu.com/ubuntu focal-updates main restricted universe multiverse
+deb http://archive.ubuntu.com/ubuntu focal-backports main restricted universe multiverse
+deb http://security.ubuntu.com/ubuntu focal-security main restricted universe multiverse
+```
