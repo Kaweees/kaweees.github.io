@@ -78,6 +78,13 @@ export const LOGO_IMAGE = {
 
 export const JOBS: JobsType = [
   {
+    company: 'Dimensional',
+    role: 'Agentic Robotics',
+    time: 'Dec. 2025 - Present',
+    link: 'https://dimensionalos.com/',
+    image: '/assets/logos/dimensional-logo.png',
+  },
+  {
     company: 'NVIDIA GEAR',
     role: 'Humanoids Research',
     time: 'Jun 2025 - Sep 2025',
