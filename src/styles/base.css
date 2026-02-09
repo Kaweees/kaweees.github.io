@@ -144,6 +144,11 @@
     @apply bg-skin-card-muted;
   }
 
+  /* Katex text color */
+  .prose .katex-display {
+    @apply text-skin-base;
+  }
+
   code,
   blockquote,
   kbd {
