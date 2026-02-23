@@ -1,20 +1,19 @@
 const primaryColorScheme = ''; // "light" | "dark"
 
-// Get theme data from local storage
-const currentTheme = localStorage.getItem('theme');
-
 function getPreferTheme() {
-  // return theme value in local storage if it is set
+  // get theme data from local storage (user's explicit choice)
+  const currentTheme = localStorage.getItem('theme');
   if (currentTheme) return currentTheme;
 
-  // return primary color scheme if it is set
+  // return primary color scheme if it is set (site default)
   if (primaryColorScheme) return primaryColorScheme;
 
-  // return user device's prefer color scheme
+  // return user device's prefer color scheme (system fallback)
   return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 }
 
-let themeValue = getPreferTheme();
+// Use existing theme value from inline script if available, otherwise detect
+let themeValue = window.theme?.themeValue ?? getPreferTheme();
 
 function setPreference() {
   localStorage.setItem('theme', themeValue);
@@ -22,7 +21,7 @@ function setPreference() {
 }
 
 function reflectPreference() {
-  document.firstElementChild.setAttribute('data-theme', themeValue);
+  document.firstElementChild?.setAttribute('data-theme', themeValue);
 
   document.querySelector('#theme-btn')?.setAttribute('aria-label', themeValue);
 
@@ -42,31 +41,63 @@ function reflectPreference() {
   }
 }
 
-// set early so no page flashes / CSS is made aware
+// Update the global theme API
+if (window.theme) {
+  window.theme.setPreference = setPreference;
+  window.theme.reflectPreference = reflectPreference;
+} else {
+  window.theme = {
+    themeValue,
+    setPreference,
+    reflectPreference,
+    getTheme: () => themeValue,
+    setTheme: (val) => {
+      themeValue = val;
+    },
+  };
+}
+
+// Ensure theme is reflected (in case body wasn't ready when inline script ran)
 reflectPreference();
 
-window.onload = () => {
-  function setThemeFeature() {
-    // set on load so screen readers can get the latest value on the button
-    reflectPreference();
+function setThemeFeature() {
+  // set on load so screen readers can get the latest value on the button
+  reflectPreference();
 
-    // now this script can find and listen for clicks on the control
-    document.querySelector('#theme-btn')?.addEventListener('click', () => {
-      themeValue = themeValue === 'light' ? 'dark' : 'light';
-      setPreference();
-    });
+  // now this script can find and listen for clicks on the control
+  document.querySelector('#theme-btn')?.addEventListener('click', () => {
+    themeValue = themeValue === 'light' ? 'dark' : 'light';
+    window.theme?.setTheme(themeValue);
+    setPreference();
+  });
+}
+
+// astro:page-load fires on initial load AND after view transition navigations
+// Use it to attach the click handler (DOM is ready at this point)
+document.addEventListener('astro:page-load', setThemeFeature);
+
+// astro:after-swap fires during SPA navigations BEFORE the new page is visible
+// Use it to reflect theme on the new document to prevent flash of wrong theme
+document.addEventListener('astro:after-swap', reflectPreference);
+
+// Set theme-color value before page transition
+// to avoid navigation bar color flickering in Android dark mode
+document.addEventListener('astro:before-swap', (event) => {
+  const bgColor = document.querySelector("meta[name='theme-color']")?.getAttribute('content');
+
+  if (bgColor) {
+    event.newDocument.querySelector("meta[name='theme-color']")?.setAttribute('content', bgColor);
   }
 
-  setThemeFeature();
-
-  // Runs on view transitions navigation
-  document.addEventListener('astro:after-swap', setThemeFeature);
-};
+  // Apply theme to the new document before swap to prevent flash
+  event.newDocument.firstElementChild?.setAttribute('data-theme', themeValue);
+});
 
 // sync with system changes
 window
   .matchMedia('(prefers-color-scheme: dark)')
   .addEventListener('change', ({ matches: isDark }) => {
     themeValue = isDark ? 'dark' : 'light';
+    window.theme?.setTheme(themeValue);
     setPreference();
   });
