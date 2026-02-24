@@ -25,7 +25,7 @@ const { activeNav } = Astro.props;
   <div
     id="nav-menu"
     class={`fixed top-0 left-0 z-10 h-full w-full transform opacity-95 duration-300 ease-in-out 4 translate-x-full`}
-    style="background-color: rgb(var(--navigation-fill-secondary)); color: rgb(var(--navigation-fill-primary));"
+    style="background-color: var(--navigation-fill-secondary); color: var(--navigation-fill-primary);"
   >
     <div class="flex justify-end">
       <button
@@ -37,7 +37,7 @@ const { activeNav } = Astro.props;
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
-          style="fill: rgb(var(--navigation-fill-primary));"
+          style="fill: var(--navigation-fill-primary);"
         >
           <path
             fill-rule="evenodd"
@@ -90,13 +90,14 @@ const { activeNav } = Astro.props;
 </script>
 
 <style>
+  @reference "../styles/base.css";
   nav a {
-    color: rgb(var(--color-fill));
-    background-color: rgb(var(--color-text-base));
+    color: var(--color-fill);
+    background-color: var(--color-text-base);
   }
   nav a:hover {
-    color: rgb(var(--color-text-base));
-    background-color: rgb(var(--color-fill));
+    color: var(--color-text-base);
+    background-color: var(--color-fill);
   }
   nav a.active {
     @apply underline decoration-wavy decoration-2 underline-offset-[0.3em];

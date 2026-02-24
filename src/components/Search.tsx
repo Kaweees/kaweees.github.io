@@ -79,7 +79,7 @@ export default function SearchBar({ searchList }: Props) {
           <span className="sr-only">Search</span>
         </span>
         <input
-          className="border-skin-fill border-opacity-40 bg-skin-fill placeholder:text-opacity-75 focus:border-skin-accent block w-full rounded border py-3 pr-3 pl-10 placeholder:italic focus:outline-none"
+          className="bg-skin-fill focus:border-skin-accent block w-full rounded border border-[var(--color-text-base)]/40 py-3 pr-3 pl-10 placeholder:text-[var(--color-text-base)]/75 placeholder:italic focus:outline-none"
           placeholder="Search for anything..."
           type="text"
           name="search"

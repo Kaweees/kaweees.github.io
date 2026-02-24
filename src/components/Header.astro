@@ -14,7 +14,7 @@ const { activeNav } = Astro.props;
 
 <header
   class="flex items-center justify-between px-6 py-4"
-  style="background-color: rgb(var(--navigation-fill-primary));"
+  style="background-color: var(--navigation-fill-primary);"
 >
   <a href="/" class="sm:text-2xl; py-1 text-xl font-semibold sm:static">
     {
@@ -35,7 +35,6 @@ const { activeNav } = Astro.props;
           <span
             class="neon"
             style="color: var(--title-secondary-color); font-size: 1.5rem !important;"
-            id="typewriter"
           >
             VF
           </span>
@@ -83,12 +82,18 @@ const { activeNav } = Astro.props;
 </script>
 
 <style>
+  @reference "../styles/base.css";
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
   nav a {
-    color: rgb(var(--color-text-base));
+    color: var(--color-text-base);
   }
   nav a:hover {
-    color: rgb(var(--color-fill));
-    background-color: rgb(var(--color-text-base));
+    color: var(--color-fill);
+    background-color: var(--color-text-base);
   }
   nav a.active {
     @apply underline decoration-wavy decoration-2 underline-offset-[0.3em];

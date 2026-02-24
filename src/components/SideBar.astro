@@ -17,7 +17,7 @@ const { className }: Props = Astro.props;
 ---
 
 <BorderedElement
-  className={`w-1/1 flex flex-col items-center overflow-hidden ${className}`}
+  className={`flex w-1/1 flex-col items-center overflow-hidden ${className}`}
   border={true}
 >
   <img
@@ -26,16 +26,16 @@ const { className }: Props = Astro.props;
     class="mx-auto rounded-full border-4 border-solid object-cover object-center"
     width="250"
     height="250"
-    style="border-color: rgb(var(--fg-light));"
+    style="border-color: var(--fg-light);"
   />
   <div class="mx-auto mt-5 flex flex-row items-center justify-center text-center">
     <div class="group relative mr-2">
       <div
-        class="pointer-events-none absolute bottom-full left-1/2 z-50 mb-2 -translate-x-1/2 whitespace-nowrap rounded bg-neutral-900 px-2 py-1 text-xs text-white opacity-0 transition-opacity duration-200 group-hover:opacity-100 dark:bg-neutral-800"
+        class="pointer-events-none absolute bottom-full left-1/2 z-50 mb-2 -translate-x-1/2 rounded bg-neutral-900 px-2 py-1 text-xs whitespace-nowrap text-white opacity-0 transition-opacity duration-200 group-hover:opacity-100 dark:bg-neutral-800"
       >
         {workStatus}
         <div
-          class="absolute left-1/2 top-full h-0 w-0 -translate-x-1/2 border-l-4 border-r-4 border-t-4 border-transparent border-t-neutral-900 dark:border-t-neutral-800"
+          class="absolute top-full left-1/2 h-0 w-0 -translate-x-1/2 border-t-4 border-r-4 border-l-4 border-transparent border-t-neutral-900 dark:border-t-neutral-800"
         >
         </div>
       </div>

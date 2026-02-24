@@ -1,12 +1,11 @@
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
-import tailwind from '@astrojs/tailwind';
 import {
   transformerNotationDiff,
   transformerNotationHighlight,
   transformerNotationWordHighlight,
 } from '@shikijs/transformers';
-// import tailwindcss from '@tailwindcss/vite';
+import tailwindcss from '@tailwindcss/vite';
 import { defineConfig } from 'astro/config';
 import rehypeKatex from 'rehype-katex';
 import remarkCollapse from 'remark-collapse';
@@ -22,13 +21,7 @@ export default defineConfig({
   server: {
     port: 8080,
   },
-  integrations: [
-    tailwind({
-      applyBaseStyles: false,
-    }),
-    react(),
-    sitemap(),
-  ],
+  integrations: [react(), sitemap()],
   markdown: {
     remarkPlugins: [remarkMath, remarkToc, [remarkCollapse, { test: 'Table of contents' }]],
     rehypePlugins: [rehypeKatex],
@@ -48,7 +41,7 @@ export default defineConfig({
   },
   /** @type {import('vite').UserConfig} */
   vite: {
-    // plugins: [tailwindcss()],
+    plugins: [tailwindcss()],
     optimizeDeps: {
       exclude: ['@resvg/resvg-js'],
     },

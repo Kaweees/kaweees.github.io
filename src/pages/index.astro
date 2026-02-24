@@ -57,7 +57,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
         </p>
       </BorderedElement>
       <BorderedElement className="overflow-hidden" title="Places I've Worked" border={true}>
-        <div class="my-3 border-b border-dashed" style="border-color: rgb(var(--fg-light));">
+        <div class="my-3 border-b border-dashed" style="border-color: var(--fg-light);">
           {
             JOBS.length > 0 && (
               <>
@@ -147,6 +147,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 </Layout>
 
 <style>
+  @reference "../styles/base.css";
   /* ===== Hero Section ===== */
   #hero {
     @apply pt-8 pb-6;
