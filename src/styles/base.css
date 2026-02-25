@@ -86,8 +86,12 @@
   }
   a {
     @apply focus-visible:outline-skin-fill focus-visible:no-underline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-dashed;
+    /* @apply bg-skin-fill text-skin-base selection:bg-skin-accent/70 selection:text-skin-fill flex min-h-[100svh] flex-col font-mono; */
   }
-  svg {
+  a {
+    @apply outline-skin-accent outline-hidden outline-2 outline-offset-1 focus-visible:no-underline focus-visible:outline-dashed;
+  }
+  svg:not(.tikz-container *) {
     @apply fill-skin-base group-hover:fill-skin-accent inline-block h-6 w-6;
   }
   svg.icon-tabler {
@@ -95,6 +99,7 @@
   }
   .prose {
     @apply prose-headings:!mb-3 prose-headings:!text-skin-base prose-h3:italic prose-p:!text-skin-base prose-a:!text-skin-base prose-a:!decoration-dashed prose-a:underline-offset-8 hover:prose-a:text-skin-accent prose-blockquote:!border-l-skin-accent/50 prose-blockquote:opacity-80 prose-figcaption:!text-skin-base prose-figcaption:opacity-70 prose-strong:!text-skin-base prose-kbd:rounded prose-kbd:bg-skin-card/75 prose-kbd:p-1 prose-kbd:!text-skin-base prose-kbd:before:!content-none prose-kbd:after:!content-none prose-code:rounded prose-code:bg-skin-card/75 prose-code:p-1 prose-code:!text-skin-base prose-code:before:!content-none prose-code:after:!content-none prose-ol:!text-skin-base prose-ul:overflow-x-clip prose-ul:!text-skin-base prose-li:marker:!text-skin-accent prose-table:text-skin-base prose-th:border prose-th:border-skin-line prose-td:border prose-td:border-skin-line prose-img:!my-2 prose-img:mx-auto prose-img:border-2 prose-img:border-skin-line prose-hr:!border-skin-line;
+    /* @apply prose-headings:!mb-3 prose-headings:!text-skin-base prose-h3:italic prose-p:!text-skin-base prose-a:!text-skin-base prose-a:!decoration-dashed prose-a:underline-offset-8 hover:prose-a:text-skin-accent prose-blockquote:!border-l-skin-accent/50 prose-blockquote:opacity-80 prose-figcaption:!text-skin-base prose-figcaption:opacity-70 prose-strong:!text-skin-base prose-kbd:rounded prose-kbd:bg-skin-card/75 prose-kbd:p-1 prose-kbd:!text-skin-base prose-kbd:before:!content-none prose-kbd:after:!content-none prose-code:rounded prose-code:bg-skin-card/75 prose-code:p-1 prose-code:before:!content-none prose-code:after:!content-none prose-ol:!text-skin-base prose-ul:overflow-x-clip prose-ul:!text-skin-base prose-li:marker:!text-skin-accent prose-table:text-skin-base prose-th:border prose-th:border-skin-line prose-td:border prose-td:border-skin-line prose-img:!my-2 prose-img:mx-auto prose-img:border-2 prose-img:border-skin-line prose-hr:!border-skin-line; */
   }
   .prose a {
     @apply hover:!text-skin-accent break-words;
@@ -164,6 +169,20 @@
   /* Katex text color */
   .prose .katex-display {
     @apply text-skin-base;
+  }
+
+  /* TikZJax diagrams */
+  .tikz-container {
+    display: flex;
+    justify-content: center;
+    margin: 1.5em 0;
+  }
+  .tikz-container svg {
+    width: auto !important;
+    height: auto !important;
+  }
+  html[data-theme='dark'] .tikz-container svg {
+    filter: invert(1) brightness(0.74) sepia(0.72);
   }
 
   code,

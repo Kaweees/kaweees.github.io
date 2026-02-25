@@ -48,8 +48,8 @@ export const transformerFileName = ({ style = 'v2', hideDot = false } = {}) => (
             ? 'px-2'
             : 'pl-4 pr-2 before:inline-block before:size-1 before:bg-green-500 before:rounded-full before:absolute before:top-[45%] before:left-2',
           style === 'v1'
-            ? 'left-0 -top-6 rounded-t-md border-b-0'
-            : 'left-2 top-(--file-name-offset) rounded-md',
+            ? 'left-0 -top-6 rounded-t-md border border-b-0 bg-skin-card/50'
+            : 'left-2 top-(--file-name-offset) border rounded-md bg-skin-fill',
         ],
         style: 'color: #abb2bf; background-color: #21252b; border: 1px solid #3e4451;',
       },

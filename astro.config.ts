@@ -13,6 +13,7 @@ import remarkMath from 'remark-math';
 import remarkToc from 'remark-toc';
 
 import { SITE } from './src/config';
+import { remarkTikz } from './src/utils/rehype-tikz';
 import { transformerFileName } from './src/utils/transformers/fileName';
 
 // https://astro.build/config
@@ -23,7 +24,12 @@ export default defineConfig({
   },
   integrations: [react(), sitemap()],
   markdown: {
-    remarkPlugins: [remarkMath, remarkToc, [remarkCollapse, { test: 'Table of contents' }]],
+    remarkPlugins: [
+      remarkMath,
+      remarkTikz,
+      remarkToc,
+      [remarkCollapse, { test: 'Table of contents' }],
+    ],
     rehypePlugins: [rehypeKatex],
     shikiConfig: {
       // For more themes, visit https://shiki.style/themes
