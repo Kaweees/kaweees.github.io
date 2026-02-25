@@ -1,34 +1,5 @@
 @import './theme.css';
 
-/* Asymmetric color utilities */
-@utility text-skin-base {
-  color: var(--color-text-base);
-}
-@utility text-skin-inverted {
-  color: var(--color-fill);
-}
-@utility bg-skin-fill {
-  background-color: var(--color-fill);
-}
-@utility bg-skin-inverted {
-  background-color: var(--color-text-base);
-}
-@utility border-skin-fill {
-  border-color: var(--color-text-base);
-}
-@utility outline-skin-fill {
-  outline-color: var(--color-accent);
-}
-@utility fill-skin-base {
-  fill: var(--color-text-base);
-}
-@utility focus-outline {
-  @apply focus-visible:outline-skin-fill focus-visible:no-underline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-dashed;
-}
-@utility display-none {
-  @apply hidden;
-}
-
 @layer base {
   :root,
   html[data-theme='light'] {
@@ -205,6 +176,41 @@
   pre > kbd {
     white-space: pre;
   }
+}
+
+@utility display-none {
+  @apply hidden;
+}
+
+/* Asymmetric color utilities */
+@utility text-skin-base {
+  color: var(--color-text-base);
+}
+@utility text-skin-inverted {
+  color: var(--color-fill);
+}
+@utility bg-skin-fill {
+  background-color: var(--color-fill);
+}
+@utility bg-skin-inverted {
+  background-color: var(--color-text-base);
+}
+@utility border-skin-fill {
+  border-color: var(--color-text-base);
+}
+@utility outline-skin-fill {
+  outline-color: var(--color-accent);
+}
+@utility fill-skin-base {
+  fill: var(--color-text-base);
+}
+
+@utility focus-outline {
+  @apply focus-visible:outline-skin-fill focus-visible:no-underline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-dashed;
+}
+
+@utility focus-outline {
+  @apply focus-visible:outline-skin-fill focus-visible:no-underline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-dashed;
 }
 
 .link-button.Twitter:hover {
