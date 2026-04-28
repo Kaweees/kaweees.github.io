@@ -15,3 +15,6 @@ insert_final_newline = true
 
 [*.md]
 indent_size = 4
+
+[*.nix]
+indent_size = 2

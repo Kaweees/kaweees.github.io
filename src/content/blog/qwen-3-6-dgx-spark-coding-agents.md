@@ -54,7 +54,13 @@ To run ./run-recipe.sh qwen3.6-35b-a3b-fp8 --solo at boot on a DGX Spark (which 
 4. Benchmark
 
    ```bash
-   uvx --from git+https://github.com/eugr/llama-benchy llama-benchy --base-url http://localhost:8000/v1 --model Qwen/Qwen3.6-35B-A3B-FP8
+   uvx --from git+https://github.com/eugr/llama-benchy llama-benchy --base-url http://localhost:8000/v1 --model Qwen/Qwen3.6-35B-A3B-FP8 \
+      --depth 0 4096 8192 16384 32768 65535 100000 \
+      --pp 2048 \
+      --tg 128 \
+      --enable-prefix-caching \
+      --concurrency 1 2 5 10 \
+      --save-result results.csv
    ```
 
 5. Install [OpenCode](https://opencode.ai/) to build coding agents:
