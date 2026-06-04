@@ -14,14 +14,14 @@ canonicalURL: https://miguelvf.com/posts/spark-coding-agents/
 description: Building a High-Performance Coding Agent Stack on NVIDIA's DGX Spark
 ---
 
-To run ./run-recipe.sh qwen3.6-35b-a3b-fp8 --solo at boot on a DGX Spark (which runs Ubuntu/Debian), create a systemd service:
+To run `./run-recipe.sh qwen3.6-35b-a3b-fp8 -d --solo` at boot on a DGX Spark (which runs Ubuntu/Debian), create a systemd service:
 
 1. Install and build [spark-vllm-docker](https://github.com/eugr/spark-vllm-docker):
 
    ```sh
-   git clone https://github.com/eugr/spark-vllm-docker.git
-   cd spark-vllm-docker
-   ./build-and-copy.sh
+   sudo git clone https://github.com/eugr/spark-vllm-docker.git /opt/spark-vllm-docker
+   cd /opt/spark-vllm-docker
+   sudo ./build-and-copy.sh
    ```
 
 2. Create a systemd service:
@@ -35,8 +35,8 @@ To run ./run-recipe.sh qwen3.6-35b-a3b-fp8 --solo at boot on a DGX Spark (which 
    [Service]
    Type=oneshot
    RemainAfterExit=yes
-   WorkingDirectory=/home/kaweees/Documents/spark-vllm-docker
-   ExecStart=/home/kaweees/Documents/spark-vllm-docker/run-recipe.sh qwen3.6-35b-a3b-fp8 -d --solo
+   WorkingDirectory=/opt/spark-vllm-docker
+   ExecStart=/opt/spark-vllm-docker/run-recipe.sh qwen3.6-35b-a3b-fp8 -d --solo
    ExecStop=/usr/bin/docker stop vllm_node
 
    [Install]
@@ -51,7 +51,7 @@ To run ./run-recipe.sh qwen3.6-35b-a3b-fp8 --solo at boot on a DGX Spark (which 
    sudo systemctl start vllm-qwen.service
    ```
 
-4. Benchmark
+4. Benchmark with [llama-benchy](https://github.com/eugr/llama-benchy):
 
    ```bash
    uvx --from git+https://github.com/eugr/llama-benchy llama-benchy --base-url http://localhost:8000/v1 --model Qwen/Qwen3.6-35B-A3B-FP8 \
@@ -71,7 +71,7 @@ To run ./run-recipe.sh qwen3.6-35b-a3b-fp8 --solo at boot on a DGX Spark (which 
 
 6. Configure OpenCode to use the local vLLM instance:
 
-   ```json file=.config/opencode/config.json
+   ```json file=~/.config/opencode/config.json
    {
      "$schema": "https://opencode.ai/config.json",
      "provider": {
@@ -88,7 +88,6 @@ To run ./run-recipe.sh qwen3.6-35b-a3b-fp8 --solo at boot on a DGX Spark (which 
              "tool_call": true,
              "limit": {
                "context": 212992,
-               "context": 180224,
                "output": 32768
              }
            }
