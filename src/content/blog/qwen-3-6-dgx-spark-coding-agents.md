@@ -1,17 +1,17 @@
 ---
 author: Miguel Villa Floran
-pubDatetime: 2026-08-31T25:35:08Z
-modDatetime: 2026-08-31T25:35:08Z
+pubDatetime: 2026-06-03T20:40:08Z
+modDatetime: 2026-06-03T20:40:08Z
 title: Running Qwen 3.6 on NVIDIA DGX Spark
-slug: qwen-3-6-dgx-spark-coding-agents
+slug: spark-coding-agents
 featured: false
 draft: false
 tags:
   - qwen
   - vllm
   - dgx spark
-canonicalURL: https://miguelvf.com/posts/qwen-3-6-dgx-spark-coding-agents/
-description: Building a High-Performance Coding Agent Stack
+canonicalURL: https://miguelvf.com/posts/spark-coding-agents/
+description: Building a High-Performance Coding Agent Stack on NVIDIA's DGX Spark
 ---
 
 To run ./run-recipe.sh qwen3.6-35b-a3b-fp8 --solo at boot on a DGX Spark (which runs Ubuntu/Debian), create a systemd service:
