@@ -29,8 +29,16 @@ After=multi-user.target
 
 [Service]
 Type=oneshot
-ExecStart=/bin/bash -c "/usr/sbin/nvpmodel -m 0 && /usr/bin/jetson_clocks"
 RemainAfterExit=yes
+
+# Set maximum performance power mode
+ExecStart=/usr/sbin/nvpmodel -m 0
+
+# Lock all clocks to maximum frequency
+ExecStart=/usr/bin/jetson_clocks
+
+# Disable GPU railgate
+ExecStart=/bin/sh -c 'echo on > /sys/bus/pci/devices/0000:01:00.0/power/control'
 
 [Install]
 WantedBy=multi-user.target
