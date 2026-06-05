@@ -2,41 +2,49 @@
 author: Miguel Villa Floran
 pubDatetime: 2026-06-03T20:40:08Z
 modDatetime: 2026-06-03T20:40:08Z
-title: Running Qwen 3.6 on NVIDIA DGX Spark
-slug: spark-coding-agents
+title: Running Qwen 3.6 on NVIDIA Jetson Thor
+slug: thor-coding-agents
 featured: false
 draft: false
 tags:
-  - dgx spark
+  - jetson thor
   - qwen
   - vllm
-canonicalURL: https://miguelvf.com/posts/spark-coding-agents/
-description: Building a High-Performance Coding Agent Stack on NVIDIA's DGX Spark
+canonicalURL: https://miguelvf.com/posts/thor-coding-agents/
+description: Building a High-Performance Coding Agent Stack on NVIDIA's Jetson Thor
 ---
 
-To run `./run-recipe.sh qwen3.6-35b-a3b-fp8 -d --solo` at boot on a DGX Spark (which runs Ubuntu/Debian), create a systemd service:
+To run ./run-recipe.sh qwen3.6-35b-a3b-fp8 --solo at boot on a Jetson Thor (which runs Ubuntu/Debian), create a systemd service:
 
 1. Install and build [spark-vllm-docker](https://github.com/eugr/spark-vllm-docker):
 
    ```sh
-   sudo git clone https://github.com/eugr/spark-vllm-docker.git /opt/spark-vllm-docker
-   cd /opt/spark-vllm-docker
-   sudo ./build-and-copy.sh
+   git clone https://github.com/eugr/spark-vllm-docker.git
+   cd spark-vllm-docker
+   ./build-and-copy.sh
    ```
 
 2. Create a systemd service:
 
    ```ini file=/etc/systemd/system/vllm-qwen.service
    [Unit]
-   Description=vLLM Qwen3.6-35B-A3B-FP8
+   Description=vLLM Qwen3.6-35B-A3B-NVFP4
    After=network.target docker.service
    Requires=docker.service
 
    [Service]
    Type=oneshot
    RemainAfterExit=yes
-   WorkingDirectory=/opt/spark-vllm-docker
-   ExecStart=/opt/spark-vllm-docker/run-recipe.sh qwen3.6-35b-a3b-fp8 -d --solo
+   ExecStart=/usr/bin/docker run --rm --pull always \
+     --name vllm_node \
+     --runtime=nvidia --network host \
+     vllm/vllm-openai:nightly-aarch64 \
+     bash -c "pip install -q 'vllm[audio]' && vllm serve RedHatAI/Qwen3.6-35B-A3B-NVFP4 \
+       --gpu-memory-utilization 0.8 \
+       --enable-prefix-caching \
+       --reasoning-parser qwen3 \
+       --enable-auto-tool-choice \
+       --tool-call-parser qwen3_coder"
    ExecStop=/usr/bin/docker stop vllm_node
 
    [Install]
@@ -51,7 +59,7 @@ To run `./run-recipe.sh qwen3.6-35b-a3b-fp8 -d --solo` at boot on a DGX Spark (w
    sudo systemctl start vllm-qwen.service
    ```
 
-4. Benchmark with [llama-benchy](https://github.com/eugr/llama-benchy):
+4. Benchmark
 
    ```bash
    uvx --from git+https://github.com/eugr/llama-benchy llama-benchy --base-url http://localhost:8000/v1 --model Qwen/Qwen3.6-35B-A3B-FP8 \
@@ -71,7 +79,7 @@ To run `./run-recipe.sh qwen3.6-35b-a3b-fp8 -d --solo` at boot on a DGX Spark (w
 
 6. Configure OpenCode to use the local vLLM instance:
 
-   ```json file=~/.config/opencode/config.json
+   ```json file=.config/opencode/config.json
    {
      "$schema": "https://opencode.ai/config.json",
      "provider": {
@@ -88,6 +96,7 @@ To run `./run-recipe.sh qwen3.6-35b-a3b-fp8 -d --solo` at boot on a DGX Spark (w
              "tool_call": true,
              "limit": {
                "context": 212992,
+               "context": 180224,
                "output": 32768
              }
            }
