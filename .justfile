@@ -17,7 +17,7 @@ default:
 # Install the virtual environment and pre-commit hooks
 install:
   @echo "Installing..."
-  @pnpm install
+  @pnpm taze -w -r -i -u
   @pre-commit install --install-hooks
 
 update:
@@ -49,4 +49,3 @@ clean:
 format:
   @echo "Formatting..."
   @pnpm format
-  @find . -name "*.nix" -type f -exec nixfmt {} \;
