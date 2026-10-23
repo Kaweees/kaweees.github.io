@@ -10,9 +10,9 @@ slug: impossible-list
 featured: true
 draft: false
 tags:
-  - dreams
-  - goals
-  - ambitions
+    - dreams
+    - goals
+    - ambitions
 canonicalURL: https://miguelvf.com/posts/impossible-list/
 description: My attempt to live forever or die trying, by doing what I want to do with my life. Do the things I want to do, see the places I want to see, meet the people I want to meet, and live the life I want to live.
 ---
@@ -66,23 +66,20 @@ something or have something to add, with the later being most likely.
 
 - Work Remotely
 - ~~Work at the Magnificent Seven (aka Big Tech) [(June 24, 2024 - NVIDIA)](https://www.nvidia.com/)~~
-- ~~Work at a startup
-  [(June 19, 2023 - DeepWater Exploration)](https://dwe.ai/)~~
-- ~~Win a hackaton
-  [(November 24, 2024 - USS Hornet Defense Tech Hackathon (No Bananas))](https://lu.ma/uss-hornet-hackathon?tk=Z5zIgM/)~~
+- ~~Work at a startup [(June 19, 2023 - DeepWater Exploration)](https://dwe.ai/)~~
+- ~~Win a hackaton [(November 24, 2024 - USS Hornet Defense Tech Hackathon (No Bananas))](https://lu.ma/uss-hornet-hackathon?tk=Z5zIgM/)~~
 - Found a startup
 - Start a newsletter/YouTube channel
-  - Gain 100 subscribers
-  - Gain 250 subscribers
-  - Gain 500 subscribers
-  - Gain 1,000 subscribers
+    - Gain 100 subscribers
+    - Gain 250 subscribers
+    - Gain 500 subscribers
+    - Gain 1,000 subscribers
 - Write a book
 - Write 100 blog posts
 
 ## 🎨 Creative Goals
 
-- ~~Write a script for a movie/short film
-  [(Jan 5, 2022 - A Reminiscent Gift)](https://www.youtube.com/watch?v=OvyhgLkh59A)~~
+- ~~Write a script for a movie/short film [(Jan 5, 2022 - A Reminiscent Gift)](https://www.youtube.com/watch?v=OvyhgLkh59A)~~
 - Work in a movie/short film as a film editor
 - Direct a movie/short film
 

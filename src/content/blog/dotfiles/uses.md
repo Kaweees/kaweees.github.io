@@ -10,11 +10,11 @@ slug: uses
 featured: true
 draft: false
 tags:
-  - uses
-  - tools
-  - software
-  - hardware
-  - dotfiles
+    - uses
+    - tools
+    - software
+    - hardware
+    - dotfiles
 canonicalURL: https://miguelvf.com/posts/uses/
 description: The wonderful world of things I use to make my life easier.
 ---

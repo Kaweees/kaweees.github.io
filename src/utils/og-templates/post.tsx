@@ -76,7 +76,15 @@ export default (post: CollectionEntry<'blog'>) => {
               overflow: 'hidden',
             }}
           >
-            <div style={{ display: 'flex', fontSize: 26, fontWeight: 'bold', color: GREEN, marginBottom: 14 }}>
+            <div
+              style={{
+                display: 'flex',
+                fontSize: 26,
+                fontWeight: 'bold',
+                color: GREEN,
+                marginBottom: 14,
+              }}
+            >
               &gt;&gt; blog
             </div>
             <div
@@ -91,7 +99,14 @@ export default (post: CollectionEntry<'blog'>) => {
             >
               {post.data.title}
             </div>
-            <div style={{ display: 'flex', marginTop: 24, fontSize: 28, lineHeight: 1.4 }}>
+            <div
+              style={{
+                display: 'flex',
+                marginTop: 24,
+                fontSize: 28,
+                lineHeight: 1.4,
+              }}
+            >
               {post.data.description}
             </div>
           </div>
@@ -105,9 +120,14 @@ export default (post: CollectionEntry<'blog'>) => {
             }}
           >
             <span style={{ display: 'flex' }}>
-              by<span style={{ fontWeight: 'bold', color: TITLE_2, marginLeft: 12 }}>{post.data.author}</span>
+              by
+              <span style={{ fontWeight: 'bold', color: TITLE_2, marginLeft: 12 }}>
+                {post.data.author}
+              </span>
             </span>
-            <span style={{ overflow: 'hidden', fontWeight: 'bold', color: GREEN }}>{SITE.blogURL}</span>
+            <span style={{ overflow: 'hidden', fontWeight: 'bold', color: GREEN }}>
+              {SITE.blogURL}
+            </span>
           </div>
         </div>
       </div>

@@ -7,8 +7,8 @@ slug: jetson-thor
 featured: true
 draft: false
 tags:
-  - jetson
-  - thor
+    - jetson
+    - thor
 canonicalURL: https://miguelvf.com/posts/jetson-thor/
 description: A guide to getting started with the Jetson Thor Dev Kit.
 ---

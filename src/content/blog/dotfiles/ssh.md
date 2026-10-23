@@ -10,9 +10,9 @@ slug: ssh
 featured: false
 draft: false
 tags:
-  - developer-tools
-  - dotfiles
-  - ssh
+    - developer-tools
+    - dotfiles
+    - ssh
 canonicalURL: https://miguelvf.com/posts/ssh/
 description: A brief guide to setting up, configuring, and using ssh for secure remote access to servers.
 ---
@@ -58,35 +58,42 @@ enter your password every time you connect to a server.
 
 To set up SSH key-based authentication, follow the steps below.
 
-1. Generate a new ssh key (we will generate an RSA SSH key pair with a key size
-   of 4096 bits)
-   > **Note** Do not change the default name or location of the key. Using a
-   > passphrase is optional but not recommended.
-   ```sh
-   # If the host was previously used for ssh and the host key has changed, remove the old host key
-   ssh-keygen -f "~/.ssh/known_hosts" -R "<server_ip>"
-   # Generate a new ssh key
-   ssh-keygen -t rsa -b 4096
-   ```
+1. Generate a new ssh key (we will generate an RSA SSH key pair with a key size of 4096 bits)
+    > **Note** Do not change the default name or location of the key. Using a
+    > passphrase is optional but not recommended.
+    ```sh
+    # If the host was previously used for ssh and the host key has changed, remove the old host key
+    ssh-keygen -f "~/.ssh/known_hosts" -R "<server_ip>"
+    # Generate a new ssh key
+    ssh-keygen -t rsa -b 4096
+    ```
 2. Copy the public key to the server
-   ```sh
-   # Ssh into the server
-   ssh <username>@<server_ip>
-   # Create ssh directory
-   mkdir ~/.ssh
-   cd ~/.ssh
-   # exit server
-   exit
-   ```
-   On your local machine execute the following commands:
-   ```sh
-   scp ~/.ssh/id_rsa.pub <username>@<server_ip>:~/.ssh/authorized_keys
-   ```
-3. Change the permissions of the ssh directory and its contents to prevent other
-   users from accessing your keys
-   ``sh     # Ssh into the server     ssh <username>@<server_ip>     # Restrict read, write, and execute permissions to the `~/.ssh` directory to only the owner (`username`)     chmod 700 ~/.ssh/     # Restrict read and write permissions to the contents of the `authorized_keys` directory to only the owner (`username`)     chmod 600 ~/.ssh/authorized_keys     # exit server     exit     ``
-   After completing the steps above, you should be able to connect to the server
-   without entering your password.
+    ```sh
+    # Ssh into the server
+    ssh <username>@<server_ip>
+    # Create ssh directory
+    mkdir ~/.ssh
+    cd ~/.ssh
+    # exit server
+    exit
+    ```
+    On your local machine execute the following commands:
+    ```sh
+    scp ~/.ssh/id_rsa.pub <username>@<server_ip>:~/.ssh/authorized_keys
+    ```
+3. Change the permissions of the ssh directory and its contents to prevent other users from accessing your keys
+    ```sh
+    # Ssh into the server
+    ssh <username>@<server_ip>
+    # Restrict read, write, and execute permissions to the `~/.ssh` directory to only the owner (`username`)
+    chmod 700 ~/.ssh/
+    # Restrict read and write permissions to the contents of the `authorized_keys` directory to only the owner (`username`)
+    chmod 600 ~/.ssh/authorized_keys
+    # exit server
+    exit
+    ```
+    After completing the steps above, you should be able to connect to the server
+    without entering your password.
 
 ## Enabling SSH Key-Based Authentication Only
 
@@ -146,13 +153,13 @@ sudo sed -i 's/^#ChallengeResponseAuthentication yes/ChallengeResponseAuthentica
 sudo sed -i 's/^#PubkeyAuthentication yes/PubkeyAuthentication yes/' /etc/ssh/sshd_config
 # Restart the server's SSH service to apply the new configuration
 if [[ $(ps -p 1 -o comm=) == "systemd" ]]; then
-  ## On systemd-based systems
-  echo "System is systemd-based. Restarting sshd."
-  sudo systemctl restart sshd
+    ## On systemd-based systems
+    echo "System is systemd-based. Restarting sshd."
+    sudo systemctl restart sshd
 else
-  ## On SysV init systems
-  echo "System is SysV init-based. Restarting ssh."
-  sudo service ssh restart
+    ## On SysV init systems
+    echo "System is SysV init-based. Restarting ssh."
+    sudo service ssh restart
 fi
 echo "SSH configuration completed. Disconnecting from server."
 # exit server

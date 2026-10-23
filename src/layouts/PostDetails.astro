@@ -2,7 +2,7 @@
 import Layout from '@layouts/Layout.astro';
 import Tag from '@components/Tag.astro';
 import Datetime from '@components/Datetime';
-import type { CollectionEntry } from 'astro:content';
+import { type CollectionEntry, render } from 'astro:content';
 import { slugifyStr } from '@utils/slugify';
 import ShareLinks from '@components/ShareLinks.astro';
 
@@ -15,7 +15,7 @@ const { post } = Astro.props;
 const { title, author, description, ogImage, canonicalURL, pubDatetime, modDatetime, tags } =
   post.data;
 
-const { Content } = await post.render();
+const { Content } = await render(post);
 
 const ogImageUrl = typeof ogImage === 'string' ? ogImage : ogImage?.src;
 const ogUrl = new URL(ogImageUrl ?? `/blog/${slugifyStr(title)}.png`, Astro.url.origin).href;
@@ -42,25 +42,28 @@ const layoutProps = {
       class="focus-outline mt-8 mb-2 flex hover:opacity-75"
       onclick="(() => (history.length === 1) ? window.location = '/' : history.back())()"
     >
-      <svg xmlns="http://www.w3.org/2000/svg"
-        ><path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path>
-      </svg><span>Go back</span>
+      <svg xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path>
+      </svg>
+      <span>Go back</span>
     </button>
   </div>
   <main id="main-content">
-    <h1 transition:name={slugifyStr(title)} class="post-title">{title}</h1>
+    <h1 transition:name={slugifyStr(title)} class="post-title">
+      {title}
+    </h1>
     <Datetime pubDatetime={pubDatetime} modDatetime={modDatetime} size="lg" className="my-2" />
 
     <ul>
-      {tags.map((tag) => <Tag tag={slugifyStr(tag)} />)}
+      {tags.map((tag) => (
+        <Tag tag={slugifyStr(tag)} />
+      ))}
     </ul>
     <article id="article" role="article" class="prose mx-auto mt-8 max-w-3xl">
       <Content />
     </article>
 
-    <div
-      class="flex flex-col-reverse items-center justify-between gap-6 sm:flex-row-reverse sm:items-end sm:gap-4"
-    >
+    <div class="flex flex-col-reverse items-center justify-between gap-6 sm:flex-row-reverse sm:items-end sm:gap-4">
       <button id="back-to-top" class="focus-outline py-1 whitespace-nowrap hover:opacity-75">
         <svg xmlns="http://www.w3.org/2000/svg" class="rotate-90">
           <path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path>

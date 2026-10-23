@@ -10,9 +10,9 @@ slug: off-by-one
 featured: false
 draft: false
 tags:
-  - programming
-  - computer-science
-  - algorithms
+    - programming
+    - computer-science
+    - algorithms
 canonicalURL: https://miguelvf.com/posts/off-by-one/
 description: How to never overshoot or undershoot for loops again.
 ---
@@ -55,7 +55,7 @@ intend to loop and $i$ represents the current iteration:
 ```c
 // Case Study A
 for (int i = 1; i < n; i++) {
-  /* Body of the loop */
+    /* Body of the loop */
 }
 ```
 
@@ -72,14 +72,13 @@ than intended. This scenario can be fixed by changing the initial value of $i$
 to be $0$ instead of $1$. A good example of overshooting is with the following
 brain teaser:
 
-- If you build a straight fence 30 feet long with posts spaced 3 feet apart, how
-  many posts do you need?
-  - (The common answer is one less than the correct answer)
+- If you build a straight fence 30 feet long with posts spaced 3 feet apart, how many posts do you need?
+    - (The common answer is one less than the correct answer)
 
 ```c
 // Case Study B
 for (int i = 0; i <= n; i++) {
-  /* Body of the loop */
+    /* Body of the loop */
 }
 ```
 
@@ -97,7 +96,7 @@ $1$ instead of $0$. A good example of overshooting is with the following brain
 teaser:
 
 - If you have n posts, how many sections are there between them?
-  - (The common answer is one more than the correct answer)
+    - (The common answer is one more than the correct answer)
 
 Note that a for loop is simply a special case of a while loop where the number
 of iterations to be done is already known, whereas a while loop has an
@@ -109,7 +108,7 @@ the loop is:
 
 ```c
 for (int i = 0; i < n; i++) {
-  /* Body of the loop */
+    /* Body of the loop */
 }
 ```
 

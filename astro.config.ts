@@ -1,3 +1,4 @@
+import { unified } from '@astrojs/markdown-remark';
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
 import {
@@ -24,13 +25,15 @@ export default defineConfig({
   },
   integrations: [react(), sitemap()],
   markdown: {
-    remarkPlugins: [
-      remarkMath,
-      remarkTikz,
-      remarkToc,
-      [remarkCollapse, { test: 'Table of contents' }],
-    ],
-    rehypePlugins: [rehypeKatex],
+    processor: unified({
+      remarkPlugins: [
+        remarkMath,
+        remarkTikz,
+        remarkToc,
+        [remarkCollapse, { test: 'Table of contents' }],
+      ],
+      rehypePlugins: [rehypeKatex],
+    }),
     shikiConfig: {
       // For more themes, visit https://shiki.style/themes
       // themes: { light: "min-light", dark: "night-owl" },
@@ -57,7 +60,4 @@ export default defineConfig({
     layout: 'constrained',
   },
   scopedStyleStrategy: 'where',
-  experimental: {
-    preserveScriptOrder: true,
-  },
 });

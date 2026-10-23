@@ -13,15 +13,13 @@ const { title, className, border = true }: Props = Astro.props;
   class={`${border ? 'border-solid border-2 rounded-lg p-6' : ''} h-fit lg:mx-4 mt-8 ${className}`}
   style="border-color: var(--fg-light);"
 >
-  {
-    title ? (
-      <h1
-        class="neon dark:shadow-fg1-light shadow-fg1-dark text-xl drop-shadow-lg md:py-4 md:text-3xl"
-        style="color: var(--color-text-alt);"
-      >
-        {title}
-      </h1>
-    ) : null
-  }
+  {title ? (
+    <h1
+      class="neon dark:shadow-fg1-light shadow-fg1-dark text-xl drop-shadow-lg md:py-4 md:text-3xl"
+      style="color: var(--color-text-alt);"
+    >
+      {title}
+    </h1>
+  ) : null}
   <slot />
 </div>

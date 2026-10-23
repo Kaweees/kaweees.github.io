@@ -10,9 +10,9 @@ slug: c-makefile
 featured: false
 draft: false
 tags:
-  - c
-  - makefile
-  - build-system
+    - c
+    - makefile
+    - build-system
 canonicalURL: https://miguelvf.com/posts/c-makefile/
 description: A brief guide to creating from scratch the Makefile template that is used in my C projects.
 ---

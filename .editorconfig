@@ -13,9 +13,5 @@ charset = utf-8
 trim_trailing_whitespace = true
 insert_final_newline = true
 
-[*.md]
-# List continuation indent follows the marker width (e.g. 3 for `1. `)
-indent_size = unset
-
-[*.nix]
-indent_size = 2
+[*.{md,toml}]
+indent_size = 4

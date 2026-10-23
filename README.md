@@ -14,11 +14,11 @@
 </div>
 
 <a href="https://miguelvf.com">
-  <img alt="Astro Logo'" src="assets/img/astro-logo.png" align="right" width="150">
+    <img alt="Astro Logo'" src="assets/img/astro-logo.png" align="right" width="150">
 </a>
 
 <div align="left">
-  <h1><em><a href="https://miguelvf.com">~miguelvf.com</a></em></h1>
+    <h1><em><a href="https://miguelvf.com">~miguelvf.com</a></em></h1>
 </div>
 
 <!-- ABOUT THE PROJECT -->
@@ -50,15 +50,15 @@ Run these commands from this project's directory:
 
 1. Install the project dependencies
 
-   ```sh
-   just install
-   ```
+    ```sh
+    just install
+    ```
 
 2. Start the development server
 
-   ```sh
-   just run
-   ```
+    ```sh
+    just run
+    ```
 
 <!-- PROJECT FILE STRUCTURE -->
 

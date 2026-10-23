@@ -71,7 +71,15 @@ export default () => {
           <span style={{ color: TITLE_2, marginLeft: 20 }}>{rest.join(' ')}</span>
         </div>
 
-        <div style={{ display: 'flex', marginTop: 30, fontSize: 27, fontWeight: 'bold', color: GREEN }}>
+        <div
+          style={{
+            display: 'flex',
+            marginTop: 30,
+            fontSize: 27,
+            fontWeight: 'bold',
+            color: GREEN,
+          }}
+        >
           &gt;&gt; robotics · silicon · firmware
         </div>
 

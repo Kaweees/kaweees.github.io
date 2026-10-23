@@ -1,2 +1,13 @@
-onlyBuiltDependencies:
-  - sharp
+allowBuilds:
+  '@swc/core': false
+  esbuild: false
+  sharp: true
+minimumReleaseAgeExclude:
+  - typewriter-effect@3.3.0
+  - prettier-plugin-astro@1.1.2
+permissions:
+  taze:
+    skills: true
+skills:
+  dirs:
+    - .claude/skills

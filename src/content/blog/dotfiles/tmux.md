@@ -10,9 +10,9 @@ slug: tmux
 featured: false
 draft: false
 tags:
-  - developer-tools
-  - dotfiles
-  - tmux
+    - developer-tools
+    - dotfiles
+    - tmux
 canonicalURL: https://miguelvf.com/posts/tmux/
 description: A brief guide to setting up, configuring, and using Tmux for terminal multiplexing.
 ---

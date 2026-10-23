@@ -7,7 +7,7 @@ slug: robotics
 featured: false
 draft: false
 tags:
-  - robotics
+    - robotics
 canonicalURL: https://miguelvf.com/posts/robotics/
 description: A guide to reinforcement learning in Isaac Lab.
 ---
@@ -23,14 +23,14 @@ $$
 
 ```tikz
 \begin{tikzpicture}[
-  node distance = 6em, auto, thick,
-  block/.style={rectangle, draw, text width=8em, text centered, rounded corners, minimum height=4em}
+    node distance = 6em, auto, thick,
+    block/.style={rectangle, draw, text width=8em, text centered, rounded corners, minimum height=4em}
 ]
-  \node [block] (Agent) {Agent};
-  \node [block, below of=Agent] (Environment) {Environment};
+    \node [block] (Agent) {Agent};
+    \node [block, below of=Agent] (Environment) {Environment};
 
-  \path [draw, -latex] (Agent.0) --++ (4em,0em) |- node [near start]{Action $a_t$} (Environment.0);
-  \path [draw, -latex] (Environment.190) --++ (-6em,0em) |- node [near start] {New state  $s_{t+1}$} (Agent.170);
-  \path [draw, -latex] (Environment.170) --++ (-4.25em,0em) |- node [near start, right] {Reward $r_{t+1}$} (Agent.190);
+    \path [draw, -latex] (Agent.0) --++ (4em,0em) |- node [near start]{Action $a_t$} (Environment.0);
+    \path [draw, -latex] (Environment.190) --++ (-6em,0em) |- node [near start] {New state  $s_{t+1}$} (Agent.170);
+    \path [draw, -latex] (Environment.170) --++ (-4.25em,0em) |- node [near start, right] {Reward $r_{t+1}$} (Agent.190);
 \end{tikzpicture}
 ```

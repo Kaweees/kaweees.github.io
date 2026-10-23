@@ -7,8 +7,8 @@ slug: unitree-setup
 featured: true
 draft: true
 tags:
-  - unitree
-  - robotics
+    - unitree
+    - robotics
 canonicalURL: https://miguelvf.com/posts/unitree-setup/
 description: A guide to configuring a development environment on the Unitree Go2 Pro.
 ---
@@ -46,27 +46,27 @@ sudo systemctl status tailscaled --no-pager
 
 ```js file=src/config.ts
 export const SITE = {
-  website: "https://astro-paper.pages.dev/", // replace this with your deployed domain
-  author: "Sat Naing",
-  profile: "https://satnaing.dev/",
-  desc: "A minimal, responsive and SEO-friendly Astro blog theme.",
-  title: "AstroPaper",
-  ogImage: "astropaper-og.jpg",
-  lightAndDarkMode: true,
-  postPerIndex: 4,
-  postPerPage: 4,
-  scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
-  showArchives: true,
-  showBackButton: true, // show back button in post detail
-  editPost: {
-    enabled: true,
-    text: "Suggest Changes",
-    url: "https://github.com/satnaing/astro-paper/edit/main/",
-  },
-  dynamicOgImage: true, // enable automatic dynamic og-image generation
-  dir: "ltr", // "rtl" | "auto"
-  lang: "en", // html lang code. Set this empty and default will be "en"
-  timezone: "Asia/Bangkok", // Default global timezone (IANA format) https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+    website: "https://astro-paper.pages.dev/", // replace this with your deployed domain
+    author: "Sat Naing",
+    profile: "https://satnaing.dev/",
+    desc: "A minimal, responsive and SEO-friendly Astro blog theme.",
+    title: "AstroPaper",
+    ogImage: "astropaper-og.jpg",
+    lightAndDarkMode: true,
+    postPerIndex: 4,
+    postPerPage: 4,
+    scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
+    showArchives: true,
+    showBackButton: true, // show back button in post detail
+    editPost: {
+        enabled: true,
+        text: "Suggest Changes",
+        url: "https://github.com/satnaing/astro-paper/edit/main/",
+    },
+    dynamicOgImage: true, // enable automatic dynamic og-image generation
+    dir: "ltr", // "rtl" | "auto"
+    lang: "en", // html lang code. Set this empty and default will be "en"
+    timezone: "Asia/Bangkok", // Default global timezone (IANA format) https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 } as const;
 ```
 
@@ -78,7 +78,7 @@ tailscale status
 ```
 
 <!--
- ![Unitree Tailscale](./assets/unitree-tailscale.png) -->
+    ![Unitree Tailscale](./assets/unitree-tailscale.png) -->
 
 ![Unitree Tailscale](@/assets/images/unitree-tailscale.png)
 

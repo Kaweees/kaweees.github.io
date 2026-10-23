@@ -7,7 +7,7 @@ slug: books
 featured: false
 draft: false
 tags:
-  - books
+    - books
 canonicalURL: https://miguelvf.com/posts/books/
 description: An aggregated catalog of books I aspire to read.
 ---

@@ -7,8 +7,8 @@ slug: philosophy
 featured: false
 draft: false
 tags:
-  - books
-  - philosophy
+    - books
+    - philosophy
 canonicalURL: https://miguelvf.com/posts/philosophy/
 description: A list of philosophy books to read.
 ---
