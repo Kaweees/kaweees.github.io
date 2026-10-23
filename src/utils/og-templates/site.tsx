@@ -1,11 +1,24 @@
 import { SITE } from '@config';
 
+// Dark Gruvbox card, matching the site's dark theme: charcoal ground with
+// scanlines, a sand-bordered card, the neon "> Miguel Villa Floran" title,
+// the green ">>" tagline, and a one-line summary.
+const GROUND = '#282828';
+const CARD = '#3c3836';
+const SAND = '#ebdbb2';
+const TITLE_2 = '#d8c787';
+const GREEN = '#8ec07c';
+
 export default () => {
+  const [first, ...rest] = SITE.title.split(' ');
   return (
     // Configure via: https://og-playground.vercel.app/
     <div
       style={{
-        background: SITE.secondaryColor,
+        background: GROUND,
+        backgroundImage: 'linear-gradient(rgba(0,0,0,0) 66%, rgba(0,0,0,0.15) 66%)',
+        backgroundSize: '100% 5px',
+        backgroundRepeat: 'repeat',
         width: '100%',
         height: '100%',
         display: 'flex',
@@ -18,9 +31,7 @@ export default () => {
           position: 'absolute',
           top: '-1px',
           right: '-1px',
-          border: '4px solid #000',
-          background: SITE.tertiaryColor,
-          opacity: '0.9',
+          border: `4px solid ${SAND}`,
           borderRadius: '4px',
           display: 'flex',
           justifyContent: 'center',
@@ -32,57 +43,49 @@ export default () => {
 
       <div
         style={{
-          border: '4px solid #000',
-          background: SITE.primaryColor,
+          border: `4px solid ${SAND}`,
+          background: CARD,
           borderRadius: '4px',
           display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
           justifyContent: 'center',
           margin: '2rem',
           width: '88%',
           height: '80%',
+          color: SAND,
+          textAlign: 'center',
         }}
       >
         <div
           style={{
             display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'space-between',
-            margin: '20px',
-            width: '90%',
-            height: '90%',
+            fontSize: 74,
+            fontWeight: 'bold',
+            color: '#ffffff',
+            textShadow: `2px 2px 7px ${SAND}`,
+            whiteSpace: 'nowrap',
           }}
         >
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              alignItems: 'center',
-              height: '90%',
-              maxHeight: '90%',
-              width: '100%',
-              maxWidth: '100%',
-              overflow: 'visible',
-              textAlign: 'center',
-            }}
-          >
-            <p style={{ fontSize: 72, fontWeight: 'bold' }}>{SITE.title}</p>
-            <p style={{ fontSize: 28 }}>{SITE.desc}</p>
-          </div>
+          <span>&gt; {first} </span>
+          <span style={{ color: TITLE_2, marginLeft: 20 }}>{rest.join(' ')}</span>
+        </div>
 
-          <div
-            style={{
-              display: 'flex',
-              justifyContent: 'flex-end',
-              width: '100%',
-              marginBottom: '8px',
-              fontSize: 28,
-            }}
-          >
-            <span style={{ overflow: 'hidden', fontWeight: 'bold' }}>
-              {new URL(SITE.website).hostname}
-            </span>
-          </div>
+        <div style={{ display: 'flex', marginTop: 30, fontSize: 27, fontWeight: 'bold', color: GREEN }}>
+          &gt;&gt; robotics · silicon · firmware
+        </div>
+
+        <div
+          style={{
+            display: 'flex',
+            marginTop: 30,
+            fontSize: 27,
+            lineHeight: 1.45,
+            maxWidth: 880,
+            justifyContent: 'center',
+          }}
+        >
+          Pantheon, Dimensional, NVIDIA GEAR, and CARP on the SAL-E CubeSat.
         </div>
       </div>
     </div>
